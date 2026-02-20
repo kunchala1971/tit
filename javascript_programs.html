@@ -434,7 +434,7 @@ console.log(typeof b)
           <div class="card-body">
             <pre>
             <code>
-              //Let vs Var vs Constant
+//Let vs Var vs Constant
 //constans can allow the initialization only declaration time
 //it can't support re-initialization
 //constants are block scoped variables
@@ -498,7 +498,7 @@ console.log("D=", d);
           <div class="card-body">
             <pre>
             <code>
-              //Arrays
+//Arrays
 let nums=[1,2,3,4,5,6];
 console.log(nums);
 console.log("Length of Array:",nums.length);
@@ -530,14 +530,14 @@ console.log("After Delete:",nums);
           <div class="card-body">
             <pre>
             <code>
-              let nums = [1, 2, 3, 4, 5, 6];
+let nums = [1, 2, 3, 4, 5, 6];
 //Modern For Loop
 for (x in nums) {
   console.log(nums[x]);
 }
 let l = nums.length;
 //Traditional Loop
-for (let i = 0; i < l; i++) {
+for (let i = 0; i &lt; l; i++) {
   console.log(nums[i]);
 }
 console.log(nums[0]);
@@ -561,7 +561,7 @@ console.log(nums[1]);
           <div class="card-body">
             <pre>
             <code>
-              //tricky Question
+//tricky Question
 let x=[1,2];
 x[100]=20;
 console.log(x.length);
@@ -581,7 +581,7 @@ console.log(x);
           <div class="card-body">
             <pre>
             <code>
-              let nums=[5,2,3,1,4,10,6,14,22,32,45,101];
+let nums=[5,2,3,1,4,10,6,14,22,32,45,101];
 console.log(nums);
 console.log(nums.sort());
 console.log(nums.reverse());
@@ -622,7 +622,7 @@ console.log(c);
           <div class="card-body">
             <pre>
             <code>
-              let nums=[1,2,3,4,5,6,7,8];
+let nums=[1,2,3,4,5,6,7,8];
 //syntax array.splice(startindex,noofelement,addingelements)
 nums.splice(2,0,"a","b","c");
 console.log(nums);
@@ -654,6 +654,595 @@ console.log(names.includes("Kishore"));
         </pre>
           </div>
         </div>
+        <!-- Program 17 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             17 Arrays and keys,values,reduce functions
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+const nums = [11, 22, 33, 44, 55];
+//it returns keys(indexs)
+for (let x in nums) {
+  console.log(x + "->" + nums[x]);
+}
+//it returns values
+for (let x of nums.values()) {
+  console.log(x);
+}
+//it returns values
+for (let x of nums) {
+  console.log(x);
+}
+
+//reduce
+
+// const sum=nums.reduce((acc,currentValue)=>acc+currentValue);
+// console.log(sum);
+function sum(acc, currentValue) {
+  return acc + currentValue;
+}
+const sunofNums = nums.reduce(sum);
+console.log(sunofNums);
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 18 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             18 forEach,map,filter functions
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+// const nums=[1,2,3,4,5,6];
+let nums;
+nums?.forEach((element)=>console.log(element));
+
+// var result=nums.map((element)=>{
+//     if(element>3)
+//     {
+//         return(element);
+//     }
+//     else
+//     {
+//         return null;
+//     }
+// });
+var result=nums?.map((element)=>element>3 ? element : null)
+console.log(result)
+
+var result=nums?.filter((element)=>element>2 && element&lt;4);
+console.log(result)
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 19 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             19 fill,at functions
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+const months=["jan","Feb","Mar","Apr"];
+console.log(months[0]);
+console.log(months.at(0));
+//it return array values
+const reulst=months.values();
+for(x of months)
+{
+    console.log(x)
+}
+//it returns array keys
+for(x of months.keys())
+{
+    console.log(x)
+}
+
+//it fills upt  to 3 elements
+const nums=[1,2,3,4,5,6];
+console.log(nums);
+console.log(nums.fill('x',nums.length-5,nums.length-2))
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 20 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             20 find,every functions
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+const nums=[1,2,3,4,5,6];
+
+//it returns after find first element
+let result=nums.find((element)=>element>3);
+console.log(result);
+
+function checkValue(element)
+{
+    return element>4;
+}
+result=nums.find(checkValue);
+console.log(result);
+
+result=nums.every((element)=>element>0)
+function checkEvery(element)
+{
+    return element>3;
+}
+result=nums.every(checkEvery)
+console.log(result);
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 21 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             21 Objects
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//objects
+const person={
+    id:1,
+    name:"SrinivasaRao",
+    course:"java",
+    place:"ongole"
+};
+//shallow copy ( it copies the reference)
+//const student=person;
+//Deep copy (it copies the data to new reference)
+const student={...person}
+console.log(person);
+console.log(student);
+console.log(person["id"]);
+console.log(person["name"]);
+console.log(person.id);
+console.log(person.name);
+person.name="Kunchala SrinivasaRao";
+console.log(person.name);
+console.log(person);
+console.log(student);
+person.state="AP";
+console.log(person);
+console.log(student);
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 22 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             22 Object,Array Destructuring, rest Operators
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+const person={
+    id:1,
+    name:"John",
+    designation:"Engg"
+};
+const address={
+    area:"Newyork",
+    city:"Newyork",
+    state:"NewYork City",
+    country:"America"
+}
+//object spreading
+const fullDetails={...person,...address};
+console.log(person);
+console.log(address);
+console.log(fullDetails);
+
+//object destructuring
+const {name,designation,id}=person;
+console.log(id);
+console.log(name);
+console.log(designation);
+
+//Arrya Destructure
+const nums=[1,2,3];
+[a,,c]=nums;
+console.log(a);
+// console.log(b);
+console.log(c);
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 23 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             23 Array Object Destructuring
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//array destructring
+const nums=[45,67,78];
+const [a,,c]=nums;
+console.log(a);
+// console.log(b);
+console.log(c);
+
+//object destructuring
+const person={
+    id:1,
+    name:"Ramesh",
+    desig:"engg",
+    city:"ongole"
+}
+const {name,city,id}=person;
+console.log(name);
+console.log(id);
+console.log(city)
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 24 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             24 Function Declaration
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//1.Function Declaration
+const result=sum(45,56);
+console.log(result)
+
+function sum(arg1, arg2) {
+  return arg1 + arg2;
+}
+//function declartions should always moves on top while execution of the javascript
+//that is called hoisting
+
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 25 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             25 Function Expression
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//2. function expression
+//this is not apply hoisting
+const sum = function (arg1, arg2) {
+  return arg1 + arg2;
+};
+
+console.log(sum(10, 20));
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 26 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             26 Arrow Functions
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//3.Arrow functions nothing but expression functions
+//this will not apply the hoisting because arrow functions can works  es6 onwards
+const sum = (arg1, arg2) => arg1 + arg2;
+
+console.log(sum(34, 45));
+
+const big = (arg1, arg2) => {
+  if (arg1 > arg2) {
+    return arg1;
+  } else {
+    return arg2;
+  }
+};
+console.log(big(45, 77));
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 27 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             27 Ananonmous functions
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//4 Ananonmous functions
+console.log("1");
+setTimeout(() => {
+  console.log("2");
+}, 0);
+
+console.log("3");
+
+
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 28 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             28 Immediatly Invoked Function
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+ //5.iif (Immediatly Invoked Function)
+(function () {
+  console.log("Hai");
+})();
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 29 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             29 Higher-Order Function
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//6. Higher-Order Function
+//A function that takes another function as an argument or returns a function.
+function  sum(a,b)
+{
+    return(a+b)
+}
+function operate(a, b, sum) {
+  return sum(a, b);
+}
+
+//const result=operate(6, 4, (x, y) => x + y);
+const result=operate(6, 4, sum);
+console.log(result)
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 30 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             30 Callback Function
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//7. Callback Function
+//A function passed into another function to be executed later.
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+greet("Srinivas", function () {
+  console.log("Welcome to JavaScript!");
+});
+console.log("--------------");
+function fun(msg) {
+  console.log("This Message Came from First Funciton " + msg);
+}
+const showMessage = (msg, fun) => {
+  console.log("First Function Execution completed");
+  fun(msg);
+};
+
+showMessage("Hi Call Back Function", fun);
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 31 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             31 Constructor Function Deep Copy
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//8. Constructor Function
+//Used to create objects (before ES6 class).
+function Person(name=null, age=null) {
+  this.name = name;
+  this.age = age; 
+}
+//like deep copy
+const p1 = new Person("Ravi", 25);
+const p2 = new Person("Sree", "44");
+const p3 = new Person();
+console.log(p1.name);
+console.log(p1.age);
+p1.age = 60;
+console.log(p1.age);
+console.log(p2.name);
+console.log(p2.age);
+
+console.log(p3.name);
+console.log(p3.age);
+p3.name="SrinivasaRao";
+p3.age=54;
+console.log(p3.name);
+console.log(p3.age);
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 32 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             32
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 33 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             33 Generator Function
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//9. Generator Function
+function* numbers() {
+  yield showMessage();
+  yield 2;
+  yield 3;
+}
+
+function showMessage()
+{
+    return(1);
+}
+const gen = numbers();
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 34 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             34 functions with rest operator
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//functions with rest operator
+function sum(a, b, ...d) {
+  let total = a + b;
+  for (let i = 0; i &lt; d.length; i++) {
+    total += d[i];
+  }
+  return total;
+}
+
+console.log(sum(34, 45));
+console.log(sum(34, 45, 88));
+console.log(sum(34, 45, 88, 99));
+console.log(sum(34, 45, 88, 100, 78));
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 35 -->
+        <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             35 API Calling
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+//api calling
+//https://jsonplaceholder.typicode.com/
+const URL = "https://jsonplaceholder.typicode.com/users";
+
+// fetch(URL)
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
+
+const getData = async () => {
+  const data = await fetch(URL).then((response) => response.json());
+  data.map((user) => {
+    console.log(
+      user.id + " - " + user.name + " - " + user.username + " - " + user.email
+    );
+  });
+};
+
+getData();
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Program 36 -->
+        <!-- <div class="card shadow mb-2">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+             36
+            </h5>
+          </div>
+          <div class="card-body">
+            <pre>
+              <code>
+              </code>
+            </pre>
+          </div>
+        </div> -->
       </div>
  </main>
       <footer id="footer">
