@@ -10,14 +10,10 @@
       name="description"
       content="Telugu IT Tutorials offers live virtual full-stack development courses in Telugu (HTML, CSS, JavaScript, React, Node.js, SQL) with 100% job placement support and lifetime access."
     />
-
-    <!-- Primary Keywords -->
     <meta
       name="keywords"
       content="Telugu IT Tutorials, IT training in Telugu, Telugu web development tutorials, Full stack development courses in Telugu, Online coding classes in Telugu, Programming tutorials Telugu, ReactJS tutorials in Telugu, Node.js course in Telugu, SpringBoot tutorials Telugu, Git and Docker training in Telugu, SQL courses for beginners Telugu, HTML CSS JavaScript in Telugu, Best Telugu online coding institute, Interview Q&A preparation Telugu"
     />
-
-    <!-- Open Graph (Facebook/LinkedIn) -->
     <meta
       property="og:title"
       content="Telugu IT Tutorials — Learn Full Stack Development in Telugu"
@@ -32,8 +28,6 @@
       property="og:image"
       content="https://teluguittutorials.com/images/banner.jpg"
     />
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -47,43 +41,45 @@
       name="twitter:image"
       content="https://teluguittutorials.com/images/banner.jpg"
     />
-    <!-- Favicons -->
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
-
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
       rel="stylesheet"
     />
-
-    <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
     <link href="lib/venobox/venobox.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-
-    <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet" />
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
       crossorigin="anonymous"
     ></script>
+        <style>
+            pre {
+        background-color: midnightblue;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+      h5{
+        color:white;
+      }
+    </style>
   </head>
 
   <body>
     <header id="header" class="header-scrolled">
       <div class="container">
         <div id="logo" class="pull-left">
-          <!-- Uncomment below if you prefer to use a text logo -->
           <h2>
             <a href="index.html">Telugu <span>IT</span> Tutorials</a>
           </h2>
-          <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
@@ -100,7 +96,7 @@
                 <li><a href="javaQA.html">Java</a></li>
               </ul>
             </li>
-                        <li class="menu-has-children">
+            <li class="menu-has-children">
               <a href="#">Code Snipets</a>
               <ul>
                 <li><a href="c_programs.html">C Language</a></li>
@@ -111,37 +107,32 @@
             </li>
             <li><a href="index.html#courses">Courses</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            <!-- <li class="buy-tickets"><a href="index.html#buy-tickets">Register</a></li> -->
           </ul>
         </nav>
-        <!-- #nav-menu-container -->
       </div>
     </header>
-    <!-- #header -->
-        <main id="main" style=" padding:10%;">
+    <main id="main" style=" padding:10%;">
     <div class="container">
-      <h1>Java Programs</h1>
+      <h1>Java Basic Programs</h1>
       <!-- Program 1 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
           <h5 class="mb-0">
-            1. Single Character Input and Output Example (C Program)
+            1. Data Out Put Example (Hello Java World)
           </h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-// Single Character Input and Output Example
-#include &lt;stdio.h&gt;
-int main()
+class Prog1
 {
-    char c; // declaration of variable
-    printf("Enter any character "); // output statement
-    c = getchar(); // input statement for character
-    printf("The Given Character is ");
-    putchar(c); // output statement for character
-    return 0;
+public static void main(String args[])
+{
+    System.out.println("Hello Java World!");
+    System.out.println("Telutu IT Tutorials");
+    System.out.println("Ongole");    
+}
 }
             </code>
         </pre>
@@ -150,25 +141,27 @@ int main()
       <!-- Program 2 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Data Input and output Example</h5>
+          <h5 class="mb-0">2 Data Reading from Keyboard using Scanner</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//2 Data Input and output Example
-#include &lt;stdio.h&gt;
-int main()
+import java.util.*;
+class Prog2
 {
-    int a,b,c;
-    float amount=4500.50;
-    printf("Enter a,b,c values"); //prompt message
-    scanf("%d",&a); //reading data
-    scanf("%d",&b);
-    scanf("%d",&c);
-    printf("A=%d B=%d C=%d",a,b,c); //out put
-    printf("\nAmount=%.2f",amount); //.2f means it shows only 2 decimals
-    return 0;
+    public static void main(String args[])
+    {
+        Scanner scanner = new Scanner(System.in);
+        int a,b,c;
+        System.out.println("Enter a,b values");
+        a=scanner.nextInt();
+        b=scanner.nextInt();
+        c=a+b;
+        System.out.println("A=" + a);
+        System.out.println("B=" + b);
+        System.out.println("Sum=" + c);
+    }
 }
             </code>
         </pre>
@@ -177,1157 +170,429 @@ int main()
       <!-- Program 3 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Symbolic contstant Example</h5>
+          <h5 class="mb-0">3 Area Calculation Example</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//3.Symbolic contstant Example
-#include &lt;stdio.h&gt;
-#define PI 3.1416 //this way of declaration Symbolic constants no need data type no need equal for assign
-int main()
+import java.util.*;
+class Prog3
 {
-    float r,area,peri;
-    printf("Enter radius value");
-    scanf("%f",&r);
-    area=PI*r*r;
-    peri=2*PI*r;
-    printf("\n%.2f Radius, Area is %.2f and Its Perimeter is %.2f",r,area,peri);
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-      <!-- Program 4 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 Symbolic constants usage example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//4.Symbolic constants usage example
-#include &lt;stdio.h&gt;
-#define PI 3.1416
-#define P printf // instead of printf you can also use P, becuase we define P as printf
-#define S scanf// instead of scanf you can also use P, becuase we define S as scanf
-int main()
-{
-    float r,area,peri;
-    P("Enter radius value");
-    S("%f",&r);
-    area=PI*r*r;
-    peri=2*PI*r;
-    P("\n%.2f Radius, Area is %.2f and Its Perimeter is %.2f",r,area,peri);
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-      <!-- Program 5 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Simple Interest Calculation(p*n*r/100)</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//5.Simple Interest Calculation(pnr/100)
-#include &lt;stdio.h&gt;
-int main()
-{
-    float capital,intrest_rate,no_of_years,simple_intreset,si;
-    printf("Enter Capital");
-    scanf("%f",&capital);
-    printf("Enter Intreset Rate");
-    scanf("%f", & intrest_rate);
-    printf("Enter No of Years");
-    scanf("%f",&no_of_years);
-    si=(capital*intrest_rate*no_of_years)/100;
-    printf("\nCapital:%.2f",capital);
-    printf("\nInterest Rate:%.2f",intrest_rate);
-    printf("\nNo of Years:%.2f",no_of_years);
-    printf("\nSimple Interest on above data:%.2f",si);
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-      <h1>Control Statements</h1>
-      <!-- Program 6 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Simple if..else Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//1 Simple if...else Statements
-#include &lt;stdio.h&gt;
-int main()
-{
-    int age;
-    printf("Enter Age");
-    scanf("%d",&age);
-    //printf("%s",age>17 ? "Eligible" : "Not Eligible");
-    if(age>17)
-      printf("Eligible");
-    else
-      printf("Not Eligible");
-
-    return 0;
-}
-//Or
-// no need Brace Brackets if your using after if one statement after else one statement other wise you should place brackets 
-    int main()
+    public static void main(String args[])
     {
-    int age;
-    printf("Enter Age");
-    scanf("%d",&age);
-    //printf("%s",age>17 ? "Eligible" : "Not Eligible");
-    if(age>17) 
-      printf("Eligible");
-    else 
-      printf("Not Eligible");
-    return 0;
+        Scanner scanner=new Scanner(System.in);
+        float r,area,pi=3.1416f;
+        System.out.println("Enter radius value");
+        r=scanner.nextFloat();
+        area=pi*r*r;
+        System.out.println(r + " Area is " + area);
     }
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+      <!-- Program 1 -->
+      <h1>Control Statements</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 if...else (Nested if...else) Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+import java.util.*;
+class Prog1
+{
+    public static void main(String args[])
+    {
+        int m,p,c,avg;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter m,p,c values");
+        m=in.nextInt();
+        p=in.nextInt();
+        c=in.nextInt();
+        avg=((m+p+c)/3);
+        if(m>34 && c>34 && p>34)
+        {
+            if(avg>34 && avg<50)
+            {
+             System.out.println("Ordianary");   
+            }
+            else if(avg>=50 && avg<60)
+            {
+            System.out.println("Second class");
+            }
+            else if(avg>=60 && avg<75)
+            {
+            System.out.println("First Class");
+            }
+            else if(avg>=75 && avg<=100)
+            {
+                System.out.println("Distinction");
+            }
+            else if(avg>100)
+            {
+                System.out.println("Given Marks is Wrong");
+            }
+
+
+        }
+        else
+        {
+            if(m<35)
+            System.out.print("Maths  ");
+            if(p<35)
+            System.out.print("Phy ");
+            if(c<35)
+            System.out.print("Che ");
+            System.out.print(" Failed");
+        }
+    }
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+      <!-- Program 2 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2 While Loop Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+
+import java.util.Scanner;
+class Prog2
+{
+    public static void main(String args[])
+    {
+    int n,i;
+    Scanner in=new Scanner(System.in);
+    System.out.println("Enter n value");
+    n=in.nextInt();
+    i=1;
+    while(i<=10)
+    {
+        System.out.println(n + "X" + i + "=" + n*i);
+        i++;
+    }
+    }
+    
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+      <!-- Program 3 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">3 For Loop with Nested </h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*
+1
+12
+123
+1234
+12345
+*/
+import java.util.*;
+class Prog3
+{
+    public static void main(String args[])
+    {
+        int n;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter n value");
+        n=in.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+        for(int i=n-1;i>=1;i--)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+
+    }
+}
               </code>
         </pre>
         </div>
       </div>
-       <!-- Program 7 -->
+       <!-- Program 4 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 control Statements(if...else Nested) Example</h5>
+          <h5 class="mb-0">4 do..while Exmaple</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//control Statements(if...else Nested) Example
-#include &lt;stdio.h&gt;
-int main()
+import java.util.*;
+class Prog4
 {
-    int score;
-    char name[20];
-    printf("Enter Player Name");
-    scanf("%s",name);
-    printf("Enter Score");
-    scanf("%d",&score);
-    if(score==0)
+    public static void main(String args[])
     {
-        printf("%s Plays %d and he is  Dock Out",name,score);
-    }
-    else if(score>0 && score<50)
-    {
-        printf("%s Plays %d and he is  Below Half Century",name,score);
-    }
-    else if(score==50)
-    {
-        printf("%s Plays %d and he is  Half Century",name,score);
-    }
-    else if(score>50 && score<100)
-    {
-        printf("%s Plays %d and he is  Above Half Century",name,score);
-    }
-    else if(score==100)
-    {
-        printf("%s Plays %d and he is  Century",name,score);
-    }
-    else if(score>100 && score<150)
-    {
-        printf("%s Plays %d and he is  Above Century",name,score);
-    }
-    else if(score==150)
-    {
-        printf("%s Plays %d and he is  One and Half Century",name,score);
-    }
-    else if(score>150 && score<200)
-    {
-        printf("%s Plays %d and he is  Above One and Half Century",name,score);
-    }
-    else if(score==200)
-    {
-     printf("%s Plays %d and he is  Double Century",name,score);   
-    }
-    else if(score>200)
-    {
-        printf("%s Plays %d and he is Above Double Century",name,score);
-    }
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 8 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 if..else Lader Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-#include &lt;stdio.h&gt;
-int main()
-{
-    int score;
-    char name[20];
-    printf("Enter Player Name");
-    scanf("%s",name);
-    printf("Enter Score");
-    scanf("%d",&score);
-    if(score==0)
-    {
-        printf("%s Plays %d and he is  Dock Out",name,score);
-    }
-    else 
-    {
-        if(score>0 && score<50)
+        int amount,sum=0;
+        Scanner in=new Scanner(System.in);
+        do
         {
-        printf("%s Plays %d and he is  Below Half Century",name,score);
-        }
-        else
-        {
-            if(score==50)
+            System.out.println("Enter Amount");
+            amount=in.nextInt();
+            if(amount>0)
             {
-            printf("%s Plays %d and he is  Half Century",name,score);
+                sum=sum+amount;
+                System.out.println("Cumilative Amount is :" + sum);
             }
-            else
-            {
-                if(score>50 && score<100)
-                {
-                printf("%s Plays %d and he is  Above Half Century",name,score);
-                }
-                    else
-                    {
-                    if(score==100)
-                    {
-                    printf("%s Plays %d and he is  Century",name,score);
-                    }
-                    else
-                    {
-                        if(score>100 && score<150)
-                        {
-                        printf("%s Plays %d and he is  Above Century",name,score);
-                         }
-                        else
-                        {
-                            if(score==150)
-                            {
-                            printf("%s Plays %d and he is  One and Half Century",name,score);
-                            }
-                            else
-                            {
-                                if(score>150 && score<200)
-                                {
-                                printf("%s Plays %d and he is  Above One and Half Century",name,score);
-                                }
-                                else
-                                {
-                                    if(score==200)
-                                    {
-                                     printf("%s Plays %d and he is  Double Century",name,score);   
-                                    }
-                                    else
-                                    {
-                                        if(score>200)
-                                        {
-                                            printf("%s Plays %d and he is Above Double Century",name,score);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        }while(amount>0);
+        System.out.println("The Total Amount  is " + sum);
     }
-            
-    return 0;
-}
-
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 9 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 Print Multiple Table using While Loop</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//4 Print Multiple Table using While Loop
-//multiple table example
-#include &lt;stdio.h&gt;
-
-int main()
-{
-   int n,i;
-   printf("Enter n value");
-   scanf("%d",&n);
-   i=1;
-   while(i<=10)
-   {
-       printf("\n%dX%d=%d",n,i,n*i);
-       i++;
-   }
-    return 0;
 }
             </code>
         </pre>
         </div>
       </div>
-       <!-- Program 10 -->
+       <!-- Program 5 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Print n Tables using nested While Loop</h5>
+          <h5 class="mb-0">5 Switch...Case...Break with do..while</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//nested while loop
-//example of multiple tables between range
-#include &lt;stdio.h&gt;
-int main()
+import java.util.*;
+class Prog5
 {
-   int low,high,i;
-   printf("Enter low,high value");
-   scanf("%d%d",&low,&high);
-   while(low<=high)
-   {
-       i=1;
-       while(i<=10)
-       {
-           printf("\n%dX%d=%d",low,i,low*i);
-           i++;
-       }
-      low++;
-       
-   }
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 11 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">6 Combination While if continue Statements</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//while with continue statement
-//if any doubt please watch my channel c language course
-#include &lt;stdio.h&gt;
-int main()
-{
-   int low,high,i;
-   printf("Enter low,high value");
-   scanf("%d%d",&low,&high);
-   while(low<=high)
-   {
-        if(low==5 || low==8)
+    public static void main(String args[])
+    {
+        int a,b,c;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter a,b values");
+        a=in.nextInt();
+        b=in.nextInt();
+        do{
+        System.out.println("1.Addition");
+        System.out.println("2.Subtraction");
+        System.out.println("3.Multiplication");
+        System.out.println("4.Division");
+        System.out.println("5.Modulus");
+        System.out.println("6.Exit");
+        System.out.println("Enter Your Choice ");
+        c=in.nextInt();
+        switch(c)
         {
-            low++;
-           continue;
-        }
-       i=1;
-       while(i<=10)
-       {
-           printf("\n%dX%d=%d",low,i,low*i);
-           i++;
-       }
-      low++;
-       
-   }
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 12 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">7 Combination While if  break</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//while with Break statement
-//if any doubt please watch my channel c language course
-#include &lt;stdio.h&gt;
-int main()
-{
-   int low,high,i;
-   printf("Enter low,high value");
-   scanf("%d%d",&low,&high);
-   while(low<=high)
-   {
-        if(low==5)
-        {
-           
-          break;
-        }
-       i=1;
-       while(i<=10)
-       {
-           printf("\n%dX%d=%d",low,i,low*i);
-           i++;
-       }
-      low++;
-       
-   }
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 13 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">8 do while Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-
-//do while program example
-#include &lt;stdio.h&gt;
-int main()
-{
-
-    int amount,total_amount=0;
-    do{
-        printf("\nEnter Amount");
-        scanf("%d",&amount);
-        if(amount>0)
-        {
-            total_amount=total_amount+amount;
-            printf("\nCumilative Amount=%d",total_amount);
-        }
-    }while(amount>0);
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 14 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">9 Print Line using While loop/For Loop </h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//for loop
-//we can also write using while also
-#include &lt;stdio.h&gt;
-int main()
-{
-
-    int size_of_line,i;
-    printf("Enter size_of_line value");
-    scanf("%d",&size_of_line);
-   /* i=1;
-    while(i<=size_of_line)
-    {
-        printf("-");
-        i++;
-    }*/
-    for(i=1;i<=size_of_line;i++)
-    {
-       printf("-"); 
-    }
-    
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 15 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">10 Prime number Program  Model 1</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-
-//Prime number Program model 1
-#include &lt;stdio.h&gt;
-int main()
-{
-
-    int isPrime=0,num,i;
-    printf("Enter any number");
-    scanf("%d",&num);
-    for(i=1;i<=num;i++)
-    {
-        if(num%i==0)
-        {
-            isPrime++;
-        }
-    }   
-    if(isPrime==2)
-    {
-        printf("This is Prime Number %d",num);
-    }
-    else
-    {
-        printf("This  is Not Prime Number %d",num);
-    }
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 16 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">11 Prime Number Program Model 2</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Prime number Program model 2
-#include &lt;stdio.h&gt;
-int main()
-{
-    int isPrime=0,num,i;
-    printf("Enter any number");
-    scanf("%d",&num);
-    for(i=2;i&lt;num;i++)
-    {
-        if(num%i==0)
-        {
-            isPrime++;
+            case 1:
+            System.out.println("A+B=" + (a+b));
             break;
+            case 2:
+            System.out.println("A-B=" + (a-b));
+            break;
+            case 3:
+            System.out.println("AXB=" + (a*b));
+            break;
+            case 4:
+            System.out.println("A/B=" + (a/b));
+            break;
+            case 5:
+            System.out.println("A%B=" + (a%b));
+            break;
+            default:
+            System.out.println("Your Exit");
         }
-    }   
-    if(isPrime==0)
-    {
-        printf("This is Prime Number %d",num);
+        }while(c<=5);
+        
+
     }
-    else
-    {
-        printf("This  is Not Prime Number %d",num);
-    }
-    return 0;
 }
             </code>
         </pre>
         </div>
       </div>
-       <!-- Program 17 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">12 Number Pattern using For Loop</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-/*
-1 
-12 
-123
-1234
-12345
-*/
-#include &lt;stdio.h&gt;
-
-int main()
-{
-  int n,i,j;
-  printf("Enter n value");
-  scanf("%d",&n);
-  for(i=1;i<=n;i++)
-  {
-      for(j=1;j<=i;j++)
-      {
-          //printf("%2d",i);//it set 2 digits width
-          printf("* ");
-      }
-      printf("\n");
-  }
-
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 18 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">13 Full Number Pattern</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-
-/*
-1 
-12 
-123
-1234
-12345
-1234
-123 
-12
-1
-*/
-#include &lt;stdio.h&gt;
-
-int main()
-{
-  int n,i,j;
-  printf("Enter n value");
-  scanf("%d",&n);
-  for(i=1;i<=n;i++)
-  {
-      for(j=1;j<=i;j++)
-      {
-          //printf("%2d",i);//it set 2 digits width
-          printf("* ");
-      }
-      printf("\n");
-  }
-  for(i=n-1;i>=1;i--)
-  {
-      for(j=1;j<=i;j++)
-      {
-          //printf("%2d",i);//it set 2 digits width
-          printf("* ");
-      }
-      printf("\n");
-  }
-
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 19 -->
+       <!-- Program 1 -->
         <h1>Arrays</h1>
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1. One Dimensional Array</h5>
+          <h5 class="mb-0">1 One Dimensional Array Example</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-#include &lt;stdio.h&gt;
-int main()
+import java.util.*;
+class Prog1
 {
-  int a[20],n,i;
-  printf("Enter n values");
-  scanf("%d",&n);
-  printf("Enter %d elements",n);
-  for(i=0;i<n;i++)
-  {
-      scanf("%d",&a[i]);
-  }
-  printf("\nThe Elements are in Original Order ");
-  for(i=0;i<n;i++)
-  {
-      printf("%2d",a[i]);
-  }
-   printf("\nThe Elements are in Reverse Order ");
-    for(i=n-1;i>=0;i--)
-  {
-      printf("%2d",a[i]);
-  }
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 20 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 One Dimensional Array</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Take n numbers and print those at the same time print above average numbers
-#include &lt;stdio.h&gt;
-
-int main()
-{
-  int a[20],n,i,sum=0,avg;
-  printf("Enter n values");
-  scanf("%d",&n);
-  printf("Enter %d elements",n);
-  for(i=0;i&lt;n;i++)
-  {
-      scanf("%d",&a[i]);
-      sum=sum+a[i];
-  }
-  printf("\nThe Given Numbers are ");
-  for(i=0;i&lt;n;i++)
-  {
-      printf("%3d",a[i]);
-  }
-  printf("\nThe Above Numbers sum is %d",sum);
-  avg=sum/n;
-  printf("\nThe Above Numbers Average is %d",avg);
-  printf("\nThe Above Average Numbers are ");
-    for(i=0;i&lt;n;i++)
-  {
-      if(a[i]>avg)
-      {
-      printf("%3d",a[i]);
-      }
-  }
-  
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-      <!-- Program 21 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Two Dimensional Array</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Two Dimensional Array Example
-#include &lt;stdio.h&gt;
-int main()
-{
- int mat[5][5],r,c,i,j;
- printf("Enter row and columns values");
- scanf("%d%d",&r,&c);
- printf("Enter %dX%d Matrix values",r,c);
- for(i=0;i&lt;r;i++)
- {
-     for(j=0;j&lt;c;j++)
-     {
-         scanf("%d",&mat[i][j]);
-     }
- }
-  printf("\nThe Matrix is \n");
-   for(i=0;i&lt;r;i++)
- {
-     for(j=0;j&lt;c;j++)
-     {
-         printf("%3d",mat[i][j]);
-     }
-     printf("\n");
- }
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 22 -->
-        <h1>Got ... Switch .. Case .. Break</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 A Simple Goto Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//1 A Simple Goto Example
-#include &lt;stdio.h&gt;
-int main()
-{
-int n,i;
-printf("Enter n value");
-scanf("%d",&n);
-i=1;
-A:
-printf("\n%dX%d=%d",n,i,n*i);
-i++;
-if(i<=10) goto A;
-
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 23 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Nested Goto Statements Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Nested Goto Statements Example
-#include &lt;stdio.h&gt;
-int main()
-{
-int min,max,i;
-printf("Enter min,max value");
-scanf("%d%d",&min,&max);
-
-A:   i=1;
-B:   printf("\n%dX%d=%d",min,i,min*i);
-     i++;
-     if(i<=10) goto B;
-C:   min++;
-     if(min%2==0) goto C;
-if(min<=max) goto A;
-
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 24 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Switch..Case..Break Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Switch..Case..Break Example
-#include &lt;stdio.h&gt;
-int main()
-{
-
-int a,b,c;
-printf("Enter a,b values");
-scanf("%d%d",&a,&b);
-printf("\n1.Addition");
-printf("\n2.Subtraction");
-printf("\n3.Multiplication");
-printf("\n4.Division");
-printf("\n5.Modulus");
-printf("\n6.Exit");
-printf("\nEnter your choice ..");
-scanf("%d",&c);
-switch(c)
-{
-    case 1:
-    printf("\nA+B=%d",a+b);
-    break;
-    case 2:
-    printf("\nA-B=%d",a-b);
-    break;
-    case 3:
-    printf("\nAXB=%d",a*b);
-    break;
-    case 4:
-    printf("\nA/B=%d",a/b);
-    break;
-    case 5:
-    printf("\nA%B=%d",a%b);
-    break;
-    default:
-    printf("\nYour Exit the Program.");
-    
-}
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 25 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 Switch..Case..Goto Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Switch..Case..Goto Example
-#include &lt;stdio.h&gt;
-
-int main()
-{
-int a,b,c;
-printf("Enter a,b values");
-scanf("%d%d",&a,&b);
-printf("\n1.Addition");
-printf("\n2.Subtraction");
-printf("\n3.Multiplication");
-printf("\n4.Division");
-printf("\n5.Modulus");
-printf("\n6.Exit");
-A:
-printf("\nEnter your choice ..");
-scanf("%d",&c);
-switch(c)
-{
-    case 1:
-    printf("\nA+B=%d",a+b);
-    //break;
-    goto A;
-    case 2:
-    printf("\nA-B=%d",a-b);
-    //break;
-    goto A;
-    case 3:
-    printf("\nAXB=%d",a*b);
-    //break;
-    goto A;
-    case 4:
-    printf("\nA/B=%d",a/b);
-    //break;
-    goto A;
-    case 5:
-    printf("\nA%B=%d",a%b);
-    //break;
-    goto A;
-    default:
-    printf("\nYour Exit the Program.");
-    
-}
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 26 -->
-        <h1>String Built in Functions</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Read String information and print those</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-// Read String information and print those
-#include &lt;stdio.h&gt;
-int main()
-{
-
- char name[20],course[15],city[20];
- printf("Enter Name");
- scanf("%s",name);
- printf("Enter course");
- scanf("%s",course);
- printf("Enter city");
- scanf("%s",city);
- printf("\nName:%s",name);
- printf("\nCourse:%s",course);
- printf("\nCity:%s",city);
- 
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 27 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Read n names and print those </h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Read n names and print those
-#include &lt;stdio.h&gt;
-int main()
-{
-int n,i;
-char names[30][20];
-    printf("\nEnter n value");
-    scanf("%d",&n);
-    for(i=0;i&lt;n;i++)
+    public static void main(String args[])
     {
-        scanf("%s",names[i]);
+        /*int a[],n,i;*/
+        int[] a;
+        int n,i;
+
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter array size");
+        n=in.nextInt();
+        a=new int[n]; //Re initilization array
+        System.out.println("Enter " + n + " Elements");
+        for(i=0;i&lt;n;i++)
+        {
+            a[i]=in.nextInt();
+        }
+        System.out.println("The Elements are");
+        for(i=0;i&lt;n;i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println("\nThe Elements in Reverse is ");
+        for(i=n-1;i>=0;i--)
+        {
+            System.out.print(a[i] + " ");
+        }
     }
-    for(i=0;i&lt;n;i++)
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 2 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2 Two Dimensional Array Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+import java.util.*;
+class Prog2
+{
+    public static void main(String args[])
     {
-        printf("\n%d. %s",i+1,names[i]);
+        int a[][],r,c,i,j;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter r,c values");
+        r=in.nextInt();
+        c=in.nextInt();
+        a=new int[r][c];
+        System.out.println("Enter " + r + "X" + c + " Matrix values");
+        for(i=0;i&lt;r;i++)
+        {
+            for(j=0;j&lt;c;j++)
+            {
+                a[i][j]=in.nextInt();
+            }
+        }
+        System.out.println("The Matrix is ");
+        for(i=0;i&lt;r;i++)
+        {
+            for(j=0;j&lt;c;j++)
+            {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println("");
+        }
     }
-    return 0;
 }
             </code>
         </pre>
         </div>
       </div>
-       <!-- Program 28 -->
+
+       <!-- Program 1 -->
+        <h1>Functions</h1>
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 strupr() , strlwr(), strrev(), strlen(), strcpy(), strcat()</h5>
+          <h5 class="mb-0">1 No Arguments pass and No Return value</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//string upper using strupr();
-//string lower using strlwr();
-//string length using strlen();
-//string copy using strcpy();
-//string concatanation using strcat();
-//string reverse using strrev();
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-int main()
+//No Arguments Pass and No Return values
+import java.util.*;
+class Prog1
 {
-    char name[20],copy_name[20];
-    printf("Enter any Name");
-    scanf("%s",name);
-    strcpy(copy_name,name);
-    printf("\nOriginal:%s",name);
-    printf("\nUppercase:%s",strupr(name));
-    printf("\nLowercase:%s",strlwr(name));
-    printf("\nReverse:%s",strrev(name));
-    printf("\nLength:%d",strlen(name));
-    printf("\n%s",copy_name);
-    printf("\n%s",strcat(copy_name," Garu"));
-
-    return 0;
+    public static void area()
+    {
+        float r,pi=3.1416f,a;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter radius value");
+        r=in.nextFloat();
+        a=pi*r*r;
+        System.out.println(r + " Area is " + a);
+    }
+    public static void main(String args[])
+    {
+        int n,i;
+       Scanner in=new Scanner(System.in);
+        System.out.println("Enter n value");
+        n=in.nextInt();
+        for(i=1;i&lt;=n;i++)
+        {
+            area();
+        }
+    }
 }
+
             </code>
         </pre>
         </div>
       </div>
-       <!-- Program 29 -->
+       <!-- Program 2 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 String Comparision (strcmp()) Example</h5>
+          <h5 class="mb-0">2 Arguments Pass but No Return value</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//Password match example using String Comparision using strcmp()
-#include &lt;stdio.h&gt;
-int main()
+import java.util.*;
+class Prog2
 {
-    int a,b,c;
-    float amount=4500.50;
-    printf("Enter a,b,c values"); //prompt message
-    scanf("%d",&a); //reading data
-    scanf("%d",&b);
-    scanf("%d",&c);
-    printf("A=%d B=%d C=%d",a,b,c); //out put
-    printf("\nAmount=%.2f",amount); //.2f means it shows only 2 decimals
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 30 -->
-        <h1>Function and its Types</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1. No arguments pass and No return values</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-#include &lt;stdio.h&gt;
-#define PI 3.1416//global declaration 
-//No Arguments pass but No Return values
-int main()
-{
- int n,i;
- printf("Enter n value");
- scanf("%d",&n);
- for(i=1;i<=n;i++)
- {
- area();   
- }
-
-    return 0;
-}
-area()
-{
-    float r,a;
-    printf("\nEnter radius value");
-    scanf("%f",&r);
-    a=PI*r*r;
-    printf("\n%f area is %f",r,a);
+    public static void area(float r)
+    {
+        float pi=3.1416f,a;
+        a=pi*r*r;
+        System.out.println(r + " Area is " + a);
+    }
+    public static void main(String args[])
+    {
+        int n,i;
+        float r;
+       Scanner in=new Scanner(System.in);
+        System.out.println("Enter n value");
+        n=in.nextInt();
+        for(i=1;i&lt;=n;i++)
+        {
+            System.out.println("Enter Radius value");
+            r=in.nextFloat();
+            area(r);
+        }
+    }
 }
 
             </code>
         </pre>
         </div>
       </div>
-       <!-- Program 31 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Arguments pass but No Return value</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//2 Arguments pass but No Return value
-#include &lt;stdio.h&gt;
-#define PI 3.1416//global declaration 
-//Arguments pass but No Return values
-int main()
-{
- float r;
- printf("Enter radius value");
- scanf("%f",&r);
- area(r);
-    return 0;
-}
-area(r)
-float r;
-{
-    float a;
-    a=PI*r*r;
-    printf("\n%f area is %f",r,a);
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 32 -->
+       <!-- Program 3 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
           <h5 class="mb-0">3 Arguments pass and Return value</h5>
@@ -1336,1031 +601,1548 @@ float r;
         <div class="card-body">
           <pre>
             <code>
-#include &lt;stdio.h&gt;
-#define PI 3.1416//global declaration 
-//Arguments pass but No Return values
-int main()
-{
- float r;
- int n,i;
- printf("Enter n value");
- scanf("%d",&n);
- for(i=1;i<=n;i++)
- {
- printf("\nEnter radius value");
- scanf("%f",&r);
- area(r);   
- }
 
-    return 0;
-}
-area(r)
-float r;
-{
-    float a;
-    a=PI*r*r;
-    printf("\n%f area is %f",r,a);
-}
 
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 33 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 No Arguments pass but Return value</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//No arguments  and return value
-#include &lt;stdio.h&gt;
-#define PI 3.1416
-int main()
+import java.util.*;
+class Prog3
 {
-    float area,cal_area();
-    int n,i;
-    printf("Enter n value");
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    public static float area(float r)
     {
-        area=cal_area();
-        printf(" area is %f",area);
+        float pi=3.1416f,a;
+        a=pi*r*r;
+        return(a);
     }
-    return 0;
-}
-
-float cal_area()
-{
-    float a,r;
-    printf("\nEnter radius value");
-    scanf("%f",&r);
-    a=PI*r*r;
-    printf("\n%f",r);
-    return(a);
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 34 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 One Dimensional Arrays using Functions</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Functions with one dimensional Array
-#include &lt;stdio.h&gt;
-#define PI 3.1416
-int main()
-{
-    int a[20],n,read_array(),display_array();
-    printf("enter n value");
-    scanf("%d",&n);
-    read_array(a,n);
-    display_array(a,n);
-    
-    return 0;
-}
-int read_array(int x[20],int size)
-{
-  int i;
- for(i=0;i&lt;size;i++)
- {
-     printf("\nEnter %d value",i+1);
-     scanf("%d",&x[i]);
- }
-return 0;
-}
-int display_array(int x[20],int  size)
-{
-    int i;
- for(i=0;i&lt;size;i++)
- {
-     printf("%2d",x[i]);
- }  
-return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 35 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">6 Two Dimensional Arrays using Functions</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Functions with Two dimensional Array
-#include &lt;stdio.h&gt;
-#define PI 3.1416
-int main()
-{
-    int a[20][20],r,c,read_array(),display_array();
-    printf("enter row and column value");
-    scanf("%d%d",&r,&c);
-    read_array(a,r,c);
-    display_array(a,r,c);
-    
-    return 0;
-}
-int read_array(int a[20][20],int r,int c)
-{
-  int i,j;
-  printf("\nEnter %dX%d Matrix values",r,c);
- for(i=0;i&lt;r;i++)
- {
-     for(j=0;j&lt;c;j++)
-     {
-         scanf("%d",&a[i][j]);
-     }
-     
- }
-return 0;
-}
-int display_array(int a[20][20],int  r,int c)
-{
-    int i,j;
- for(i=0;i&lt;r;i++)
- {
-     for(j=0;j&lt;c;j++)
-     {
-         printf("%3d",a[i][j]);
-     }
-     printf("\n");
-     
- }
-return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 37 -->
-        <h1>Structures</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1. Structure using Global Declaration</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Structure using Global Declaration
-#include &lt;stdio.h&gt;
-// A similar data type of information can be store into single variable is called arrays
-// A different data type of elements can be store into a single variable is called structure
-//Global Declration
-struct Student
-{
-    int code;
-    char name[20];
-    char course[11];
-};
-int main()
-{
-    //initialization
-    struct Student stu={100,"Sreee","C Language"};
-    printf("\nCode:%d",stu.code);
-    printf("\nName:%s",stu.name);
-    printf("\nCourse:%s",stu.course);
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 38 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Structures using Local Declration</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//2 Structures using Local Declration
-#include &lt;stdio.h&gt;
-int main()
-{
-    //local declration
-    //initialization
-struct 
-{
-    int code;
-    char name[20];
-    char course[11];
-}student={100,"Sreee","C Language"};
-    
-    
-    printf("\nCode:%d",student.code);
-    printf("\nName:%s",student.name);
-    printf("\nCourse:%s",student.course);
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 39 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Create multiple instances using Structures</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Create multiple instances using Structures
-#include &lt;stdio.h&gt;
-struct Student
-{
-    int code;
-    char name[20];
-    char course[11];
-};
-
-int main()
-{
-    struct Student stu1,stu2;
-    printf("enter stu1 code name course");
-    scanf("%d%s%s",&stu1.code,stu1.name,stu1.course);
-    printf("enter stu2 code name course");
-    scanf("%d%s%s",&stu2.code,stu2.name,stu2.course);
-    printf("\nStudent 1 Details:");
-    printf("\nCode:%d",stu1.code);
-    printf("\nName:%s",stu1.name);
-    printf("\nCourse:%s",stu1.course);
-    printf("\nStudent 2 Details:");
-    printf("\nCode:%d",stu2.code);
-    printf("\nName:%s",stu2.name);
-    printf("\nCourse:%s",stu2.course);
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 40 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 Structures with Arrays</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Structures with Arrays
-#include &lt;stdio.h&gt;
-//structures with arrays
-struct Student
-{
-    int code;
-    char name[20];
-    char course[11];
-};
-
-int main()
-{
-    struct Student student[20];
-    int n,i;
-    printf("Enter how many memeber data you want to enter");
-    scanf("%d",&n);
-    for(i=0;i&lt;n;i++)
+    public static void main(String args[])
     {
-    printf("enter stu%d code name course",i+1);
-    scanf("%d%s%s",&student[i].code,student[i].name,student[i].course); 
+        int n,i;
+        float r,a;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter n value");
+        n=in.nextInt();
+        for(i=1;i&lt;=n;i++)
+        {
+            System.out.println("Enter Radius value");
+            r=in.nextFloat();
+            a=area(r);
+            System.out.println(r + " Area is " + a);
+        }
     }
-    printf("\nCode Name               Course");
-    for(i=0;i&lt;n;i++)
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 4 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">4 No Arguments pass but Return value </h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+// No Arguments Pass But  Return values
+import java.util.*;
+class Prog4
+{
+    public static float area()
     {
-    printf("\n%-5d%-20s%-11s",student[i].code,student[i].name,student[i].course); 
+        float r,pi=3.1416f,a;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter Radius value");
+        r=in.nextFloat();
+        a=pi*r*r;
+        System.out.print(r);
+        return(a);
     }
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 41 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Structures with Substructures</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//structures with Substructures
-struct Student
-{
-    int code;
-    char name[20];
-    char course[11];
-    struct 
+    public static void main(String args[])
     {
-        char area[20];
-        char city[20];
-        char state[20];
-    }address;
-};
-
-int main()
-{
-    struct Student student;
-    printf("Enter code name course");
-    scanf("%d%s%s",&student.code,student.name,student.course);
-    printf("Enter area,city,state");
-    scanf("%s%s%s",student.address.area,student.address.city,student.address.state);
-    printf("\nCode:%d",student.code);
-    printf("\nName:%s",student.name);
-    printf("\nCourse:%s",student.course);
-    printf("\nArea:%s",student.address.area);
-    printf("\nCity:%s",student.address.city);
-    printf("\nState:%s",student.address.state);
-
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 42 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">6 Structures Using Functions</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Structures Using Functions
-#include &lt;stdio.h&gt;
-
-#include <stdio.h>
-struct Employee
-{
-    int code;
-    char name[20];
-    float salary;
-};
-int main()
-{
-    struct Employee emp,updateSal();
-    printf("Enter employee Code Name Salary");
-    scanf("%d%s%f",&emp.code,emp.name,&emp.salary);
-    printf("\nCode;%d\nName:%s\nSalary:%.2f",emp.code,emp.name,emp.salary);
-    emp=updateSal(emp);
-    printf("\nCode;%d\nName:%s\nSalary:%.2f",emp.code,emp.name,emp.salary);
-
-    return 0;
-}
-struct Employee updateSal(temp_emp)
-struct Employee temp_emp;
-{
-    float salary;
-    printf("How much salary you want add ");
-    scanf("%f",&salary);
-    temp_emp.salary=temp_emp.salary+salary;
-    return (temp_emp);
-}
-
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 43 -->
-        <h1>Pointers</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1. Pointers Basic Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Pointers Basic Example
-#include &lt;stdio.h&gt;
-int main()
-{
-int a,b,*p,*q;
-printf("Enter a,b values");
-scanf("%d%d",&a,&b);
-printf("\nA=%d B=%d",a,b);
-p=&a;
-q=&b;
-printf("\nA=%d B=%d ",p,q);
-printf("\nP=%d Q=%d ",&p,&q);
-printf("\nA=%d B=%d ",*p,*q);
-printf("\nA=%d B=%d ",&a,&b);
-printf("\nP=%d Q=%d ",p,q);
-   return 0;
-}
-
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 44 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Pointers Arithmatic</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Pointers Artithmatic
-#include &lt;stdio.h&gt;
-int main()
-{
-int a,b,*p,*q;
-printf("Enter a,b values");
-scanf("%d%d",&a,&b);
-p=&a;
-q=&b;
-printf("\nA+B=%d",(*p)+(*q));
-printf("\nA-B=%d",(*p)-(*q));
-printf("\nA*B=%d",(*p)*(*q));
-printf("\nA/B=%d",(*p)/(*q));
-printf("\nA mod B=%d",(*p)%(*q));
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 45 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Pointers Using Structure</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Pointers Using Structures
-#include &lt;stdio.h&gt;
-int main()
-{
-struct 
-{
-    int code;
-    char name[20];
-}*emp;
-printf("Enter Code Name");
-scanf("%d%s",&emp->code,emp->name);
-printf("\nCode:%d\nName:%s",emp->code,emp->name);
-return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 46 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 Pointers Using One Dimensional Array</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Pointers One dimensional
-#include &lt;stdio.h&gt;
-int main()
-{
-int *a,n,i;
-printf("Enter n value");
-scanf("%d",&n);
-for(i=0;i&lt;n;i++)
-{
-    scanf("%d",(a+i));
-}
-printf("\nThe Numbers are ");
-for(i=0;i&lt;n;i++)
-{
-    printf("%3d",*(a+i));
-}
-return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 47 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Pointers Using Two Dimensional Array</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Pointers Using Two Dimensional Array
-#include &lt;stdio.h&gt;
-
-int main()
-{
-int *a[10][10],r,c,i,j;
-printf("Enter r,c value");
-scanf("%d%d",&r,&c);
-for(i=0;i&lt;r;i++)
-{
-    for(j=0;j&lt;c;j++)
-    {
-      scanf("%d",*(a+i)+j);  
+        int n,i;
+        float a;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter n value");
+        n=in.nextInt();
+        for(i=1;i<=n;i++)
+        {
+            a=area();
+            System.out.println(" Area is " + a);
+        }
     }
-    
-}
-printf("\nThe Numbers are\n");
-for(i=0;i&lt;r;i++)
-{
-     for(j=0;j&lt;c;j++)
-    {
-      printf("%3d",*(*(a+i)+j));  
-    }
-    printf("\n");
-}
-return 0;
 }
 
             </code>
         </pre>
         </div>
       </div>
-       <!-- Program 48 -->
-        <h1>Files</h1>
+       <!-- Program 1 -->
+        <h1>Functions Overloading</h1>
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Create File (Chracter by Character)</h5>
+          <h5 class="mb-0">1 Functions Overloading Example</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//1 Create File (Chracter by Character)
-#include &lt;stdio.h&gt;
-FILE *fp;
-main()
-{
-char fname[11],c;
-clrscr();
-printf("\nEnter your filename");
-scanf("%s",fname);
-fp=fopen(fname,"w");
-while((c=getchar())!=EOF)
-{
-putc(fp,c);
-}
-fclose(fp);
-printf("\nFile Successfully Created");
-getch();
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 49 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Read File Character by Character</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
-// Read File Character by Character
-#include &lt;stdio.h&gt;
-FILE *fp;
-main()
-{
-char fname[11],c;
-clrscr();
-printf("\nEnter your filename");
-scanf("%s",fname);
-fp=fopen(fname,"r");
-while((c=getchar())!=EOF)
-{
-putc(c,fp);
-}
-fclose(fp);
-printf("\nFile Successfully Appended");
-getch();
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 50 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Append File Character by Character</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Append File Character by Character
-#include &lt;stdio.h&gt;
-FILE *fp;
-main()
-{
-char fname[11],c;
-clrscr();
-printf("\nEnter your filename");
-scanf("%s",fname);
-fp=fopen(fname,"a");
-while((c=getchar())!=EOF)
-{
-putc(fp,c);
-}
-fclose(fp);
-printf("\nFile Successfully Created");
-getch();
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-      <!-- Program 51 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 Create a file using Structure Based Data</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Create a file using Structure Based Data
-#include &lt;stdio.h&gt;
-FILE *fp;
-struct Employee
-{
-int code;
-char name[20];
-long int salary;
-}
-main()
-{
-struct Employee emp;
-char fname[11];
-clrscr();
-printf("Enter your file name");
-scanf("%s",fname);
-fp=fopen(fname,"w");
-do
-{
-printf("\nEnter Code");
-scanf("%d",&emp.code);
-if(emp.code>0)
-{
-printf("\nEnter Name and Salary");
-scanf("%s",emp.name);
-scanf("%ld",&emp.salary);
-fprintf(fp,"\n%-5d%-20s%-10ld",emp.code,emp.name,emp.salary);
-}
-}while(emp.code>0);
-fclose(fp);
-getch();
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 52 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Read a file using Structure Based Data</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Create a file using Structure Based Data
-#include &lt;stdio.h&gt;
-FILE *fp;
-struct Employee
-{
-int code;
-char name[20];
-long int salary;
-}
-main()
-{
-struct Employee emp;
-char fname[11];
-clrscr();
-printf("Enter your file name");
-scanf("%s",fname);
-fp=fopen(fname,"r");
-while((fscanf(fp,"%d%s%ld",&emp.code,emp.name,&emp.salary))!=EOF)
-{
-printf("\n%-5d%-20s%-10ld",emp.code,emp.name,emp.salary);
-}
-fclose(fp);
-getch();
-}
-
-
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 53 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">6 Appending  a file using Structure Based Data</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//2 Data Input and output Example
-#include &lt;stdio.h&gt;
-FILE *fp;
-struct Employee
-{
-int code;
-char name[20];
-long int salary;
-}
-main()
-{
-struct Employee emp;
-char fname[11];
-clrscr();
-printf("Enter your Existing file name");
-scanf("%s",fname);
-fp=fopen(fname,"r");
-do
-{
-printf("\nEnter Code");
-scanf("%d",&emp.code);
-if(emp.code>0)
-{
-printf("\nEnter Name and Salary");
-scanf("%s",emp.name);
-scanf("%ld",&emp.salary);
-fprintf(fp,"\n%-5d%-20s%-10ld",emp.code,emp.name,emp.salary);
-}
-}while(emp.code>0);
-fclose(fp);
-getch();
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-
-       <!-- Program 57 -->
-          <h1>'C' Language Interview Question and Answers</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Count digits in a numbers</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Count digits in a numbers
-#include &lt;stdio.h&gt;
-int main()
-{
-    int n,count=0;
-    printf("etner any number");
-    scanf("%d",&n);
-    while(n!=0)
-    {
-       count++;
-        n=n/10;
-    }
-    printf("Length of Above Number :%d" ,count);
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 58 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Factorial Using Recursion</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-              //Factorial Using Recursion
-#include &lt;stdio.h&gt;
-int fact(int x)
-{
-    if(x==0)
-    {
-        return 1;
-    }
-    printf("\n%d",x);
-    return x*fact(x-1);
-}
-int main()
-{
-  int n;
-  printf("Enter n value");
-  scanf("%d",&n);
-  printf("\n%dact is %d",n,fact(n));
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 59 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Fibonacci using Loop</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-#include &lt;stdio.h&gt;
 /*
-Fibonacci using Loop
-F(0)=0
-F(1)=1
-F(n)=F(n-1)+F(n-2)
+Functions Overloading ?
+The function name is the common and the parameters is different is called a 
+functions overloading
 */
 
-int main()
+import java.util.*;
+class Prog1
 {
-  int n,a=0,b=1,c,i;
-  printf("Enter n value");
-  scanf("%d",&n);
-  for(i=1;i&lt;=n;i++)
+    public static int sum(int a,int b)
+    {
+        return(a+b);
+    }
+    public static int sum(int a,int b,int c)
+    {
+        return(a+b+c);
+    }
+    public static int sum(int a,int b,int c,int d)
+    {
+        return(a+b+c+d);
+    }
+    public static float sum(int a,float b)
+    {
+        return(a+b);
+    }
+    public static float sum(float a,int b)
+    {
+        return(a+b);
+    }
+    public static float sum(float a,float b)
+    {
+        return(a+b);
+    }
+    public static void main(String args[])
+    {
+    int a,b,c,d;
+    float e,f;
+    Scanner in=new Scanner(System.in);
+    System.out.println("Enter any four Integers");
+    a=in.nextInt();
+    b=in.nextInt();
+    c=in.nextInt();
+    d=in.nextInt();
+    System.out.println("Enter any two Float numbers");
+    e=in.nextFloat();
+    f=in.nextFloat();
+    System.out.println("A+B=" + sum(a,b));
+    System.out.println("A+B+C=" + sum(a,b,c));
+    System.out.println("A+B+C+D=" + sum(a,b,c,d));
+    System.out.println("A+E=" + sum(a,e));
+    System.out.println("E+A=" + sum(e,a));
+    System.out.println("E+F=" + sum(e,f));
+    }
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 1 -->
+        <h1>OOPS</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 Simple Class Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*
+What is the Class ?
+The combination state and behaviour of the object is called class
+What is the Object ?
+A instance of the class is called object
+*/
+import java.util.*;
+class Student
+{
+    int code;
+    String name;
+    String course;
+    public void setStudent(int intcode,String strname,String strcourse)
+    {
+        code=intcode;
+        name=strname;
+        course=strcourse;
+    }
+    public void showStudent()
+    {
+        System.out.println("Code   : " +code);
+        System.out.println("Name   : " +name);
+        System.out.println("Course : " +course);
+    }
+}
+class Prog1
+{
+    public static void main(String args[])
+    {
+        Student student1=new Student();
+        int code;
+        String name,course;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter Code Name Course");
+        code=in.nextInt();
+        name=in.next();
+        course=in.next();
+        student1.setStudent(code,name,course);
+        Student student2=new Student();
+        System.out.println("Enter Code Name Course for Student 1");
+        code=in.nextInt();
+        name=in.next();
+        course=in.next();
+        student2.setStudent(code,name,course);
+        student1.showStudent();
+        student2.showStudent();
+    }
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 2-->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2 Direct Members access in Class Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*if your using private keyword with in the class memebers we can't 
+access out side of the class other then private it can access*/
+
+import java.util.*;
+class Person
+{
+    int code;
+    String name;
+    String course;
+}
+class Prog2
+{
+    public static void main(String args[])
+    {
+        Person person=new Person();
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter Code Name Course");
+        person.code=in.nextInt();
+        person.name=in.next();
+        person.course=in.next();
+        System.out.println("Code : " + person.code);
+        System.out.println("Name : " + person.name);
+        System.out.println("Course : " + person.course);
+    }
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 1 -->
+        <h1>Constructors</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 Constructor Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+
+/*
+What is the Constructor ?
+The constructor can initialize the class members
+note: whenever we instantiated the class then automatically the constructor
+executed
+
+Rules:
+    1)The constructor name must be a class name
+    2)No return type in constructors
+Types of Constructors:
+    1)Default constructor(With out parameters or arguments)
+    2)Parameterised constructor( With parameters or arguments)
+
+Overloading Construrctor:
+    if you are using default constructor and parameterised constructor
+    using a single class i.e overloading construcotrs
+
+*/
+
+
+import java.util.*;
+class Employee
+{
+    int code;
+    String name;
+    String desig;
+    Employee()
+    {
+        code=100;
+        name="SrinivasaRao.K";
+        desig="Engg";
+    }
+    public void setEmployee(int code,String name,String desig)
+    {
+        this.code=code;
+        this.name=name;
+        this.desig=desig;
+    }
+    public void showEmployee()
+    {
+        System.out.println("Code  : " + code);
+        System.out.println("Name  : " + name);
+        System.out.println("Desig : " + desig);
+    }
+}
+class Prog1
+{
+public static void main(String args[])
+{
+    int code;
+    String name,desig;
+    Scanner in=new Scanner(System.in);
+    Employee employee=new Employee();
+    employee.showEmployee();
+    
+    System.out.println("Enter code name desig");
+    code=in.nextInt();
+    name=in.next();
+    desig=in.next();
+ 
+    employee.setEmployee(code,name,desig);
+    employee.showEmployee();
+}
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 2 -->
+        
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2. Default and Parameterised Constructors</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*Default Contructor and Parameterised Constructor*/
+import java.util.*;
+class Employee
+{
+    int code;
+    String name;
+    String desig;
+    Employee()//default constructor
+    {
+        code=100;
+        name="SrinivasaRao.K";
+        desig="Engg";
+    }
+    Employee(int code,String name,String desig)//parameterised constructor
+    {
+        this.code=code;
+        this.name=name;
+        this.desig=desig;
+    }
+    public void setEmployee(int code,String name,String desig)
+    {
+        this.code=code;
+        this.name=name;
+        this.desig=desig;
+    }
+    public void showEmployee()
+    {
+        System.out.println("Code  : " + code);
+        System.out.println("Name  : " + name);
+        System.out.println("Desig : " + desig);
+    }
+}
+class Prog2
+{
+public static void main(String args[])
+{
+    int code;
+    String name,desig;
+    Scanner in=new Scanner(System.in);
+    System.out.println("Enter code name desig");
+    code=in.nextInt();
+    name=in.next();
+    desig=in.next();
+    Employee employee=new Employee();//default constructor
+    employee.showEmployee();
+    employee.setEmployee(code,name,desig);
+    employee.showEmployee();
+    Employee employee1=new Employee(102,"Durrga","CSC");
+    //parameterised constructor
+    employee1.showEmployee();
+    employee1.setEmployee(code,name,desig);
+    employee1.showEmployee();
+}
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 20 -->
+        <h1>Inheritance</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 Single Inheritance</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*
+What is Inheritance?
+A relation between the Parent class and Child class is called inheritance
+or
+A Mechanisam between the Base class and derived class is called inhertinace
+
+Single Inheritance
+*/
+import java.util.*;
+class Father
+{
+    int fcode;
+    String fname;
+    Father(int fcode,String fname)
+    {
+        this.fcode=fcode;
+        this.fname=fname;
+    }
+
+}
+class Child extends Father
+{
+int code;
+String name;
+Child(int fcode,String fname,int code,String name)
+{
+    super(fcode,fname);
+    this.code=code;
+    this.name=name;
+}
+void showDetails()
+{
+    System.out.println("Father Code " + fcode);
+    System.out.println("Father Name " + fname);
+    System.out.println("Child Code " + code);
+    System.out.println("Child Name " + name);
+
+}
+}
+
+class Prog1
+{
+    public static void main(String args[])
+    {
+        int fcode,code;
+        String fname,name;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter Father Code and Name");
+        fcode=in.nextInt();
+        fname=in.next();
+        System.out.println("Enter Child Code and Name");
+        code=in.nextInt();
+        name=in.next();
+        Child child =new Child(fcode,fname,code,name);
+        child.showDetails();
+    }
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+      <!-- Program 2 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2 Multi Level Inheritance</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*Multilevel Inheritance*/
+import java.util.*;
+class GFather
+{
+    int gcode;
+    String gname;
+    GFather(int gcode,String gname)
+    {
+        this.gcode=gcode;
+        this.gname=gname;
+    }
+
+}
+class Father extends GFather
+{
+    int fcode;
+    String fname;
+    Father(int gcode,String gname,int fcode,String fname)
+    {
+        super(gcode,gname);
+        this.fcode=fcode;
+        this.fname=fname;
+    }
+
+}
+class Child extends Father
+{
+int code;
+String name;
+Child(int gcode,String gname,int fcode,String fname,int code,String name)
+{
+    super(gcode,gname,fcode,fname);
+    this.code=code;
+    this.name=name;
+}
+void showDetails()
+{
+    System.out.println("GFather Code " + gcode);
+    System.out.println("GFather Name " + gname);
+    System.out.println("Father Code " + fcode);
+    System.out.println("Father Name " + fname);
+    System.out.println("Child Code " + code);
+    System.out.println("Child Name " + name);
+
+}
+}
+
+class Prog2
+{
+    public static void main(String args[])
+    {
+        int gcode,fcode,code;
+        String gname,fname,name;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter GFather Code and Name");
+        gcode=in.nextInt();
+        gname=in.next();
+        System.out.println("Enter Father Code and Name");
+        fcode=in.nextInt();
+        fname=in.next();
+        System.out.println("Enter Child Code and Name");
+        code=in.nextInt();
+        name=in.next();
+        Child child =new Child(gcode,gname,fcode,fname,code,name);
+        child.showDetails();
+    }
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 3 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">3 Hirarchical Inheritance Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*Hirarchical Inheritance*/
+import java.util.*;
+class Father 
+{
+    int fcode;
+    String fname;
+    Father(int fcode,String fname)
+    {
+        this.fcode=fcode;
+        this.fname=fname;
+    }
+
+}
+class Child1 extends Father
+{
+int code;
+String name;
+Child1(int fcode,String fname,int code,String name)
+{
+    super(fcode,fname);
+    this.code=code;
+    this.name=name;
+}
+void showDetails()
+{
+    System.out.println("Father Code " + fcode);
+    System.out.println("Father Name " + fname);
+    System.out.println("Child Code " + code);
+    System.out.println("Child Name " + name);
+
+}
+}
+class Child2 extends Father
+{
+int code;
+String name;
+Child2(int fcode,String fname,int code,String name)
+{
+    super(fcode,fname);
+    this.code=code;
+    this.name=name;
+}
+void showDetails()
+{
+    System.out.println("Father Code " + fcode);
+    System.out.println("Father Name " + fname);
+    System.out.println("Child Code " + code);
+    System.out.println("Child Name " + name);
+
+}
+}
+
+
+class Prog3
+{
+    public static void main(String args[])
+    {
+        int fcode,code1,code2;
+        String fname,name1,name2;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter Father Code and Name");
+        fcode=in.nextInt();
+        fname=in.next();
+        System.out.println("Enter Child1 Code and Name");
+        code1=in.nextInt();
+        name1=in.next();
+        System.out.println("Enter Child2 Code and Name");
+        code2=in.nextInt();
+        name2=in.next();
+        Child1 child1 =new Child1(fcode,fname,code1,name1);
+        Child2 child2 =new Child2(fcode,fname,code2,name2);
+        child1.showDetails();
+        child2.showDetails();
+    }
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 1 -->
+        <h1>Abstract Classes</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 Abstract Class Example1 </h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*
+Polymorphisam
+method overridding
+multiple Inheritance
+
+Abstract Classes
+The abstract class inside can accept ordinary methods
+                                      ordinary variables
+                                      Abstract methods(Declaration only)
+                                      Final variables
+Note:Every abstract class before we must type abstract keyword
+
+Interfaces
+No need of to abstract key bofore the class name why becuase by default
+all Interfaces are declared as abstract Classes
+The interfaces can accept Static final varibales and
+abstract methods(Declaration only)
+*/
+import java.util.*;
+abstract class Bike
+{
+  abstract void getBenifit();
+}
+class Honda extends Bike
+{
+void getBenifit()
+{
+System.out.println("Honda Running Smoothly");
+}
+}
+class Bajaj extends Bike
+{
+void getBenifit()
+{
+System.out.println("Bajaj  Gives More Milage");
+}
+}
+class Bullet extends Bike
+{
+void getBenifit()
+{
+System.out.println("Bullet is More Power like (350 cc)");
+}
+}
+
+class Prog1
+{
+public static void main(String args[])
+{
+int choice;
+Scanner in=new Scanner(System.in);
+do
+{
+System.out.println("Enter Your Choice(Honda-1,Bajaj-2,Bullet-3,Others-[4-9])");
+choice=in.nextInt();
+if(choice==1)
+{
+ Bike honda = new Honda();
+ honda.getBenifit();
+}
+else if(choice==2)
+	 {
+	 Bike baja= new Bajaj();
+	 baja.getBenifit();
+	 }
+	else if(choice==3)
+		{
+		 Bike bullet= new Bullet();
+		 bullet.getBenifit();
+		}
+		else
+		{
+		System.out.println("Your Selection is out Range");
+		}
+
+}while(choice>0 && choice&lt;=3);
+}
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 2 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2 Abstract Class Example 2</h5>
+        </div>
+        <div class="card-body">
+          <pre>
+            <code>
+import java.util.*;
+abstract class Area
+{
+  String cname;
+  abstract float getArea(float param1,float param2);
+  public void showName()
   {
-      printf("%d ",a);
-      c=a+b;
-      a=b;
-      b=c;
-      
+  cname="KKCC INFO SYSTEMS";
+  System.out.println(cname);
+  }
+}
+class Rectangle extends Area
+{
+float getArea(float  l,float w)
+{
+return(l*w);
+}
+}
+class Circle extends Area
+{
+float getArea(float r,float r1)
+{
+return(3.1416f*r*r);
+}
+}
+
+class Prog2
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+ Area rectangle = new Rectangle();
+ Area circle= new Circle();
+float a,r;
+int l,w;
+System.out.println("Enter l,w values");
+l=in.nextInt();
+w=in.nextInt();
+a= rectangle.getArea(l,w);
+rectangle.showName();
+System.out.println("Rectangle Area = " + a);
+System.out.println("Enter Radius value");
+r=in.nextFloat();
+circle.showName();
+a=circle.getArea(r,0f);
+System.out.println("Circle Area = " +a);
+}
+}
+
+         </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 1 -->
+        <h1>Interfaces</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 Interface Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+import java.util.*;
+// interfaces are allowed only static final variables and abstract methods
+// all interfaces are declared by default as abstract
+interface  Area
+{
+public float getArea(float l,float w);
+public static final String objname="KKCC INFO SYSTEMS";
+}
+class Rectangle  implements Area
+{
+public float getArea(float  l,float w)
+{
+return(l*w);
+}
+}
+class Circle  implements Area
+{
+public float getArea(float r,float r1)
+{
+return(3.1416f*r*r);
+}
+}
+class Square implements Area
+{
+public float getArea(float l,float w)
+{
+return(l*w);
+}
+}
+class Prog3
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+ Area rectangle = new Rectangle();
+ Area circle= new Circle();
+ Area square=new Square();
+float l,w,r,a;
+
+System.out.println("Enter l,w values");
+l=in.nextFloat();
+w=in.nextFloat();
+a= rectangle.getArea(l,w);
+System.out.println("Rectangle Area = " + a);
+System.out.println("Object Name=" + rectangle.objname);
+
+System.out.println("Enter Radius values");
+r=in.nextFloat();
+a=circle.getArea(r,0.0f);
+System.out.println("Circle Area = " + a);
+System.out.println("Object Name=" + circle.objname);
+
+System.out.println("Enter Side values");
+l=in.nextFloat();
+a=square.getArea(l,l);
+System.out.println("Square Area ="+ a);
+System.out.println("Object Name=" + square.objname);
+}
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 2 -->
+        
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2 Interface Example 2</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+
+interface Comp
+{
+public static final String objname="KKCC INFO SYSTEMS";
+}
+interface  Area extends Comp
+{
+public float getArea(float a,float b);
+}
+
+class Rectangle  implements Area
+{
+public float getArea(float  l,float w)
+{
+return(l*w);
+}
+}
+class Circle  implements Area
+{
+public float getArea(float r,float r1)
+{
+return(3.1416f*r*r);
+}
+}
+class Prog4
+{
+public static void main(String args[])
+{
+Area rectangle = new Rectangle();
+Area circle= new Circle();
+float a;
+a= rectangle.getArea(5,6);
+System.out.println("Rectangle Area = " + a);
+System.out.println("Object Name=" + rectangle.objname);
+a=circle.getArea(4.56f,0f);
+System.out.println("Circle Area = " + a);
+System.out.println("Object Name=" + circle.objname);
+}
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 1 -->
+        <h1>Built-in Functions</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 String Functions </h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+//String Functions Example
+import java.util.*;
+class Prog1
+{
+public static void main(String args[])
+{
+String name;
+Scanner in=new Scanner(System.in);
+int p;
+name="Hellow How Are You";
+System.out.println("Enter Which position character you want print");
+p=in.nextInt();
+System.out.println(name.charAt(p));
+System.out.println(name.compareTo("hellow How Are You"));
+System.out.println(name.compareToIgnoreCase("HELLOW HOW ARE YOU"));
+System.out.println(name.concat(" Srinivas"));
+System.out.println("Kunchala, ".concat(name));
+System.out.println(name.toLowerCase());
+System.out.println(name.toUpperCase());
+}
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 2 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">2 Password Comparision Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+import java.util.*;
+class Prog2
+{
+public static void main(String args[])
+{
+String pwd,rpwd;
+int cnt,r;
+cnt=1;
+Scanner in=new Scanner(System.in);
+do {
+  System.out.println("Enter Password  : ");
+  pwd=in.next();
+  System.out.println("Re-Type Password : ");
+  rpwd=in.next();
+  r=pwd.compareTo(rpwd);
+  if(r==0)
+  {
+    System.out.println("Passwors is Success");
+  }
+  else
+  {
+    System.out.println("Password Not Match Try Again !");
+  }
+  cnt+=1;
+} while (r!=0 && cnt<=3);
+
+if(r!=0 && cnt>0)
+{
+  System.out.println("Your Attempts is completed. Try again after 30 Minutes!");
+}
+}
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 3 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">3 Character and String functions</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+class Prog3
+{
+  public static void main(String args[])
+  {
+    String name="SrinivasaRao",name1="   SrinivasaRao   ";
+    System.out.println(name.length());
+    System.out.println(name.charAt(0));
+    System.out.println(name.indexOf('S'));
+    System.out.println(name.substring(3));
+    System.out.println(name.substring(3,6));
+    System.out.println(name.toLowerCase());
+    System.out.println(name.toUpperCase());
+    System.out.println("Rama is a good boy".replace("good","bad"));
+    System.out.println(name.equals("SrinivasaRao"));
+    System.out.println(name.equalsIgnoreCase("srinivasarao"));
+    System.out.println(name.concat(" Garu"));
+    System.out.println(name1.trim());
+    System.out.println(name.endsWith("Rao"));
+    System.out.println(name.startsWith("Sri"));
+
+  }
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 4 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">4 String Tokenizer</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+
+//String Tokens
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Prog4 {
+    public static void main(String args[]) {
+        String name;
+        Scanner in = new Scanner(System.in);
+        name = in.nextLine();
+        StringTokenizer st = new StringTokenizer(name);
+        while (st.hasMoreTokens()) {
+            System.out.println(st.nextToken());
+        }
+
+    }
+}
+
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 5 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">5 Math Functions</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*Math Functions*/
+
+class Prog5
+{
+  public static void main(String args[])
+  {
+    int a = 28,b= 4;
+    double r;
+    System.out.println("Maximum number of a and b is: " + Math.max(a, b));
+    r= Math.sqrt(b);
+    System.out.println("Square root of b is: " +r);
+    System.out.println("Power of x and b is: " + Math.pow(a, b));
+    System.out.println("Logarithm of a is: " + Math.log(a));
+    System.out.println("Logarithm of b is: " + Math.log(b));
+    System.out.println("log10 of a is: " + Math.log10(a));
+    System.out.println("log10 of b is: " + Math.log10(b));
+    System.out.println("log1p of a is: " + Math.log1p(a)); // return the log of x + 1
+    System.out.println("exp of a is: " + Math.exp(a));
+    System.out.println("expm1 of a is: " + Math.expm1(a));  // return (a power of 2)-1
+
+  }
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 6 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">6 Math Conversion Functions</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+class Prog6
+{
+  public static void main(String args[])
+  {
+    double angle=30;
+    System.out.println("Degree to Radiuns is: " + Math.toRadians(angle));// converting values to radian
+    System.out.println("Degree to Radiuns is: " + Math.round(Math.toRadians(angle)));// converting values to radian
+    System.out.println("Sine value of a is: " + Math.sin(angle));
+    System.out.println("Cosine value of a is: " +Math.cos(angle));
+    System.out.println("Tangent value of a is: " +Math.tan(angle));
+    System.out.println("A Sine value of a is: " +Math.asin(angle));
+    System.out.println("A Cosine value of a is: " +Math.acos(angle));
+    System.out.println("A Tangent value of a is: " +Math.atan(angle));
+    System.out.println("H Sine value of a is: " +Math.sinh(angle));
+    System.out.println("H Cosine value of a is: " +Math.cosh(angle));
+    System.out.println("H Tangent value of a is: " +Math.tanh(angle));
+
+  }
+}
+
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 7 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">7 Math Formatting Functions</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+
+import java.text.DecimalFormat;
+class Prog7
+{
+	public static DecimalFormat df=new DecimalFormat("00.000");
+  public static void main(String args[])
+  {
+    double d=456.55656;
+
+    System.out.println("Absolute value of a is: " + Math.abs(-456));// converting values to radian
+    System.out.println("Max value of a is: " +Math.max(45,56));
+    System.out.println("Min value of a is: " +Math.min(45,56));
+    System.out.println("SQrt value of a is: " +Math.sqrt(12));
+    System.out.println("Cubic Root value of a is: " +Math.cbrt(12));
+    System.out.println("power value of a is: " +Math.pow(2,2));
+    System.out.println("sign value of a is: " +Math.signum(-456));
+    System.out.println("Ceil value of a is: " +Math.ceil(45.56f));
+    System.out.println("Floor value of a is: " +Math.floor(45.56f));
+	System.out.println("Round" + df.format(d));
+  }
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+
+       <!-- Program 1 -->
+        <h1>Vectors</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">1 Vector Example</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+import java.util.*;
+class Prog1
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+int i,n,p;
+String name[],element;
+Vector vector=new Vector();
+System.out.println("Enter n vaule");
+n=in.nextInt();
+System.out.println("Enter " + n + " Elements");
+for(i=0;i&lt;n;i++)
+{
+  element=in.next();
+  vector.addElement(element);
+}
+
+for(i=0;i&lt;vector.size();i++)
+{
+System.out.println((i + 1) + ")" + vector.elementAt(i));
+}
+
+System.out.println("Which position you want add element");
+p=in.nextInt();
+element=in.next();
+vector.insertElementAt(element,p);
+
+System.out.println("After Inserting  Elements are");
+for(i=0;i&lt;vector.size();i++)
+{
+System.out.println((i + 1) + ")" + vector.elementAt(i));
+}
+System.out.println("Which position you want remove element");
+p=in.nextInt();
+vector.removeElementAt(p);
+System.out.println("After Removing  Elements are");
+for(i=0;i&lt;vector.size();i++)
+{
+System.out.println((i + 1) + ")" + vector.elementAt(i));
+}
+name=new String[vector.size()];
+vector.copyInto(name);
+vector.removeAllElements();
+System.out.println("The String elements are");
+for(i=0;i&lt;name.length;i++)
+{
+System.out.println((i+1) + ")" + name[i]);
+}
+}
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 1 -->
+        <h1>Multi Thread</h1>
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">Example 1</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+/*
+What is multithread ?
+multithread is a separate program.
+A Single processor can do the multple programs simultaneously.
+it executes concurrently or parallely depends upon the system speed.
+In Operating system we are calling Multitasking
+In Programming Languages we are calling Multithrading
+
+*/
+class Prog1 extends Thread
+{
+public void run()
+{
+    try
+    {
+        System.out.println("\nMy First Thread is Started");
+        for(int i=1;i&lt;=5;i++)
+        {
+            System.out.println("\ni=" + i);
+            if(i==1 || i==3)
+            {
+            sleep(1000);
+            }
+        }
+        System.out.println("\nThread is Completed");
+    }
+    catch(Exception e)
+    {
+        System.out.println(e);
+    }
+}
+public static void main(String args[])
+{
+Prog1  mt=new Prog1 ();
+mt.start();
+System.out.println("The Above thread is started");
+}
+
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+       <!-- Program 2 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">Example 2</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+
+class Count extends Thread {
+  Count() {
+    start();
   }
 
-    
-    return 0;
+  public void run() {
+    try {
+      for (int i = 0; i &lt; 10; i++) {
+        System.out.println("Printing the count " + i);
+        Thread.sleep(1000);
+      }
+    } catch (InterruptedException e) {
+      System.out.println("my thread interrupted");
+    }
+    System.out.println("Thread run is Complete");
+  }
 }
+
+class Prog2 {
+  public static void main(String args[]) {
+    Count cnt = new Count();
+    // cnt.start();
+    try {
+      while (cnt.isAlive()) {
+        System.out.println("Thread will be alive till the child thread is live");
+        Thread.sleep(3000);
+      }
+    } catch (InterruptedException e) {
+      System.out.println("Main thread interrupted");
+    }
+    System.out.println("Main thread's run is over");
+  }
+}
+
             </code>
         </pre>
         </div>
       </div>
-       <!-- Program 60 -->
+       <!-- Program 3 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Find Second Large Number</h5>
+          <h5 class="mb-0">Example 3</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//Find Second Large Number
-#include &lt;stdio.h&gt;
-int main()
+
+class MultiThread implements Runnable
+/*class MultiThread  extends Thread*/
 {
-    int a[100],n,max,smax,i;
-    printf("Enter n value");
-    scanf("%d",&n);
-    printf("Enter %d Numbers",n);
-    for(i=0;i&lt;n;i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    max=smax=-9999;
-    for(i=0;i&lt;n;i++)
-    {
-        if(a[i]>max)
-        {
-            smax=max;
-            max=a[i];
-        }
-        else if(a[i]>smax && a[i]!=max)
-        {
-            smax=a[i];
-        }
-    }
-    printf("Second Largest Number %d",smax);
-    return 0;
+public void run()
+{
+try
+{
+System.out.println("Thread is in running Start.");
+for(int i=1;i&lt=5;i++)
+{
+System.out.println("I=" + i);
+Thread.sleep(1000);
 }
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
+class Prog3
+{
+public static void main(String args[])
+{
+MultiThread mt=new MultiThread();
+Thread newobj =new Thread(mt);
+/*MultiThread newobj=new MultiThread();*/
+newobj.start();
+ }
+}
+
             </code>
         </pre>
         </div>
       </div>
+       <!-- Program 4 -->
       <div class="card shadow mb-2">
         <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Prime Number Check</h5>
+          <h5 class="mb-0">Exampl 4 Runnable</h5>
         </div>
 
         <div class="card-body">
           <pre>
             <code>
-//Prime Number Check
-#include &lt;stdio.h&gt;
-int main()
+
+class Count implements Runnable
+//class Count extends Thread
 {
-    int n,count=0,i;
-    printf("etner any number");
-    scanf("%d",&n);
-   for(i=2;i&lt;n;i++)
-    {
-       if(n%i==0)
-       {
-           count++;
-       }
-    }
-    if(count==0)
-    {
-      printf("Prime")  ;
-    }
-    else
-    {
-        printf("Not Prime");
-    }
-    
-    return 0;
+Thread mythread=new Thread(this, "Child Thread");
+Count()
+{
+mythread.start();
 }
-            </code>
-        </pre>
-        </div>
-      </div>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Reverse Number</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//Reverse Number
-#include &lt;stdio.h&gt;
-int main()
-{
-    int n,rev=0,r;
-    printf("etner any number");
-    scanf("%d",&n);
-    while(n!=0)
-    {
-        r=n%10;
-        rev=(rev*10)+r;
-        n=n/10;
-    }
-    printf("Reverse of Above Number :%d" ,rev);
-    
-    return 0;
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">String length with out using function</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-//String length with out using function
-#include &lt;stdio.h&gt;
-
-int main()
-{
-   char name[20];
-   int len=0;
-   printf("Enter any String ");
-   scanf("%s",name);
-   while(name[len]!='\0')
+   public void run()
    {
-       len++;
+      try
+      {
+        for (int i=0 ;i&lt;10;i++)
+        {
+          System.out.println("Printing the count " + i);
+          Thread.sleep(1000);
+        }
+     }
+     catch(InterruptedException e)
+     {
+        System.out.println("my thread interrupted");
+     }
+     System.out.println("mythread run is over" );
    }
-   printf("\nString Length is %d",len);
-    return 0;
 }
+class Prog4
+{
+    public static void main(String args[])
+    {
+       Count cnt = new Count();
+      //  Thread mythread=new Thread(cnt);
+      //  mythread.start();
+       try
+       {
+          while(cnt.mythread.isAlive())
+          {
+            System.out.println("Thread will be alive till the child thread is live");
+            Thread.sleep(3000);
+          }
+       }
+       catch(InterruptedException e)
+       {
+          System.out.println("Thread interrupted");
+       }
+       System.out.println("Thread run is over" );
+    }
+}
+
             </code>
         </pre>
         </div>
       </div>
+       <!-- Program 5 -->
+      <div class="card shadow mb-2">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">5 Thread Priority</h5>
+        </div>
+
+        <div class="card-body">
+          <pre>
+            <code>
+class ThreadA extends Thread
+{
+public void run()
+{  
+try
+{
+System.out.println("\nThread A is running Start.");
+for(int i=1;i&lt;=5;i++)
+{
+System.out.println("\nThread A=" + i);
+}
+System.out.println("\nThread A Closed");
+}
+catch(Exception e)
+{
+    System.out.println(e);
+}
+}
+}
+class ThreadB extends Thread
+{
+public void run()
+{
+try
+{
+System.out.println("\nThread B is running Start.");
+for(int i=1;i&lt;=5;i++)
+{
+System.out.println("\nThread B=" + i);
+}
+System.out.println("\nThread B Closed");
+}
+catch(Exception e)
+{
+}
+}
+}
+class ThreadC extends Thread
+{
+public void run()
+{
+try
+{
+System.out.println("\nThread C is running Start.");
+for(int i=1;i&lt;=5;i++)
+{
+System.out.println("\nThread C=" + i);
+}
+System.out.println("\nThread C Closed");
+}
+catch(Exception e)
+{
+}
+}
+}
+class Prog5
+{
+public static void main(String args[])
+{
+try
+{
+ThreadA a=new ThreadA();
+ThreadB b=new ThreadB();
+ThreadC c=new ThreadC();
+a.setPriority(Thread.MIN_PRIORITY);
+b.setPriority(Thread.MAX_PRIORITY);
+c.setPriority(Thread.NORM_PRIORITY);
+System.out.println(a.getPriority());
+System.out.println(b.getPriority());
+System.out.println(c.getPriority());
+a.start();
+b.start();
+c.start();
+}
+catch(Exception ex)
+{
+System.out.println(ex);
+}
+}
+}
+
+            </code>
+        </pre>
+        </div>
+      </div>
+
+
     </div>
 </main>
     <footer id="footer">
