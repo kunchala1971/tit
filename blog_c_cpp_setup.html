@@ -1,0 +1,435 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>C & C++ Compiler Setup Tutorial (GCC/VS Code) | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_c_cpp_setup.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="telugu it tutorials.com" name="keywords" />
+  
+  <meta name="description" content="Easy guide to setting up GCC, MinGW, VS Code, and C/C++ development environment on Windows and Linux." />
+
+  <!-- Primary Keywords -->
+  <meta name="keywords"
+    content="Telugu IT Tutorials, IT training in Telugu, Telugu web development tutorials, Full stack development courses in Telugu, Online coding classes in Telugu, Programming tutorials Telugu, ReactJS tutorials in Telugu, Node.js course in Telugu, SpringBoot tutorials Telugu, Git and Docker training in Telugu, SQL courses for beginners Telugu, HTML CSS JavaScript in Telugu, Best Telugu online coding institute, Interview Q&A preparation Telugu" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta property="og:description"
+    content="Learn programming in Telugu with live virtual courses on React, Node.js, SQL, Git, Docker & more. Lifetime access + 100% job placement support." />
+  <meta property="og:url" content="https://teluguittutorials.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://teluguittutorials.com/images/banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta name="twitter:description"
+    content="Master full-stack development in Telugu with lifetime access & job support. Courses include HTML, CSS, JavaScript, React, Node.js, SQL." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/images/banner.jpg" />
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+        <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg wow fadeInUp" style="padding-top: 60px; padding-bottom: 60px;">
+      <article class="blog-post-card">
+
+        <!-- Post Header -->
+        <header class="post-header">
+          <span class="post-tag">Developer Setup Guide</span>
+          <h1>C/C++ Development Environment Setup Guide</h1>
+          <p>Visual Studio Code & MinGW (MSYS2) Setup Guide — Telugu & English Versions</p>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content">
+
+          <!-- TELUGU VERSION POST SECTION -->
+          <section class="lang-section" id="telugu-guide">
+            <h2 class="section-heading">📌 C/C++ Environment Setup for VS Code (తెలుగు మార్గదర్శి)</h2>
+            <p class="intro-desc">ఈ గైడ్ ద్వారా మీ కంప్యూటర్‌లో C/C++ కంపైలర్ (MinGW) మరియు VS Code ని సరిగ్గా సెటప్
+              చేసుకోవచ్చు.</p>
+
+            <!-- Step 1 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">1</span>
+                <span>మొదటి దశ (Step 1): MSYS2 డౌన్‌లోడ్ చేయడం</span>
+              </div>
+              <ul class="step-list">
+                <li>ముందుగా <strong>msys2.org</strong> వెబ్‌సైట్‌కి వెళ్ళండి.</li>
+                <li>అక్కడ ఉన్న ఇన్స్టాలర్ లింక్ <code>msys2-x86_64-20260611.exe</code> ని డౌన్‌లోడ్ చేసుకోండి.</li>
+              </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">2</span>
+                <span>రెండవ దశ (Step 2): MSYS2 ఇన్స్టాల్ చేయడం & టూల్‌చైన్ అమర్చడం</span>
+              </div>
+              <ul class="step-list">
+                <li>డౌన్‌లోడ్ అయిన ఫైల్‌పై రైట్-క్లిక్ చేసి <strong>Run as Administrator</strong> ని ఎంచుకోండి.</li>
+                <li><strong>గమనిక:</strong> ఇన్స్టాలేషన్ ప్రాసెస్ మొత్తం ఎలాంటి సెట్టింగ్స్ మార్చకుండా డిఫాల్ట్
+                  ఆప్షన్స్‌తోనే సరిపెట్టండి (Next నొక్కుతూ వెళ్ళండి).</li>
+                <li>ఇన్స్టాలేషన్ పూర్తయ్యాక, ఆటోమేటిక్‌గా MSYS2 టెర్మినల్ ఓపెన్ అవుతుంది.</li>
+                <li>ఆ టెర్మినల్‌లో క్రింది కమాండ్‌ను పేస్ట్ చేసి Enter నొక్కండి:</li>
+              </ul>
+              <div class="command-card">pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain</div>
+              <ul class="step-list">
+                <li>స్క్రీన్ పై ఆప్షన్లు అడిగినప్పుడు <strong>3</strong> టైప్ చేసి Enter నొక్కండి (GCC కోసం).</li>
+                <li>ఆ తర్వాత ఇన్స్టాలేషన్ కొనసాగించడానికి <strong>y</strong> అని టైప్ చేసి Enter నొక్కండి.</li>
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">3</span>
+                <span>మూడవ దశ (Step 3): ఎన్విరాన్మెంట్ వేరియబుల్స్ (PATH) సెట్ చేయడం</span>
+              </div>
+              <ul class="step-list">
+                <li>కంప్యూటర్ ఎక్కడి నుంచైనా కంపైలర్‌ను గుర్తుపట్టడానికి <strong>Environment Variables</strong> ని ఓపెన్
+                  చేయండి.</li>
+                <li>System Variables విభాగంలో <strong>Path</strong> ని ఎంచుకుని, <strong>Edit</strong> పై క్లిక్ చేయండి.
+                </li>
+                <li><strong>New</strong> నొక్కి, క్రింది పాత్‌ను యాడ్ చేసి OK నొక్కండి:</li>
+              </ul>
+              <div class="path-card">C:\msys64\ucrt64\bin</div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">4</span>
+                <span>నాలుగవ దశ (Step 4): VS Code ఇన్స్టాలేషన్ & ఎక్స్‌టెన్షన్స్</span>
+              </div>
+              <ul class="step-list">
+                <li><strong>code.visualstudio.com</strong> వెబ్‌సైట్ నుండి VS Code డౌన్‌లోడ్ చేసుకోండి.</li>
+                <li>డౌన్‌లోడ్ అయిన ఫైల్‌ను <strong>Run as Administrator</strong> గా ఇన్స్టాల్ చేయండి.</li>
+                <li>VS Code ఓపెన్ చేసి, ఎడమ వైపు ఉన్న Extensions ఐకాన్ పై క్లిక్ చేయండి (లేదా
+                  <code>Ctrl + Shift + X</code> నొక్కండి).</li>
+                <li>క్రింది రెండు ఎక్స్‌టెన్షన్స్‌ను సెర్చ్ చేసి ఇన్స్టాల్ చేసుకోండి:
+                  <ul style="padding-left: 20px; margin-top: 6px;">
+                    <li><strong>C/C++</strong> (by Microsoft)</li>
+                    <li><strong>Code Runner</strong> (by Jun Han)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">5</span>
+                <span>ఐదవ దశ (Step 5): Code Runner టెర్మినల్ సెట్టింగ్</span>
+              </div>
+              <ul class="step-list">
+                <li>ఇన్‌పుట్ డిఫాల్ట్‌గా పనిచేయడానికి (Read-Only సమస్య రాకుండా) ఈ చిన్న సెట్టింగ్ మార్చాలి:</li>
+                <li>VS Code లో సెట్టింగ్స్ ఓపెన్ చేయండి (<code>Ctrl + ,</code>).</li>
+                <li>పైన సెర్చ్ బార్‌లో <strong>Run In Terminal</strong> అని టైప్ చేయండి.</li>
+                <li><strong>Code-runner: Run In Terminal</strong> ఆప్షన్ పక్కన ఉన్న బాక్స్‌ను Check (✓) చేయండి.</li>
+              </ul>
+            </div>
+
+            <!-- Success Box -->
+            <div class="success-card">
+              <span class="icon">🎉</span>
+              <div>
+                <strong>సెటప్ పూర్తయింది!</strong><br>
+                ఇప్పుడు మీరు VS Code లో ఎలాంటి C లేదా C++ ప్రోగ్రామ్‌నైనా ఎలాంటి సమస్యలు లేకుండా సులువుగా రన్
+                చేసుకోవచ్చు.
+              </div>
+            </div>
+          </section>
+
+          <hr style="border: none; border-top: 2px dashed #e2e8f0; margin: 40px 0;">
+
+          <!-- ENGLISH VERSION POST SECTION -->
+          <section class="lang-section" id="english-guide">
+            <h2 class="section-heading">📌 C/C++ Environment Setup for VS Code (English Guide)</h2>
+            <p class="intro-desc">This comprehensive guide will help you install the C/C++ compiler (MinGW via MSYS2)
+              and configure Visual Studio Code for C and C++ development.</p>
+
+            <!-- Step 1 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">1</span>
+                <span>Step 1: Download MSYS2</span>
+              </div>
+              <ul class="step-list">
+                <li>Visit the official website: <strong>msys2.org</strong>.</li>
+                <li>Download the installer file: <code>msys2-x86_64-20260611.exe</code> (or the latest version available
+                  on the page).</li>
+              </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">2</span>
+                <span>Step 2: Install MSYS2 & C/C++ Toolchain</span>
+              </div>
+              <ul class="step-list">
+                <li>Right-click the downloaded executable file and select <strong>Run as Administrator</strong>.</li>
+                <li><strong>Note:</strong> Keep all options at their default settings—simply click Next through the
+                  setup wizard.</li>
+                <li>Once the installation completes, the MSYS2 Terminal will automatically open.</li>
+                <li>Paste the following command into the MSYS2 terminal and press Enter:</li>
+              </ul>
+              <div class="command-card">pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain</div>
+              <ul class="step-list">
+                <li>When prompted to select options, type <strong>3</strong> (for GCC) and press Enter.</li>
+                <li>When asked to proceed with installation, type <strong>y</strong> and press Enter. Wait for the
+                  process to complete.</li>
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">3</span>
+                <span>Step 3: Add Compiler Path to Environment Variables</span>
+              </div>
+              <ul class="step-list">
+                <li>Open the Start Menu, search for "Environment Variables", and open <strong>Edit the system
+                    environment variables</strong>.</li>
+                <li>Click the <strong>Environment Variables...</strong> button at the bottom right.</li>
+                <li>Under System variables, select <strong>Path</strong> and click <strong>Edit...</strong>.</li>
+                <li>Click <strong>New</strong> and paste the following path:</li>
+              </ul>
+              <div class="path-card">C:\msys64\ucrt64\bin</div>
+              <ul class="step-list">
+                <li>Click OK on all open windows to save the changes.</li>
+              </ul>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">4</span>
+                <span>Step 4: Install VS Code & Required Extensions</span>
+              </div>
+              <ul class="step-list">
+                <li>Download VS Code from <strong>code.visualstudio.com</strong>.</li>
+                <li>Right-click the setup file and select <strong>Run as Administrator</strong> to install it.</li>
+                <li>Open VS Code, click the Extensions icon on the left sidebar (or press
+                  <code>Ctrl + Shift + X</code>).</li>
+                <li>Search for and install the following two extensions:
+                  <ul style="padding-left: 20px; margin-top: 6px;">
+                    <li><strong>C/C++</strong> (by Microsoft)</li>
+                    <li><strong>Code Runner</strong> (by Jun Han)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-block">
+              <div class="step-title">
+                <span class="step-number">5</span>
+                <span>Step 5: Configure Code Runner to Run in Terminal</span>
+              </div>
+              <ul class="step-list">
+                <li>To avoid the "Cannot edit in read-only editor" error when taking input via <code>cin</code> or
+                  <code>scanf</code>:</li>
+                <li>Open Settings in VS Code (<code>Ctrl + ,</code>).</li>
+                <li>Search for <strong>Run In Terminal</strong> in the search bar.</li>
+                <li>Locate <strong>Code-runner: Run In Terminal</strong> and check (✓) the box.</li>
+              </ul>
+            </div>
+
+            <!-- Success Box -->
+            <div class="success-card">
+              <span class="icon">🎉</span>
+              <div>
+                <strong>Setup Complete!</strong><br>
+                Your C/C++ environment is fully configured. You can now write and run any C or C++ program in VS Code
+                seamlessly.
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer">
+          <span>Published for C/C++ Developers</span>
+          <span>VS Code + MinGW Setup Guide</span>
+        </footer>
+
+      </article>
+    </section>
+  </main>
+
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>

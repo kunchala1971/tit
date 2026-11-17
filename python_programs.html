@@ -1,15 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Telugu It Tutorials.com</title>
+    <title>Python Programs & Practical Code Examples | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/python_programs.html" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="telugu it tutorials.com" name="keywords" />
-    <meta content="" name="description" />
-    <meta
-      name="description"
-      content="Telugu IT Tutorials offers live virtual full-stack development courses in Telugu (HTML, CSS, JavaScript, React, Node.js, SQL) with 100% job placement support and lifetime access."
-    />
+    
+    <meta name="description" content="Explore practical Python code examples, data structures, automation scripts, and Django setup guides explained step-by-step in Telugu." />
 
     <!-- Primary Keywords -->
     <meta
@@ -68,11 +66,8 @@
 
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
-      crossorigin="anonymous"
-    ></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+     crossorigin="anonymous"></script>
             <style>
             pre {
         background-color: midnightblue;
@@ -85,7 +80,74 @@
         color:white;
       }
     </style>
-  </head>
+  
+    <style>
+      .code-window {
+        background: #1e1e1e;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 30px;
+        border: 1px solid #333;
+      }
+      .code-window-header {
+        background: #2d2d2d;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #111;
+      }
+      .mac-buttons {
+        display: flex;
+        gap: 8px;
+      }
+      .mac-btn {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .close-btn { background: #ff5f56; }
+      .minimize-btn { background: #ffbd2e; }
+      .expand-btn { background: #27c93f; }
+      .code-title {
+        color: #cccccc;
+        font-size: 15px;
+        margin: 0;
+        flex-grow: 1;
+        text-align: left;
+        margin-left: 15px;
+        font-family: 'Consolas', monospace;
+      }
+      .copy-btn {
+        background: #444;
+        border: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .copy-btn:hover {
+        background: #666;
+      }
+      .code-window-body pre {
+        background: transparent !important;
+        margin: 0;
+        padding: 20px;
+        color: #d4d4d4;
+        font-family: 'Consolas', 'Courier New', monospace;
+        font-size: 15px;
+        border: none;
+        overflow-x: auto;
+      }
+    </style>
+
+</head>
 
   <body>
     <header id="header" class="header-scrolled">
@@ -99,8 +161,8 @@
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li class="menu-active"><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="index.html#speakers">Videos</a></li>
             <li class="menu-has-children">
               <a href="articles.html">Interview Q&amp;A</a>
@@ -112,8 +174,8 @@
                 <li><a href="javaQA.html">Java</a></li>
               </ul>
             </li>
-                        <li class="menu-has-children">
-              <a href="#">Code Snipets</a>
+            <li class="menu-has-children">
+              <a class="menu-active" href="c_programs.html">Code Snippets</a>
               <ul>
                 <li><a href="c_programs.html">C Language</a></li>
                 <li><a href="java_programs.html">Java</a></li>
@@ -122,29 +184,44 @@
               </ul>
             </li>
             <li><a href="index.html#courses">Courses</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <!-- <li class="buy-tickets"><a href="index.html#buy-tickets">Register</a></li> -->
           </ul>
         </nav>
         <!-- #nav-menu-container -->
       </div>
     </header>
+
     <!-- #header -->
         <main id="main" style=" padding:10%;">
     <div class="container">
-      <h1>Pythons Basic Programs</h1>
+      <h1>Python Basic Programs &amp; Code Snippets</h1>
+      <p style='font-size:1.1rem; text-align:justify; margin-bottom:20px;'>Dive into our collection of Python programming snippets. Python's simple syntax and readability make it an excellent choice for beginners, while its powerful libraries make it a top language for data science, web development, and automation. The programs below cover essential Python topics including list comprehensions, file handling, string manipulation, and functional programming concepts. Use these examples to quickly master Python programming techniques.</p>
+      
       <!-- Program 1 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">
-            1. Python Comments
-          </h5>
-        </div>
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">1. Comments and Inputs</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Introduces single and multi-line comments in Python, along with how to read user input using the built-in input() function.
+        </p>
 
-        <div class="card-body">
-          <pre>
-            <code>
-#Pythone Single Line comments
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_1.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
+#Python Single Line comments
 """"
 Python Multiline Comments
 """
@@ -152,7 +229,7 @@ Python Multiline Comments
 Python Multiline Comments
 '''
 #Python Input
-name=input("Enter name")#this is input funciton
+name=input("Enter name: ") # input function
 #Python Output Statement
 print(name)
 #by default all inputs in string format
@@ -161,19 +238,54 @@ age=int(input("Enter Age"))
 print(age)
 #it returns the given variable data type
 print(type(age))
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Constant space.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Enter name: John
+Enter Age: 25
+25
+<class 'int'>
+                </div>
+            </div>
         </div>
       </div>
-      <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Python Input/Output Statements</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 2 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">2. Read Multiple Strings</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates taking multiple inputs from a user sequentially and printing them out.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_2.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #Take a person data and print that info(code,name,age,course,city)
 code=input("Enter Code")
 name=input("Enter Name")
@@ -186,23 +298,54 @@ print("Age:"+str(age))
 print("Age:",age)
 print("Course:"+course)
 print("City:"+city)
-
-           
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Enter Code: 101
+Enter Name: Alice
+Enter Age: 22
+...
+                </div>
+            </div>
         </div>
       </div>
-      <!-- Program 1 -->
-       <h1>Data Types</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Data Types</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 3 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">3. Variable Assignment</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Shows how Python automatically infers the data type based on the assigned value (dynamic typing).
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_3.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #if you are assign any data to variables it takes appropriate data type
 code=100
 name="SrinivasaRao"
@@ -223,19 +366,52 @@ print(type([1,2,3,4]))
 print(type((1,2,3,4)))
 print(type({1,2,3,4}))
 print(type({"1":1,"2":2,"3":3,"4":4}))
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Code: 100
+Name: SrinivasaRao
+                </div>
+            </div>
         </div>
       </div>
-      <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Dynamic Inputs</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 4 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">4. Dynamic Input Casting</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Reads strings from the user and explicitly casts them to integers (int) and floating point numbers (float).
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_4.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #dynamically inputs with type cast
 code=int(input("Enter Code"))
 name=input("Enter Name")
@@ -253,20 +429,54 @@ print(type(course))
 print(type(fees))
 print(type(is_active))
 print(type(person_id))
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Enter Code: 102
+Enter Name: Bob
+Enter Age: 30
+...
+                </div>
+            </div>
         </div>
       </div>
-      <!-- Program 1 -->
-       <h1>Variables</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Variables Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 5 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">5. Simple Print Statement</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> The classic first program, demonstrating how to use the print() function to output text to the console.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_5.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #w.a.p to assing values and print string
 print("Welcome to Python First Program") #this is python output statment
 code = 100
@@ -283,22 +493,51 @@ print(type(code))
 print(type(name))
 print(type(place))
 print(type(salary))
-
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Welcome to Python First Program
+                </div>
+            </div>
         </div>
       </div>
-      
-      <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Variables with assign values</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 6 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">6. Multiple Variable Assignments</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Assigns values to variables of various primitive data types and uses print to display them.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_6.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 # w.a.p to assign values and print those
 code = 100
 name = "SrinivasaRao.K"
@@ -314,20 +553,54 @@ print("My Name is " + name)
 print("Place is " + place)
 print("MY code is " + str(code))
 print("My Salary is " + str(salary))
-              </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+100
+SrinivasaRao.K
+Ongole
+8500.0
+                </div>
+            </div>
         </div>
       </div>
 
-       <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Dynamically Type Casting</h5>
-        </div>
+      <!-- Program 7 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">7. Billing Example</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Reads product details, converts numeric inputs to int/float, calculates the total amount, and prints a formatted bill.
+        </p>
 
-        <div class="card-body">
-          <pre>
-            <code>
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_7.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #dynamical type casting
 froot_name=input("Enter Froot Name")
 qty=int(input("Enter Qty"))
@@ -346,20 +619,54 @@ total_amount=int(qty)*float(rate)
 print("Froot Name " + froot_name + " Qty " + qty
       + " Unit Price" + rate + " Total Amount is "
       + str(total_amount))
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Enter Froot Name: Apple
+Enter Qty: 5
+Enter Rate: 2.5
+Amount: 12.5
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>Operators</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Arithmatic Operators</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 8 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">8. Arithmetic Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates standard arithmetic operations in Python including addition, subtraction, multiplication, and power/exponentiation.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_8.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #Arithmatic Operators
 # a=45
 # b=2
@@ -373,20 +680,56 @@ print("A/B=", a/b) # Division
 print("A//B=", a//b) # Rounded to floor
 print("A%B=", a%b) # Moduls
 print("2 Power 8=", 2**8) # Exponentiation**
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Enter a value: 45
+Enter b value: 2
+Addition : 47
+Sub : 43
+Mul : 90
+Power : 2025
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Assignment Operators</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 9 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">9. Assignment Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Illustrates compound assignment operators (+=, -=, *=, /=) to concisely update a variable's value.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_9.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #Assignment Operators
 #exp1=exp1+exp2 => exp1+=exp2
 a=5
@@ -404,19 +747,54 @@ a**=2 #a=a**2
 print(a)
 a%=2 #a=a%2
 print(a)
-         </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+10
+5
+25
+5.0
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Relational operators</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 10 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">10. Relational Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Shows how to compare two values, yielding boolean results (True or False) using equality and inequality checks.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_10.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #Relational operators
 a=45
 b=35
@@ -433,19 +811,56 @@ print(a>b and a>c) #false
 print(a&lt;b and a&lt;c)  #false
 print(a>b or a<c) #true
 print(a>b != a>c) #false
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+False
+True
+False
+True
+False
+True
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 4 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Identity Operator & Membership Operators</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 11 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">11. Identity and Membership Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Uses 'is' and 'is not' to compare memory locations, and 'in' and 'not in' to check for element presence inside collections or strings.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_11.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #Identity Operators
 a=45
 b=35
@@ -456,19 +871,54 @@ print (a is not b) #True
 x=[1,2,3,4,5]
 print (3 in x) #True
 print(3 not in x) #False
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) for membership tests on lists.</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+False
+True
+True
+False
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 5 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">ord() functions</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 12 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">12. String Comparison & ASCII</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Compares strings lexicographically and uses ord() and chr() to convert between characters and their ASCII code representations.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_12.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 print("grape">"apple")
 print("apple">"APPLE")
 
@@ -477,21 +927,55 @@ print(ord("a"))
 print(ord("b"))
 print(ord("A"))
 print(ord("B"))
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+True
+True
+97
+98
+a
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 6 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">ternary Operator</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 13 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">13. If-Else Statements</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Evaluates a condition using an if-else block to control program flow based on boolean logic.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_13.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #ternary Operator
 age=17
 if age >= 18:
@@ -505,19 +989,51 @@ message="Eligible" if age>=18 else "Not Eligible"
 
 print(message)
 print("Eligible" if age>=16 else "Not Eligible")
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Not Eligible
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 7 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">chaining operators</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 14 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">14. Chained Comparison Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates Python's unique ability to chain relational operators directly, e.g., 18 <= age < 65.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_14.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 #chaining operators
 age=34
 if age>= 18  and age<65:
@@ -527,20 +1043,52 @@ if age>= 18  and age<65:
 
 if 18&lt;= age &lt;65:
     print("Eligible")
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Eligible
+Eligible
+                </div>
+            </div>
         </div>
       </div>
-       <!-- Program 8 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">bitwise operators</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 15 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">15. Bitwise Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Performs bit-level operations (AND, OR, NOT, XOR, Shifts) on integer operands.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_15.py</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-python">
 # Python program to show
 # bitwise operators
 a = 10
@@ -554,87 +1102,97 @@ print("a | b =", a | b)
 print("~a =", ~a)
 # print bitwise XOR operation
 print("a ^ b =", a ^ b)
-
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+a & b = 0
+a | b = 14
+~a = -11
+a ^ b = 14
+a >> 1 = 5
+a << 1 = 20
+                </div>
+            </div>
         </div>
       </div>
-    
+
+
 
     </div>
+<div class="container mt-5 mb-5" style="background: #eef2f5; padding: 20px; border-left: 5px solid #28a745;"><h3 style="color:#28a745;">Conclusion & Next Steps</h3><p style="font-size:1.1rem; line-height: 1.6; color: #333;">Python's elegance is shown through these small but powerful programs. Whether you are using Python for data analysis, web development, or automation, understanding these foundational snippets is key. Keep writing Pythonic code and exploring the massive standard library available to you.</p></div>
 </main>
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-info">
-              <h4>TIT</h4>
-              <p>
-                With over 25 years of experience in IT training and development,
-                our institute is dedicated to empowering individuals with the
-                skills and knowledge required to excel in the rapidly evolving
-                tech industry. Led by an expert who has worked with top-tier
-                corporate companies, we offer comprehensive training in both Web
-                and Windows application development.
-              </p>
-            </div>
+      <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
 
-            <div class="col-lg-6 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#about">About us</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#courses">Courses</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="terms.html">Terms of service</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="privacy.html">Privacy policy</a>
-                </li>
-              </ul>
-            </div>
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
 
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                Ongole <br />
-                Andhrapradesh 523 002<br />
-                India <br />
-                <!-- <strong>Phone:</strong> +91 99999 99999<br> -->
-                <strong>Email:</strong>training@telugututorial.com<br />
-              </p>
-
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a href="#" class="google-plus"
-                  ><i class="fa fa-google-plus"></i
-                ></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>TIT@2024</strong>. All Rights Reserved
-        </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
       </div>
-    </footer>
+    </div>
+  </footer>
     <!-- #footer -->
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -655,5 +1213,44 @@ print("a ^ b =", a ^ b)
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
-  </body>
+  
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+  This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our use of cookies. 
+  <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+  <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');" style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got it!</button>
+</div>
+<script>
+  if(!localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+</script>
+
+  
+<script>
+  function copyCode(btn) {
+    const codeWindow = btn.closest('.code-window');
+    const codeBlock = codeWindow.querySelector('code');
+    
+    // Create a temporary textarea to hold the decoded text
+    const textArea = document.createElement('textarea');
+    textArea.innerHTML = codeBlock.innerHTML; // decodes HTML entities
+    const decodedText = textArea.value.trim();
+
+    navigator.clipboard.writeText(decodedText).then(() => {
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<i class="fa fa-check"></i> Copied!';
+      btn.style.background = '#28a745';
+      
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '#444';
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  }
+</script>
+
+</body>
 </html>

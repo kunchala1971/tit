@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Telugu IT Tutorials offers live virtual full-stack development courses in Telugu (HTML, CSS, JavaScript, React, Node.js, SQL) with 100% job placement support and lifetime access." />
+   <meta name="description" content="Master CSS3, Flexbox, CSS Grid, media queries, keyframe animations, and responsive design interview questions with detailed explanations." />
 
   <!-- Primary Keywords -->
   <meta name="keywords" content="Telugu IT Tutorials, IT training in Telugu, Telugu web development tutorials, Full stack development courses in Telugu, Online coding classes in Telugu, Programming tutorials Telugu, ReactJS tutorials in Telugu, Node.js course in Telugu, SpringBoot tutorials Telugu, Git and Docker training in Telugu, SQL courses for beginners Telugu, HTML CSS JavaScript in Telugu, Best Telugu online coding institute, Interview Q&A preparation Telugu" />
@@ -20,7 +20,8 @@
   <meta name="twitter:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
   <meta name="twitter:description" content="Master full-stack development in Telugu with lifetime access & job support. Courses include HTML, CSS, JavaScript, React, Node.js, SQL." />
   <meta name="twitter:image" content="https://teluguittutorials.com/images/banner.jpg" />
-    <title>Telugu It Tutorials.com | CSS Interview Questions and Answers</title>
+    <title>Top CSS3 & Responsive Design Interview Questions | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/cssQA.html" />
 
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon" />
@@ -56,7 +57,33 @@
                 });
             });
         });
+
+        function filterQA() {
+            const query = document.getElementById('qaSearchInput').value.toLowerCase().trim();
+            const qas = document.querySelectorAll('.qa');
+            let visibleCount = 0;
+            qas.forEach(qa => {
+                const text = qa.innerText.toLowerCase();
+                if (!query || text.includes(query)) {
+                    qa.style.display = '';
+                    visibleCount++;
+                } else {
+                    qa.style.display = 'none';
+                }
+            });
+            const countEl = document.getElementById('qaMatchCount');
+            if (countEl) {
+                countEl.innerText = query ? `Found ${visibleCount} matching questions` : `Showing all ${qas.length} questions`;
+            }
+        }
+
+        function toggleAllQA(show) {
+            document.querySelectorAll('.qa .answer').forEach(a => {
+                a.style.display = show ? 'block' : 'none';
+            });
+        }
     </script>
+
   </head>
 
   <body>
@@ -73,8 +100,8 @@
         <nav id="nav-menu-container">
           <ul class="nav-menu">
             <li ><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#speakers">Videos</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#speakers">Videos</a></li>
 
             <li class="menu-has-children">
               <a class="menu-active" href="articles.html">Interview Q&amp;A</a>
@@ -87,7 +114,7 @@
               </ul>
             </li>
             <li class="menu-has-children">
-              <a  href="#">Code Snipets</a>
+              <a href="c_programs.html">Code Snippets</a>
               <ul>
                 <li><a href="c_programs.html">C Language</a></li>
                 <li><a href="java_programs.html">Java</a></li>
@@ -96,8 +123,9 @@
               </ul>
             </li>
 
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#courses">Courses</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 
@@ -107,6 +135,23 @@
 
     <main id="main" style=" padding:10%;">
          <h1>CSS Interview QA</h1>
+<div class="container mb-4" style="background: #f9f9f9; padding: 20px; border-radius: 5px;"><p style="font-size:1.1rem; line-height: 1.6; text-align: justify; color: #444;">Welcome to the CSS interview questions and answers section. CSS (Cascading Style Sheets) is what brings the web to life, allowing developers to design responsive, visually appealing interfaces. In modern web development, mastering CSS means understanding the box model, Flexbox, CSS Grid, animations, and media queries for responsive design. The following questions range from basic styling rules to advanced layout architectures, helping you prove your UI development expertise to potential employers.</p></div>
+
+<div class="card p-3 mb-4 shadow-sm border-0" style="background: #f8fafc; border-left: 4px solid #17a2b8 !important;">
+  <div class="row align-items-center">
+    <div class="col-md-7 mb-2 mb-md-0">
+      <div class="input-group">
+        <span class="input-group-text bg-white border-end-0"><i class="fa fa-search text-info"></i></span>
+        <input type="text" id="qaSearchInput" class="form-control border-start-0" placeholder="Type keyword to filter CSS questions (e.g. flexbox, grid, box-model, specificity)..." onkeyup="filterQA()">
+      </div>
+    </div>
+    <div class="col-md-5 text-md-right text-center">
+      <button type="button" class="btn btn-sm btn-outline-info me-1" onclick="toggleAllQA(true)"><i class="fa fa-plus-circle me-1"></i> Expand All</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleAllQA(false)"><i class="fa fa-minus-circle me-1"></i> Collapse All</button>
+      <div class="small text-muted mt-1" id="qaMatchCount">Search across 50 CSS questions</div>
+    </div>
+  </div>
+</div>
         <div class="qa">
             <div class="question">1. What is CSS?</div>
             <div class="answer">CSS stands for Cascading Style Sheets. It is used to define the layout, colors, fonts, and overall presentation of web pages.</div>
@@ -207,7 +252,6 @@
             <div class="question">25. What are shorthand properties in CSS?</div>
             <div class="answer">Shorthand properties allow you to specify multiple values for a property in a single declaration. For example, &lt;margin&gt; can be written as margin: 10px 20px 30px 40px.</div>
         </div>
-        <!-- Continue adding remaining 25 questions and answers -->
         <div class="qa">
             <div class="question">26. What is the difference between border-box and content-box in the box-sizing property?</div>
             <div class="answer">In content-box, padding and border are added to the element’s width and height, while in border-box, padding and border are included within the element’s width and height.</div>
@@ -309,79 +353,80 @@
             <div class="answer">CSS pre-processors offer features like variables, mixins, nesting, and more, allowing for more maintainable and efficient CSS code.</div>
         </div>
 
-    </main>
+    <div class="container mt-5 mb-5" style="background: #eef2f5; padding: 25px; border-left: 5px solid #17a2b8; border-radius: 6px;">
+      <h3 style="color:#17a2b8; font-weight: 700;">Tips for Technical Interview Success</h3>
+      <p style="font-size:1.1rem; line-height: 1.6; color: #333;">Mastering CSS takes practice and an eye for design. By understanding the intricacies of CSS layouts and responsiveness covered in these questions, you are well on your way to becoming an expert UI developer. Continue experimenting with different layouts and stay updated with the latest CSS specifications.</p>
+      
+      <div class="mt-4 pt-3 border-top">
+        <h5 class="font-weight-bold" style="color: #0e1b4d;">💡 తెలుగులో CSS ఇంటర్వ్యూ ముఖ్య గమనికలు:</h5>
+        <ul style="line-height: 1.8; color: #444;">
+          <li><strong>బాక్స్ మోడల్ (Box Model):</strong> కంటెంట్, ప్యాడింగ్, బోర్డర్, మరియు మార్జిన్ ల మధ్య తేడాలను వివరించడం మరియు <code>box-sizing: border-box</code> ఎందుకు వాడతామో స్పష్టంగా చెప్పాలి.</li>
+          <li><strong>ఫ్లెక్స్‌బాక్స్ vs గ్రిడ్ (Flexbox vs CSS Grid):</strong> వన్-డైమెన్షనల్ లేఅవుట్‌లకు (వరుస లేదా నిలువు) ఫ్లెక్స్‌బాక్స్, టు-డైమెన్షనల్ లేఅవుట్‌లకు గ్రిడ్ సిస్టమ్ ఎంచుకోవాలి.</li>
+          <li><strong>స్పెసిఫిసిటీ రూల్స్ (CSS Specificity):</strong> ఇన్‌లైన్ స్టైల్స్ (1000) &gt; ID (100) &gt; క్లాస్ (10) &gt; ఎలిమెంట్ (1). <code>!important</code> వాడకాన్ని ఎందుకు నివారించాలో తెలుసుకోవాలి.</li>
+        </ul>
+        <p class="mb-0 text-muted small">మా యూట్యూబ్ ఛానెల్‌లో పూర్తి <a href="https://www.youtube.com/playlist?list=PLq_d8fc5zu_P5wY6X39rqI812PqppNX2S" target="_blank" rel="noopener" class="text-danger font-weight-bold">తెలుగు CSS వీడియో ప్లేలిస్ట్‌ను ఇక్కడ చూడండి &rarr;</a></p>
+      </div>
+    </div>
+</main>
 
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-info">
-              <h4>TIT</h4>
-              <p>
-                With over 25 years of experience in IT training and development,
-                our institute is dedicated to empowering individuals with the
-                skills and knowledge required to excel in the rapidly evolving
-                tech industry. Led by an expert who has worked with top-tier
-                corporate companies, we offer comprehensive training in both Web
-                and Windows application development.
-              </p>
-            </div>
+      <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
 
-            <div class="col-lg-6 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#about">About us</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#courses">Courses</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
                 <a href="terms.html">Terms of service</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="privacy.html">Privacy policy</a>
-                </li>
-              </ul>
-            </div>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
 
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                Ongole <br />
-                Andhrapradesh 523 002<br />
-                India <br />
-                <!-- <strong>Phone:</strong> +91 99999 99999<br> -->
-                <strong>Email:</strong>training@telugututorial.com<br />
-              </p>
-
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a href="#" class="google-plus"
-                  ><i class="fa fa-google-plus"></i
-                ></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>TIT@2024</strong>. All Rights Reserved
-        </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
       </div>
-    </footer>
+    </div>
+  </footer>
     <!-- #footer -->
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -402,5 +447,18 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+  
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+  This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our use of cookies. 
+  <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+  <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');" style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got it!</button>
+</div>
+<script>
+  if(!localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+</script>
+
   </body>
 </html>

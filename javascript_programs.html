@@ -1,15 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Telugu It Tutorials.com</title>
+    <title>JavaScript Programs & ES6+ Code Examples | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/javascript_programs.html" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="telugu it tutorials.com" name="keywords" />
-    <meta content="" name="description" />
-    <meta
-      name="description"
-      content="Telugu IT Tutorials offers live virtual full-stack development courses in Telugu (HTML, CSS, JavaScript, React, Node.js, SQL) with 100% job placement support and lifetime access."
-    />
+    
+    <meta name="description" content="Hands-on JavaScript programs covering DOM manipulation, async/await, closures, promises, array methods, and modern ES6+ features." />
 
     <!-- Primary Keywords -->
     <meta
@@ -68,11 +66,8 @@
 
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
-      crossorigin="anonymous"
-    ></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+     crossorigin="anonymous"></script>
             <style>
             pre {
         background-color: midnightblue;
@@ -85,7 +80,74 @@
         color:white;
       }
     </style>
-  </head>
+  
+    <style>
+      .code-window {
+        background: #1e1e1e;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 30px;
+        border: 1px solid #333;
+      }
+      .code-window-header {
+        background: #2d2d2d;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #111;
+      }
+      .mac-buttons {
+        display: flex;
+        gap: 8px;
+      }
+      .mac-btn {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .close-btn { background: #ff5f56; }
+      .minimize-btn { background: #ffbd2e; }
+      .expand-btn { background: #27c93f; }
+      .code-title {
+        color: #cccccc;
+        font-size: 15px;
+        margin: 0;
+        flex-grow: 1;
+        text-align: left;
+        margin-left: 15px;
+        font-family: 'Consolas', monospace;
+      }
+      .copy-btn {
+        background: #444;
+        border: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .copy-btn:hover {
+        background: #666;
+      }
+      .code-window-body pre {
+        background: transparent !important;
+        margin: 0;
+        padding: 20px;
+        color: #d4d4d4;
+        font-family: 'Consolas', 'Courier New', monospace;
+        font-size: 15px;
+        border: none;
+        overflow-x: auto;
+      }
+    </style>
+
+</head>
 
   <body>
     <header id="header" class="header-scrolled">
@@ -99,8 +161,8 @@
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li class="menu-active"><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="index.html#speakers">Videos</a></li>
             <li class="menu-has-children">
               <a href="articles.html">Interview Q&amp;A</a>
@@ -113,7 +175,7 @@
               </ul>
             </li>
             <li class="menu-has-children">
-              <a href="#">Code Snipets</a>
+              <a class="menu-active" href="c_programs.html">Code Snippets</a>
               <ul>
                 <li><a href="c_programs.html">C Language</a></li>
                 <li><a href="java_programs.html">Java</a></li>
@@ -122,7 +184,8 @@
               </ul>
             </li>
             <li><a href="index.html#courses">Courses</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <!-- <li class="buy-tickets"><a href="index.html#buy-tickets">Register</a></li> -->
           </ul>
         </nav>
@@ -133,15 +196,30 @@
     <main id="main" style="padding: 10%">
       <div class="container">
         <h1>Java Script Basics</h1>
-        <!-- Program 1 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">1. JavaScript is Dynamic Data Type Example</h5>
-          </div>
+      <p style='font-size:1.1rem; text-align:justify; margin-bottom:20px;'>Welcome to the JavaScript program snippets section. JavaScript is the backbone of modern web development, allowing you to create dynamic and interactive user interfaces. Here, you'll discover code examples demonstrating core JavaScript features such as DOM manipulation, asynchronous programming (Promises and async/await), ES6+ syntax, and array methods. These snippets are perfect for front-end developers looking to sharpen their coding skills.</p>
+        
+      <!-- Program 1 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">1. Vanilla Javascript (Es5 Below)</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> ECMA (Electronics computer Manufacturer Association)
+        </p>
 
-          <div class="card-body">
-            <pre>
-            <code>
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_1.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 /*
 Vanilla Javascript (ES5 Below)
 ECMA (Electronics computer Manufacturer Association)
@@ -167,20 +245,51 @@ console.log(typeof(studentName));
 var course;
 console.log(course);
 console.log(typeof(course));
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 2 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">2 Let, Var, Const Scopes Example</h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 2 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">2. Let, Const Is Block Scope Variable</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> var global scope variables
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_2.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //let, const is block scope variable
 //var global scope variables
 {
@@ -199,21 +308,52 @@ console.log(typeof(course));
     console.log("Block 2 " + c); 
     console.log("Block 1 " + x);
     // console.log(a);
-}            </code>
-        </pre>
+}
+</code></pre>
           </div>
         </div>
-        <!-- Program 3 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-              3. Hoisting , Reference Error, Undefine Example
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 3 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">3. Hoisting</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Hoisting is a mechanisam of V8Chrom engine
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_3.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Hoisting 
 //Hoisting is a mechanisam of V8Chrom engine
 //It works only ES6 below versions functions
@@ -229,22 +369,51 @@ function sum(a,b)
     return(a+b);
 }
 // const sum=(a,b)=>a+b;
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 4 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             4 Arithmetic Operators
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 4 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">4. Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of operators in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_4.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Operators
 var a=25,b=12,c=2;
 console.log("A+B=",(a+b));
@@ -253,22 +422,51 @@ console.log("A*B=",(a*b));
 console.log("A/B=",(a/b));
 console.log("A%B=",(a%b));
 console.log("A**B=",(a**c));
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 5 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             5 Relational Operators
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 5 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">5. Relational Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of relational operators in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_5.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Relational Operators
 let a=20,b=15,c="15",d=15;
 console.log("A>B",(a>b));//true
@@ -279,23 +477,51 @@ console.log("A!=B",(a!=b));//true
 console.log("B==D",(b==d));//true
 console.log("b==c",(c==d));//true
 console.log("b===c",(c===d));//false
-
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 6 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             6 Logical Operators
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 6 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">6. Logical Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of logical operators in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_6.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Logical Operators
 let a=24,b=34,c=33;
 console.log(a>b && a>c)
@@ -305,22 +531,51 @@ console.log(a>b == a>c)
 console.log(b>a && b>c)
 console.log(b>a || b>c)
 console.log(b>a != b<c)
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 7 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             7 Assignent Operators
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 7 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">7. Assignent Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of assignent operators in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_7.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Assignent Operators
 let a=12,b=2;
 console.log("A=A**B ",a**=b);
@@ -329,22 +584,51 @@ console.log("A=A-B ",a-=b);
 console.log("A=A*B ",a*=b);
 console.log("A=A/B ",a/=b);
 console.log("A=A%B ",a%=b);
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 8 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             8 Incremental and Decremental Operators
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 8 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">8. Incremental And Decremental Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of incremental and decremental operators in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_8.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Incremental and Decremental Operators
 let i = 10;
 console.log(i);
@@ -358,22 +642,51 @@ console.log(i); //the previous operation effect this statement
 console.log(--i);
 console.log(i--);
 console.log(i); //the previous operation effect this statement
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 9 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             9 Bitwise Operators
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 9 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">9. Bitwise Operators</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of bitwise operators in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_9.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Bitwise Operators
 console.log(5&9);
 console.log(5|9);
@@ -381,22 +694,51 @@ console.log(5^9);
 console.log(5&lt;&lt;9);
 console.log(9>>5);
 console.log(15>>>19);
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 10 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             10 tricky Questions
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 10 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">10. Tricky Questions</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of tricky questions in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_10.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //tricky Questions
 console.log(3+3);
 console.log(3+"3");
@@ -417,23 +759,51 @@ console.log(typeof a)
 let b=null;
 console.log(b);
 console.log(typeof b)
-
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 11 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             11 /Let vs Var vs Constant
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 11 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">11. Let Vs Var Vs Constant</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> constans can allow the initialization only declaration time
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_11.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Let vs Var vs Constant
 //constans can allow the initialization only declaration time
 //it can't support re-initialization
@@ -482,22 +852,51 @@ console.log("D=", d);
     console.log("F=", f);
   }
 }
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 12 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             12 Arrays
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 12 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">12. Arrays</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of arrays in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_12.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //Arrays
 let nums=[1,2,3,4,5,6];
 console.log(nums);
@@ -515,21 +914,51 @@ nums.unshift(1);//it adds the element begining of the array
 console.log(nums);
 nums=nums.splice(2,5);//extracts the speicified data
 console.log("After Delete:",nums);
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 13 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             13 Arrays & Loops
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 13 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">13. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_13.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 let nums = [1, 2, 3, 4, 5, 6];
 //Modern For Loop
 for (x in nums) {
@@ -542,45 +971,101 @@ for (let i = 0; i &lt; l; i++) {
 }
 console.log(nums[0]);
 console.log(nums[1]);
-
-
-
-
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-         <!-- Program 14 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             14 tricky Question
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 14 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">14. Tricky Question</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of tricky question in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_14.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //tricky Question
 let x=[1,2];
 x[100]=20;
 console.log(x.length);
 console.log(x);
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-         <!-- Program 15 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             15 Array Methods
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 15 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">15. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_15.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 let nums=[5,2,3,1,4,10,6,14,22,32,45,101];
 console.log(nums);
 console.log(nums.sort());
@@ -607,21 +1092,51 @@ let values=[44,55,66];
 let [a,,c]=values;
 console.log(a);
 console.log(c);
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-         <!-- Program 16 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             16 Splice(),Slice()
-            </h5>
-          </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N log N) - Sorting time.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-          <div class="card-body">
-            <pre>
-            <code>
+      <!-- Program 16 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">16. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_16.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 let nums=[1,2,3,4,5,6,7,8];
 //syntax array.splice(startindex,noofelement,addingelements)
 nums.splice(2,0,"a","b","c");
@@ -650,20 +1165,51 @@ else
 
 let names=["Ramesh","Kishore","Ram","Sita","Krihsna"];
 console.log(names.includes("Kishore"));
-            </code>
-        </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 17 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             17 Arrays and keys,values,reduce functions
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 17 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">17. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_17.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 const nums = [11, 22, 33, 44, 55];
 //it returns keys(indexs)
 for (let x in nums) {
@@ -687,21 +1233,51 @@ function sum(acc, currentValue) {
 }
 const sunofNums = nums.reduce(sum);
 console.log(sunofNums);
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 18 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             18 forEach,map,filter functions
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 18 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">18. Const Nums=[1,2,3,4,5,6];</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of const nums=[1,2,3,4,5,6]; in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_18.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 // const nums=[1,2,3,4,5,6];
 let nums;
 nums?.forEach((element)=>console.log(element));
@@ -721,21 +1297,51 @@ console.log(result)
 
 var result=nums?.filter((element)=>element>2 && element&lt;4);
 console.log(result)
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 19 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             19 fill,at functions
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 19 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">19. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_19.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 const months=["jan","Feb","Mar","Apr"];
 console.log(months[0]);
 console.log(months.at(0));
@@ -755,20 +1361,51 @@ for(x of months.keys())
 const nums=[1,2,3,4,5,6];
 console.log(nums);
 console.log(nums.fill('x',nums.length-5,nums.length-2))
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 20 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             20 find,every functions
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 20 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">20. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_20.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 const nums=[1,2,3,4,5,6];
 
 //it returns after find first element
@@ -789,20 +1426,51 @@ function checkEvery(element)
 }
 result=nums.every(checkEvery)
 console.log(result);
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 21 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             21 Objects
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 21 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">21. Objects</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of objects in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_21.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //objects
 const person={
     id:1,
@@ -827,21 +1495,51 @@ console.log(student);
 person.state="AP";
 console.log(person);
 console.log(student);
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 22 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             22 Object,Array Destructuring, rest Operators
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 22 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">22. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_22.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 const person={
     id:1,
     name:"John",
@@ -871,20 +1569,51 @@ const nums=[1,2,3];
 console.log(a);
 // console.log(b);
 console.log(c);
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 23 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             23 Array Object Destructuring
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 23 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">23. Array Destructring</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of array destructring in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_23.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //array destructring
 const nums=[45,67,78];
 const [a,,c]=nums;
@@ -903,20 +1632,51 @@ const {name,city,id}=person;
 console.log(name);
 console.log(id);
 console.log(city)
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 24 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             24 Function Declaration
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 24 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">24. 1.Function Declaration</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of 1.function declaration in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_24.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //1.Function Declaration
 const result=sum(45,56);
 console.log(result)
@@ -926,22 +1686,51 @@ function sum(arg1, arg2) {
 }
 //function declartions should always moves on top while execution of the javascript
 //that is called hoisting
-
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 25 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             25 Function Expression
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 25 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">25. 2. Function Expression</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> this is not apply hoisting
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_25.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //2. function expression
 //this is not apply hoisting
 const sum = function (arg1, arg2) {
@@ -949,21 +1738,51 @@ const sum = function (arg1, arg2) {
 };
 
 console.log(sum(10, 20));
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 26 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             26 Arrow Functions
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 26 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">26. 3.Arrow Functions Nothing But Expression Functions</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> this will not apply the hoisting because arrow functions can works  es6 onwards
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_26.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //3.Arrow functions nothing but expression functions
 //this will not apply the hoisting because arrow functions can works  es6 onwards
 const sum = (arg1, arg2) => arg1 + arg2;
@@ -978,20 +1797,51 @@ const big = (arg1, arg2) => {
   }
 };
 console.log(big(45, 77));
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 27 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             27 Ananonmous functions
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 27 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">27. 4 Ananonmous Functions</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of 4 ananonmous functions in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_27.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //4 Ananonmous functions
 console.log("1");
 setTimeout(() => {
@@ -999,42 +1849,100 @@ setTimeout(() => {
 }, 0);
 
 console.log("3");
-
-
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 28 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             28 Immediatly Invoked Function
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 28 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">28. 5.Iif (Immediatly Invoked Function)</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of 5.iif (immediatly invoked function) in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_28.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
- //5.iif (Immediatly Invoked Function)
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+//5.iif (Immediatly Invoked Function)
 (function () {
   console.log("Hai");
 })();
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 29 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             29 Higher-Order Function
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 29 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">29. 6. Higher-Order Function</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A function that takes another function as an argument or returns a function.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_29.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //6. Higher-Order Function
 //A function that takes another function as an argument or returns a function.
 function  sum(a,b)
@@ -1048,20 +1956,51 @@ function operate(a, b, sum) {
 //const result=operate(6, 4, (x, y) => x + y);
 const result=operate(6, 4, sum);
 console.log(result)
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 30 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             30 Callback Function
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 30 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">30. 7. Callback Function</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A function passed into another function to be executed later.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_30.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //7. Callback Function
 //A function passed into another function to be executed later.
 function greet(name, callback) {
@@ -1082,21 +2021,51 @@ const showMessage = (msg, fun) => {
 };
 
 showMessage("Hi Call Back Function", fun);
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 31 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             31 Constructor Function Deep Copy
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 31 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">31. 8. Constructor Function</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Used to create objects (before ES6 class).
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_31.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //8. Constructor Function
 //Used to create objects (before ES6 class).
 function Person(name=null, age=null) {
@@ -1120,35 +2089,51 @@ p3.name="SrinivasaRao";
 p3.age=54;
 console.log(p3.name);
 console.log(p3.age);
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
 
-              </code>
-            </pre>
+      <!-- Program 32 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">32. 9. Generator Function</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of 9. generator function in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_32.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-        </div>
-        <!-- Program 32 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             32
-            </h5>
-          </div>
-          <div class="card-body">
-            <pre>
-              <code>
-              </code>
-            </pre>
-          </div>
-        </div>
-        <!-- Program 33 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             33 Generator Function
-            </h5>
-          </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //9. Generator Function
 function* numbers() {
   yield showMessage();
@@ -1164,20 +2149,51 @@ const gen = numbers();
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 34 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             34 functions with rest operator
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 33 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">33. Functions With Rest Operator</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of functions with rest operator in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_33.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //functions with rest operator
 function sum(a, b, ...d) {
   let total = a + b;
@@ -1191,21 +2207,51 @@ console.log(sum(34, 45));
 console.log(sum(34, 45, 88));
 console.log(sum(34, 45, 88, 99));
 console.log(sum(34, 45, 88, 100, 78));
-
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 35 -->
-        <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             35 API Calling
-            </h5>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 34 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">34. Api Calling</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> https:jsonplaceholder.typicode.com/
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_34.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
           </div>
-          <div class="card-body">
-            <pre>
-              <code>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
 //api calling
 //https://jsonplaceholder.typicode.com/
 const URL = "https://jsonplaceholder.typicode.com/users";
@@ -1225,104 +2271,956 @@ const getData = async () => {
 };
 
 getData();
-              </code>
-            </pre>
+</code></pre>
           </div>
         </div>
-        <!-- Program 36 -->
-        <!-- <div class="card shadow mb-2">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">
-             36
-            </h5>
-          </div>
-          <div class="card-body">
-            <pre>
-              <code>
-              </code>
-            </pre>
-          </div>
-        </div> -->
-      </div>
- </main>
-      <footer id="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 footer-info">
-                <h4>TIT</h4>
-                <p>
-                  With over 25 years of experience in IT training and
-                  development, our institute is dedicated to empowering
-                  individuals with the skills and knowledge required to excel in
-                  the rapidly evolving tech industry. Led by an expert who has
-                  worked with top-tier corporate companies, we offer
-                  comprehensive training in both Web and Windows application
-                  development.
-                </p>
-              </div>
-
-              <div class="col-lg-6 col-md-6 footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                  <li>
-                    <i class="fa fa-angle-right"></i> <a href="#">Home</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right"></i>
-                    <a href="#about">About us</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right"></i>
-                    <a href="#courses">Courses</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right"></i>
-                    <a href="terms.html">Terms of service</a>
-                  </li>
-                  <li>
-                    <i class="fa fa-angle-right"></i>
-                    <a href="privacy.html">Privacy policy</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-3 col-md-6 footer-contact">
-                <h4>Contact Us</h4>
-                <p>
-                  Ongole <br />
-                  Andhrapradesh 523 002<br />
-                  India <br />
-                  <!-- <strong>Phone:</strong> +91 99999 99999<br> -->
-                  <strong>Email:</strong>training@telugututorial.com<br />
-                </p>
-
-                <div class="social-links">
-                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                  <a href="#" class="facebook"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                  <a href="#" class="instagram"
-                    ><i class="fa fa-instagram"></i
-                  ></a>
-                  <a href="#" class="google-plus"
-                    ><i class="fa fa-google-plus"></i
-                  ></a>
-                  <a href="#" class="linkedin"
-                    ><i class="fa fa-linkedin"></i
-                  ></a>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
         </div>
+      </div>
 
-        <div class="container">
-          <div class="copyright">
-            &copy; Copyright <strong>TIT@2024</strong>. All Rights Reserved
+      <!-- Program 35 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">35. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_35.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+
+</code></pre>
           </div>
         </div>
-      </footer>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Check the browser console to see the output of this script.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 36 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">36. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_36.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+let number = max(17, 22);
+console.log(number);
+
+function max(a, b) { 
+  return (a > b) ? a : b;
+}
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 37 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">37. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_37.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+const result=isLandscape(600, 300)
+// if(result)
+// {
+//   console.log("Landscape");
+// }
+// else{
+//   console.log("Portrait");
+// }
+console.log(result ? "Landscape": "Portrait");
+
+function isLandscape(width, height) {
+  return (width > height);
+}
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 38 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">38. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_38.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+const output = fizzBuzz(15);
+console.log(output);
+
+function fizzBuzz(input) {
+
+  if (typeof input !== "number") 
+    return NaN;
+  
+  if (input &lt;0) 
+  return "Negative values not Accepted";
+
+  if (input % 3 === 0 && input % 5 === 0) 
+    return "FizzBuzz";
+
+  if (input % 3 === 0) 
+    return "Fizz";
+
+  if (input % 5 === 0) 
+    return "Buzz";
+
+  return input;
+}
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 39 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">39. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_39.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+checkSpeed(130);
+
+function checkSpeed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
+
+  if (speed &lt; speedLimit + kmPerPoint) {
+    console.log ('Ok');
+    return; 
+  }
+  const points = Math.floor((speed - speedLimit) / kmPerPoint);
+  if (points >= 12)
+    console.log('License suspended');
+  else
+    console.log('Points', points);
+}
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 40 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">40. Shownumbers(15);</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of shownumbers(15); in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_40.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+//showNumbers(15);
+
+// function showNumbers(limit) {
+//   for (let i = 0; i &lt;= limit; i++) {
+//     const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
+//     console.log(i, message);
+//   }
+// }
+
+let min=1,max=100;
+function printPrimeNumbers(min,max)
+{
+  for(let i=min;i&lt;=max;i++)
+  {
+    count=0;
+    for(let j=2;j&lt;i;j++)
+    {
+      if(i%j===0)
+      {
+        count++;
+      }
+    }
+    if(count==0) console.log(i + " ");
+  }
+}
+printPrimeNumbers(1,100);
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 41 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">41. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_41.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+const array = [-1, null, undefined, "a", 2, 3, 5];
+
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+  let count = 0;
+  for (let value of array) if (value) count++;
+  return count;
+}
+
+console.log(null && "True")
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 42 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">42. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_42.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+const movie = {
+  title: "a",
+  releaseYear: 2018,
+  rating: 4.5,
+  director: "b",
+};
+
+showProperties(movie);
+
+function showProperties(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == "string") 
+      console.log(key, ":", obj[key]);
+  }
+}
+
+let values=Object.keys(movie);
+console.log(values);
+values.forEach((element)=>console.log(element));
+
+values=Object.values(movie);
+console.log(values);
+values.forEach((element)=>console.log(element));
+values=Object.entries(movie);
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 43 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">43. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_43.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+console.log(sum(10));
+
+function sum(limit) { 
+  let sum = 0; 
+  for (let i = 0; i &lt= limit; i++)
+    if (i % 3 === 0 || i % 5 === 0)
+      // sum += i;
+    sum++;
+  
+  return sum; 
+}
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 44 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">44. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_44.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+function calculateGrade(marks) { 
+  const average = calculateAverage(marks);
+  if (average &lt; 60) return 'F';
+  if (average &lt; 70) return 'D';
+  if (average &lt; 80) return 'C';
+  if (average &lt; 90) return 'B';
+  return 'A';
+}
+
+function calculateAverage(array) {
+  let sum = 0; 
+  for (let value of array)
+    sum += value; 
+  return sum / array.length; 
+}
+
+const marks=[[33,44,55,66,77,88,87],[33,44,55,66,77,88,87]];
+console.log(calculateAverage(marks))
+marks.forEach((element)=>console.log(calculateGrade(element)))
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 45 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">45. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_45.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+let n=5;
+pyrmidTop(n);
+pyramidBottom(n-1)
+function pyrmidTop(rows) { 
+  for (let row = 1; row &lt;= rows; row++) {
+    let pattern = ''; 
+    for (let i = 0; i &lt; row; i++)
+      pattern += '*';
+    console.log(pattern);
+  }
+}
+function pyramidBottom(rows) { 
+  for (let row = rows; row >=1; row--) {
+    let pattern = ''; 
+    for (let i = 0; i &lt; row; i++)
+      pattern += '*';
+    console.log(pattern);
+  }
+}
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 46 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">46. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_46.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+function showPrimes(limit) {
+  for (let number = 2; number &lt;= limit; number++) 
+    if (isPrime(number)) console.log(number);
+}
+
+function isPrime(number) {
+  for (let factor = 2; factor &lt; number; factor++)
+    if (number % factor === 0)
+      return false; 
+  
+  return true; 
+}
+
+showPrimes(200)
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Linear time relative to the input array/loop limit.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 47 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">47. Class</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of class in JavaScript.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_47.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+//class
+class Student{
+    constructor()
+    {
+        this.code=100;
+        this.name="Ram";
+    }
+    setData(code,name)
+    {
+        this.code=code;
+        this.name=name;
+    }
+    showData()
+    {
+        console.log("Code:" + this.code);
+        console.log("Name:"+ this.name);
+    }
+}
+
+const ramesh=new Student();
+ramesh.showData();
+code=200;
+name="Rajesh";
+ramesh.setData(code,name);
+ramesh.showData();
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Program 48 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">48. Javascript Snippet</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A standard JavaScript programming snippet demonstrating fundamental features of the language.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_48.js</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-javascript">
+class Student {
+  constructor(code, name) {
+    this.code = code;
+    this.name = name;
+  }
+  getCode() {
+    return this.code;
+  }
+  setCode(code) {
+    this.code = code;
+  }
+  getName() {
+    return this.name;
+  }
+  setName(name) {
+    this.name = name;
+  }
+}
+code = 100;
+name = "Prasanth";
+const ramesh = new Student(code, name);
+console.log(ramesh.getCode());
+console.log(ramesh.getName());
+ramesh.setCode(200);
+ramesh.setName("Kishore");
+console.log(ramesh.getCode());
+console.log(ramesh.getName());
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time execution.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal extra space used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>
+Values printed to the JavaScript Developer Console.
+                </div>
+            </div>
+        </div>
+      </div>
+
+ 
+
+      </div>
+ <div class="container mt-5 mb-5" style="background: #eef2f5; padding: 20px; border-left: 5px solid #28a745;"><h3 style="color:#28a745;">Conclusion & Next Steps</h3><p style="font-size:1.1rem; line-height: 1.6; color: #333;">These JavaScript snippets demonstrate the flexibility and power of the language. From simple DOM manipulation to complex asynchronous patterns, practicing these examples will greatly improve your web development capabilities. Keep building interactive web applications to put these skills to the test.</p></div>
+</main>
+        <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
       <!-- #footer -->
 
       <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -1343,5 +3241,44 @@ getData();
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
-  </body>
+  
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+  This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our use of cookies. 
+  <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+  <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');" style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got it!</button>
+</div>
+<script>
+  if(!localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+</script>
+
+  
+<script>
+  function copyCode(btn) {
+    const codeWindow = btn.closest('.code-window');
+    const codeBlock = codeWindow.querySelector('code');
+    
+    // Create a temporary textarea to hold the decoded text
+    const textArea = document.createElement('textarea');
+    textArea.innerHTML = codeBlock.innerHTML; // decodes HTML entities
+    const decodedText = textArea.value.trim();
+
+    navigator.clipboard.writeText(decodedText).then(() => {
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<i class="fa fa-check"></i> Copied!';
+      btn.style.background = '#28a745';
+      
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '#444';
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  }
+</script>
+
+</body>
 </html>

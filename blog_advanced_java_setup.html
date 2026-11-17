@@ -1,0 +1,616 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Advanced Java Setup on Windows (JDK 17/21, VS Code, Eclipse, Maven, Tomcat) | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_advanced_java_setup.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="telugu it tutorials.com" name="keywords" />
+  
+  <meta name="description" content="Complete step-by-step guide to installing JDK 17/21, setting JAVA_HOME, configuring VS Code, Eclipse IDE, Maven, Apache Tomcat, and MySQL on Windows." />
+
+  <!-- Primary Keywords -->
+  <meta name="keywords"
+    content="Telugu IT Tutorials, Advanced Java setup, Install JDK 21 Windows, JAVA_HOME environment variable, VS Code Java extension pack, Eclipse IDE Enterprise Java, Maven project setup, Apache Tomcat setup, Java tutorials Telugu, SpringBoot tutorials Telugu" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:title" content="Advanced Java Setup on Windows — Telugu IT Tutorials" />
+  <meta property="og:description"
+    content="Learn how to install and configure JDK 17/21, JAVA_HOME, VS Code, Eclipse IDE, Maven, Apache Tomcat, and MySQL on Windows." />
+  <meta property="og:url" content="https://teluguittutorials.com/blog_advanced_java_setup.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://teluguittutorials.com/images/banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Advanced Java Setup on Windows — Telugu IT Tutorials" />
+  <meta name="twitter:description"
+    content="Step-by-step tutorial for setting up Advanced Java development environment on Windows: JDK 17/21, VS Code, Eclipse, Maven, Tomcat & MySQL." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/images/banner.jpg" />
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg wow fadeInUp" style="padding-top: 60px; padding-bottom: 60px;">
+      <article class="blog-post-card">
+
+        <!-- Post Header -->
+        <header class="post-header">
+          <span class="post-tag">Developer Setup Guide</span>
+          <h1>Advanced Java Setup on Windows</h1>
+          <p>Complete guide to installing JDK 17/21, setting JAVA_HOME, configuring VS Code, Eclipse IDE, Maven, Apache Tomcat, and MySQL.</p>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content">
+
+          <section class="lang-section" style="padding: 10px;">
+            <h2 class="section-heading">📌 Comprehensive Advanced Java Environment Setup</h2>
+            <p class="intro-desc">Setting up a complete Java development environment on Windows is essential for developing enterprise applications, web services with Servlets/JSP, REST APIs, and database-driven solutions.</p>
+
+            <!-- Prerequisites Table -->
+            <div class="step-block mt-4">
+              <div class="step-title">
+                <span class="step-number">📋</span>
+                <span>1. What We Need to Install</span>
+              </div>
+              <p style="margin-top: 10px; color: #475569;">For Advanced Java, we recommend installing the following software suite:</p>
+              <div class="table-responsive mt-3">
+                <table class="table table-bordered table-striped" style="background: #fff;">
+                  <thead style="background-color: #1e293b; color: #fff;">
+                    <tr>
+                      <th>Software</th>
+                      <th>Purpose</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>JDK 17 or 21</strong></td>
+                      <td>Java Development Kit (JDK 17 or 21 LTS is recommended for learning & production)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>VS Code</strong></td>
+                      <td>Lightweight code editor for Java development</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Eclipse IDE</strong></td>
+                      <td>Full-featured Java IDE for Enterprise & Web Developers</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Apache Tomcat</strong></td>
+                      <td>Web application server for Servlets, JSP & REST APIs</td>
+                    </tr>
+                    <tr>
+                      <td><strong>MySQL</strong></td>
+                      <td>Relational Database Management System (RDBMS)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>MySQL Workbench</strong></td>
+                      <td>Graphical GUI client for database management</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Git</strong></td>
+                      <td>Version control system</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Maven</strong></td>
+                      <td>Dependency & build management tool</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- PART 1 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">1</span>
+                <span>PART 1 — Install JDK on Windows</span>
+              </div>
+              <h5 class="fw-bold mt-3 text-dark">Step 1: Download JDK</h5>
+              <p style="line-height: 1.8;">You can use either <strong>Eclipse Temurin JDK</strong> (Adoptium) or <strong>Oracle JDK</strong>. For a course or enterprise learning environment, <strong>Eclipse Temurin JDK 17/21</strong> is a convenient choice.</p>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Download the Windows <code>x64 Installer (.msi or .exe)</code>.</li>
+                <li>During installation, preferably enable:
+                  <ul style="padding-left: 20px; margin-top: 5px;">
+                    <li><strong>Set JAVA_HOME</strong></li>
+                    <li><strong>Add to PATH</strong></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h5 class="fw-bold mt-4 text-dark">Step 2: Verify Java</h5>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Open <strong>Command Prompt</strong> (<code>cmd</code>) and execute:</li>
+              </ul>
+              <div class="command-card mt-2 mb-3">java -version</div>
+              <p class="mb-1 text-muted">You should see output similar to:</p>
+              <div class="path-card mb-3">java version "21.0.x" 2026-x-x LTS</div>
+
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Then verify the Java compiler:</li>
+              </ul>
+              <div class="command-card mt-2 mb-3">javac -version</div>
+              <p class="mb-1 text-muted">Example output:</p>
+              <div class="path-card mb-3">javac 21.0.x</div>
+              <p>If both commands return the version without errors, Java is successfully installed!</p>
+            </div>
+
+            <!-- PART 2 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">2</span>
+                <span>PART 2 — Configure JAVA_HOME Environment Variable</span>
+              </div>
+              <p style="line-height: 1.8;">
+                Configuring <code>JAVA_HOME</code> is critical because tools like Maven, Tomcat, Spring Boot CLI, and Gradle rely on this environment variable to locate the JDK installation directory.
+              </p>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Search Windows Start menu for: <strong>Environment Variables</strong></li>
+                <li>Select: <strong>Edit the system environment variables</strong></li>
+                <li>Click <strong>Environment Variables...</strong> → Under <strong>System Variables</strong>, click <strong>New</strong></li>
+                <li>Set the variable details:
+                  <div class="path-card mt-2 mb-2">
+                    Variable name: JAVA_HOME<br>
+                    Variable value: C:\Program Files\Eclipse Adoptium\jdk-21.x.x-hotspot
+                  </div>
+                </li>
+                <li>Next, select the <strong>Path</strong> variable under System Variables and click <strong>Edit</strong>.</li>
+                <li>Click <strong>New</strong> and add:</li>
+              </ul>
+              <div class="command-card mt-2 mb-3">%JAVA_HOME%\bin</div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Open a new Command Prompt window and verify:</li>
+              </ul>
+              <div class="command-card mt-2 mb-2">echo %JAVA_HOME%</div>
+              <div class="command-card mt-2 mb-3">java -version</div>
+            </div>
+
+            <!-- PART 3 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">3</span>
+                <span>PART 3 — VS Code Setup for Java</span>
+              </div>
+              <h5 class="fw-bold mt-3 text-dark">Step 1: Install VS Code</h5>
+              <p>Download and install Visual Studio Code from <strong>code.visualstudio.com</strong> and open VS Code after installation.</p>
+
+              <h5 class="fw-bold mt-4 text-dark">Step 2: Install Java Extension Pack</h5>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>In VS Code, go to <strong>Extensions</strong> tab (or press <code>Ctrl + Shift + X</code>).</li>
+                <li>Search for: <strong>Extension Pack for Java</strong> (by Microsoft).</li>
+                <li>Click <strong>Install</strong>. This pack installs 6 essential extensions:
+                  <ul style="padding-left: 20px; margin-top: 5px;">
+                    <li>Language Support for Java™ by Red Hat</li>
+                    <li>Debugger for Java</li>
+                    <li>Maven for Java</li>
+                    <li>Test Runner for Java</li>
+                    <li>Project Manager for Java</li>
+                    <li>IntelliCode</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- PART 4 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">4</span>
+                <span>PART 4 — Create First Java Project in VS Code</span>
+              </div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Create a folder on your drive: <code>D:\AdvancedJava</code></li>
+                <li>Open VS Code and choose <strong>File → Open Folder</strong>, then select <code>D:\AdvancedJava</code></li>
+                <li>Press <code>Ctrl + Shift + P</code> to open the Command Palette.</li>
+                <li>Search for and select: <strong>Java: Create Java Project</strong>.</li>
+                <li>Choose project build type: Select <strong>Maven</strong> (recommended for Advanced Java) or <strong>No build tools</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- PART 5 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">5</span>
+                <span>PART 5 — Maven Project Structure</span>
+              </div>
+              <p>A standard Maven directory layout follows strict convention, which is essential for Advanced Java and web projects:</p>
+              <div class="command-card mt-3 mb-3" style="white-space: pre; font-family: monospace; color: #a5f3fc;">
+AdvancedJava
+│
+├── pom.xml
+│
+└── src
+    ├── main
+    │   ├── java
+    │   └── resources
+    │
+    └── test
+        └── java
+              </div>
+            </div>
+
+            <!-- PART 6 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">6</span>
+                <span>PART 6 — Create First Java Program in VS Code</span>
+              </div>
+              <p>Create a file at path: <code>src/main/java/com/teluguittutorials/App.java</code></p>
+              <div class="command-card mt-3 mb-3" style="white-space: pre; font-family: monospace; color: #e2e8f0;">
+package com.teluguittutorials;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        System.out.println("Welcome to Advanced Java");
+
+    }
+}
+              </div>
+              <p>Click the <strong>Run</strong> button above <code>main()</code> method in VS Code.</p>
+              <p class="mb-1"><strong>Output:</strong></p>
+              <div class="path-card mb-3">Welcome to Advanced Java</div>
+            </div>
+
+            <!-- PART 7 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">7</span>
+                <span>PART 7 — Configure Maven Project (pom.xml)</span>
+              </div>
+              <p>Your initial <code>pom.xml</code> file specifies project metadata and JDK compiler version settings:</p>
+              <div class="command-card mt-3 mb-3" style="white-space: pre; font-family: monospace; color: #93c5fd;">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.teluguittutorials&lt;/groupId&gt;
+
+    &lt;artifactId&gt;advanced-java&lt;/artifactId&gt;
+
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+    &lt;properties&gt;
+        &lt;maven.compiler.source&gt;17&lt;/maven.compiler.source&gt;
+        &lt;maven.compiler.target&gt;17&lt;/maven.compiler.target&gt;
+    &lt;/properties&gt;
+
+&lt;/project&gt;
+              </div>
+              <div style="background: #e7f3fe; border-left: 4px solid #2196F3; padding: 15px; margin-top: 15px;">
+                <strong>Note:</strong> If you are using JDK 21, simply change the compiler source and target properties to <code>21</code>:
+                <br><code>&lt;maven.compiler.source&gt;21&lt;/maven.compiler.source&gt;</code>
+                <br><code>&lt;maven.compiler.target&gt;21&lt;/maven.compiler.target&gt;</code>
+              </div>
+            </div>
+
+            <!-- PART 8 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">8</span>
+                <span>PART 8 — Install Eclipse IDE</span>
+              </div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Download: <strong>Eclipse IDE for Enterprise Java and Web Developers</strong> from eclipse.org.</li>
+                <li>This edition is preferable for Advanced Java because it comes pre-packaged with Servlet, JSP, JSF, Web Tools Platform (WTP), and XML tools.</li>
+                <li>Run installer and launch Eclipse on Windows.</li>
+                <li>When prompted for a <strong>Workspace</strong> directory, enter: <code>D:\AdvancedJavaWorkspace</code></li>
+                <li>Click <strong>Launch</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- PART 9 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">9</span>
+                <span>PART 9 — Verify Java Configuration in Eclipse</span>
+              </div>
+              <p>Ensure Eclipse is linked to your system JDK installation:</p>
+              <div class="path-card mt-2 mb-3">
+                Window → Preferences → Java → Installed JREs
+              </div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Verify your installed JDK (e.g. JDK 21) is listed.</li>
+                <li>If it is not available, click <strong>Add... → Standard VM → Next</strong>.</li>
+                <li>Browse and select your JDK installation folder: <code>C:\Program Files\Eclipse Adoptium\jdk-21.x.x-hotspot</code></li>
+                <li>Check the checkbox next to the JDK to set it as default.</li>
+              </ul>
+            </div>
+
+            <!-- PART 10 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">10</span>
+                <span>PART 10 — Create Java Project in Eclipse</span>
+              </div>
+              <div class="path-card mt-2 mb-3">
+                File → New → Java Project
+              </div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Project name: <code>AdvancedJava</code></li>
+                <li>Select your JDK version under JRE options.</li>
+                <li>Click <strong>Finish</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- PART 11 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">11</span>
+                <span>PART 11 — Create Package in Eclipse</span>
+              </div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Right-click the <code>src</code> folder in Package Explorer.</li>
+                <li>Select <strong>New → Package</strong>.</li>
+                <li>Name: <code>com.teluguittutorials</code></li>
+                <li>Click <strong>Finish</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- PART 12 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">12</span>
+                <span>PART 12 — Create Java Class & Run in Eclipse</span>
+              </div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Right-click package <code>com.teluguittutorials</code> → <strong>New → Class</strong>.</li>
+                <li>Name: <code>App</code></li>
+                <li>Check: <code>public static void main(String[] args)</code></li>
+                <li>Click <strong>Finish</strong>.</li>
+              </ul>
+              <p>Add program logic:</p>
+              <div class="command-card mt-3 mb-3" style="white-space: pre; font-family: monospace; color: #e2e8f0;">
+package com.teluguittutorials;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        System.out.println("Welcome to Advanced Java");
+
+    }
+}
+              </div>
+              <p>Right-click <code>App.java</code> → <strong>Run As → Java Application</strong>.</p>
+              <p class="mb-1"><strong>Console Output:</strong></p>
+              <div class="path-card mb-3">Welcome to Advanced Java</div>
+            </div>
+
+            <!-- PART 13 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">13</span>
+                <span>PART 13 — Install Standalone Maven</span>
+              </div>
+              <p>First, check if Maven command-line tool is already installed:</p>
+              <div class="command-card mt-2 mb-3">mvn -version</div>
+              <p>If you see <code>'mvn' is not recognized as an internal or external command</code>, install Apache Maven:</p>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Download Apache Maven binary zip from <strong>maven.apache.org</strong>.</li>
+                <li>Extract it to a folder such as: <code>C:\apache-maven</code></li>
+                <li>Create System Variable:
+                  <div class="path-card mt-2 mb-2">
+                    Variable name: MAVEN_HOME<br>
+                    Variable value: C:\apache-maven\apache-maven-3.x.x
+                  </div>
+                </li>
+                <li>Edit <strong>Path</strong> System Variable and add: <code>%MAVEN_HOME%\bin</code></li>
+                <li>Verify in a new Command Prompt:</li>
+              </ul>
+              <div class="command-card mt-2 mb-3">mvn -version</div>
+            </div>
+
+            <!-- PART 14 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">14</span>
+                <span>PART 14 — Install Apache Tomcat</span>
+              </div>
+              <p style="line-height: 1.8;">
+                For Advanced Java web development, Apache Tomcat is essential for learning and hosting:
+              </p>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Servlets</li>
+                <li>JSP (JavaServer Pages) & JSTL</li>
+                <li>MVC Architecture</li>
+                <li>Filters & Listeners</li>
+                <li>Session Management & Cookies</li>
+                <li>RESTful Web APIs</li>
+              </ul>
+              <p style="line-height: 1.8;">
+                Download Apache Tomcat (zip/installer) from <strong>tomcat.apache.org</strong> and extract it to:
+              </p>
+              <div class="path-card mb-3">D:\Servers\apache-tomcat</div>
+            </div>
+
+            <!-- Success Box -->
+            <div class="success-card mt-5">
+              <span class="icon">🚀</span>
+              <div>
+                <strong>Advanced Java Environment Ready!</strong><br>
+                You have successfully configured JDK 17/21, JAVA_HOME, VS Code, Eclipse IDE, Maven, and Tomcat. You are ready to start building Advanced Java web and enterprise applications!
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer">
+          <span>Published for Java Developers</span>
+          <span>Advanced Java Setup Guide on Windows</span>
+        </footer>
+
+      </article>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>

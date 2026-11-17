@@ -1,0 +1,444 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Essential Linux Commands for DevOps Engineers & AWS Cloud Admin | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_linux_commands_devops_aws.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Linux commands for DevOps, AWS Linux commands, Linux server administration, grep awk sed tutorial, systemctl journalctl SSH scp rsync" name="keywords" />
+  
+  <meta name="description" content="Master essential Linux CLI commands for DevOps engineers and AWS Cloud Administrators: file operations, permissions, networking, process management, SSH, systemctl, grep, awk, sed, and disk monitoring." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Essential Linux Commands for DevOps Engineers & AWS Cloud Administrators (2026)" />
+  <meta property="og:description"
+    content="Comprehensive Linux CLI guide for cloud engineers, SREs, and AWS sysadmins: networking, file permissions, logs, SSH, and system performance monitoring." />
+  <meta property="og:url" content="https://teluguittutorials.com/blog_linux_commands_devops_aws.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Essential Linux Commands for DevOps & AWS Cloud Users (2026)" />
+  <meta name="twitter:description" content="Master Linux server administration, shell scripting, networking, and AWS EC2 Linux management." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet" />
+
+  <!-- Bootstrap & Libs -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheets -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/custom.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369" crossorigin="anonymous"></script>
+
+  <!-- Schema.org TechArticle Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Essential Linux Commands for DevOps Engineers & AWS Cloud Administrators (2026)",
+    "description": "Comprehensive reference guide covering Linux CLI commands for system administration, networking, process monitoring, SSH, text processing, and cloud server management.",
+    "author": {
+      "@type": "Person",
+      "name": "KSR",
+      "jobTitle": "Senior Software Architect & IT Trainer"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Telugu IT Tutorials",
+      "logo": "https://teluguittutorials.com/img/favicon.png"
+    },
+    "mainEntityOfPage": "https://teluguittutorials.com/blog_linux_commands_devops_aws.html",
+    "datePublished": "2026-09-13",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <article class="blog-post-card bg-white p-4 p-md-5 rounded shadow-sm">
+
+          <!-- Post Header -->
+          <header class="post-header border-bottom pb-4 mb-4">
+            <span class="badge bg-success text-white mb-2 px-3 py-2">Linux & Cloud Administration</span>
+            <h1 class="display-5 font-weight-bold text-dark">Essential Linux Commands for DevOps Engineers & AWS Cloud Administrators</h1>
+            <p class="text-muted lead">Master indispensable Linux command line tools for server monitoring, log inspection, SSH authentication, process management, networking, and AWS EC2 instance administration.</p>
+            <div class="d-flex align-items-center mt-3 text-muted small">
+              <i class="bi bi-person-circle me-2 text-success"></i> <strong class="me-3">By KSR</strong>
+              <i class="bi bi-clock me-2 text-success"></i> <span>16 min read</span>
+              <span class="ms-auto text-muted">Updated September 2026</span>
+            </div>
+          </header>
+
+          <!-- Post Content -->
+          <div class="post-content" style="line-height: 1.8; color: #333;">
+            <p class="lead" style="font-size: 1.15rem;">
+              Over 90% of cloud infrastructure on Amazon Web Services (AWS), Google Cloud, and Microsoft Azure runs on Linux (Ubuntu, Amazon Linux 2023, RHEL, CentOS, Debian). For DevOps engineers, Site Reliability Engineers (SREs), and Cloud Administrators, fluent command-line interface (CLI) skills are essential to manage infrastructure, debug application failures, and automate CI/CD deployments.
+            </p>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">1. System Information & Resource Monitoring Commands</h2>
+            <p>When an AWS EC2 server experiences high latency or crashes, these commands help inspect CPU, RAM, and disk utilization instantly:</p>
+
+            <div class="table-responsive my-4">
+              <table class="table table-bordered">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th>Command</th>
+                    <th>Description & Usage</th>
+                    <th>DevOps Use Case</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>top</code> / <code>htop</code></td>
+                    <td>Interactive real-time process viewer and system resource monitor.</td>
+                    <td>Identify runaway processes consuming 100% CPU or RAM.</td>
+                  </tr>
+                  <tr>
+                    <td><code>free -h</code></td>
+                    <td>Displays total, used, and available RAM memory in human-readable format (MB/GB).</td>
+                    <td>Diagnose Out-Of-Memory (OOM) killer application crashes.</td>
+                  </tr>
+                  <tr>
+                    <td><code>df -h</code></td>
+                    <td>Displays file system disk space usage across mounted storage partitions.</td>
+                    <td>Check if root volume (<code>/</code>) is 100% full.</td>
+                  </tr>
+                  <tr>
+                    <td><code>du -sh *</code></td>
+                    <td>Shows total disk space consumed by directories in current folder.</td>
+                    <td>Find ballooning log files or Docker cache taking up space.</td>
+                  </tr>
+                  <tr>
+                    <td><code>uptime</code></td>
+                    <td>Shows how long system has been running + 1, 5, and 15 minute load averages.</td>
+                    <td>Check CPU load spikes on EC2 instances.</td>
+                  </tr>
+                  <tr>
+                    <td><code>uname -r</code> / <code>lscpu</code></td>
+                    <td>Displays Linux kernel version and CPU architecture info.</td>
+                    <td>Verify x86_64 vs ARM64 (AWS Graviton) CPU setup.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              <span class="text-secondary"># Quick check memory & disk utilization</span><br>
+              free -h<br>
+              df -h<br><br>
+              <span class="text-secondary"># Find top 5 largest directories in /var/log/</span><br>
+              du -sh /var/log/* | sort -rh | head -n 5
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">2. File & Directory Operations</h2>
+            <div class="table-responsive my-4">
+              <table class="table table-bordered">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th>Command</th>
+                    <th>Example</th>
+                    <th>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>ls -la</code></td>
+                    <td><code>ls -lah /var/www/</code></td>
+                    <td>List all files including hidden files (<code>.env</code>) with sizes & permissions.</td>
+                  </tr>
+                  <tr>
+                    <td><code>mkdir -p</code></td>
+                    <td><code>mkdir -p /var/www/app/logs</code></td>
+                    <td>Create parent directories recursively without throwing errors if existing.</td>
+                  </tr>
+                  <tr>
+                    <td><code>find</code></td>
+                    <td><code>find /var/log -name "*.log" -mtime -1</code></td>
+                    <td>Find all <code>.log</code> files modified in the last 24 hours.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">3. Text Processing & Log Inspection (`grep`, `awk`, `sed`, `tail`)</h2>
+            <p>DevOps engineers spend hours debugging production application log files. Mastering log filter tools is crucial:</p>
+
+            <div class="card bg-light border-0 p-4 mb-4">
+              <h5 class="font-weight-bold text-dark">Log Inspection Examples:</h5>
+
+              <h6 class="font-weight-bold text-danger mt-3">1. Live Log Streaming (`tail -f`)</h6>
+              <div class="bg-dark text-light p-3 rounded font-monospace small">
+                <span class="text-secondary"># Follow live NGINX access log output in real time</span><br>
+                tail -f /var/log/nginx/access.log<br><br>
+                <span class="text-secondary"># Follow last 100 lines of application error log</span><br>
+                tail -n 100 -f /var/log/syslog
+              </div>
+
+              <h6 class="font-weight-bold text-primary mt-3">2. Pattern Search (`grep`)</h6>
+              <div class="bg-dark text-light p-3 rounded font-monospace small">
+                <span class="text-secondary"># Case-insensitive recursive search for "ERROR" in log directory</span><br>
+                grep -rnI "ERROR" /var/log/app/<br><br>
+                <span class="text-secondary"># Filter out 200 OK responses to see failed status codes</span><br>
+                grep -v "HTTP/1.1 200" /var/log/nginx/access.log
+              </div>
+
+              <h6 class="font-weight-bold text-success mt-3">3. Column Filtering (`awk`) & Text Manipulation (`sed`)</h6>
+              <div class="bg-dark text-light p-3 rounded font-monospace small">
+                <span class="text-secondary"># Print IP addresses (1st column) of visitors in web server access log</span><br>
+                awk '{print $1}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head -n 10<br><br>
+                <span class="text-secondary"># Replace "staging.api.com" with "prod.api.com" in config file inline</span><br>
+                sed -i 's/staging.api.com/prod.api.com/g' config.env
+              </div>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">4. File Permissions & Security (`chmod`, `chown`, `sudo`)</h2>
+            <p>Security misconfigurations are a leading cause of SSH login failures and vulnerability exploits in AWS.</p>
+
+            <div class="table-responsive my-4">
+              <table class="table table-bordered">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th>Command</th>
+                    <th>Syntax / Example</th>
+                    <th>DevOps Use Case</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>chmod 400</code></td>
+                    <td><code>chmod 400 my-key.pem</code></td>
+                    <td><strong>Mandatory AWS step:</strong> Restrict AWS EC2 SSH key permissions so only owner can read it.</td>
+                  </tr>
+                  <tr>
+                    <td><code>chmod 755</code></td>
+                    <td><code>chmod 755 script.sh</code></td>
+                    <td>Make shell deployment scripts executable (Read/Write/Execute for owner, Read/Execute for group/others).</td>
+                  </tr>
+                  <tr>
+                    <td><code>chown -R</code></td>
+                    <td><code>chown -R www-data:www-data /var/www/html</code></td>
+                    <td>Change file owner user and group recursively for web servers.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">5. Network Troubleshooting & Connectivity Commands</h2>
+            <p>When microservices cannot talk to each other or an EC2 instance cannot connect to an RDS database, use these diagnostic tools:</p>
+
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              <span class="text-secondary"># Test HTTP API endpoints with response headers</span><br>
+              curl -Iv https://api.teluguittutorials.com/health<br><br>
+              <span class="text-secondary"># Check all open TCP/UDP listening ports and active process names</span><br>
+              ss -tulpn<br>
+              netstat -tulpn<br><br>
+              <span class="text-secondary"># Check DNS resolution for domain</span><br>
+              dig teluguittutorials.com +short<br>
+              nslookup db.internal.vpc<br><br>
+              <span class="text-secondary"># Test port connectivity to remote DB (e.g. AWS RDS port 5432)</span><br>
+              nc -zv database.rds.amazonaws.com 5432
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">6. Process & Service Management (`systemctl`, `journalctl`, `ps`, `kill`)</h2>
+            <p>In modern Linux distributions (Ubuntu, Debian, RHEL, Amazon Linux), system services are managed via <code>systemd</code>.</p>
+
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              <span class="text-secondary"># Check service status (e.g. nginx, docker, k3s)</span><br>
+              sudo systemctl status nginx<br>
+              sudo systemctl restart docker<br>
+              sudo systemctl enable nginx  <span class="text-secondary"># Auto-start service on boot</span><br><br>
+              <span class="text-secondary"># View systemd service logs using journalctl</span><br>
+              sudo journalctl -u docker.service --since "1 hour ago" -f<br><br>
+              <span class="text-secondary"># Find process ID (PID) and terminate unresponsive process</span><br>
+              ps aux | grep node<br>
+              sudo kill -9 &lt;PID&gt;
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">7. Secure Remote Connection & File Transfer (SSH, SCP, Rsync)</h2>
+
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              <span class="text-secondary"># Connect to AWS EC2 instance using Private Key</span><br>
+              ssh -i /path/to/my-key.pem ubuntu@ec2-54-210-10-20.compute-1.amazonaws.com<br><br>
+              <span class="text-secondary"># Copy local build artifact to remote EC2 server</span><br>
+              scp -i my-key.pem build.tar.gz ubuntu@54.210.10.20:/var/www/<br><br>
+              <span class="text-secondary"># Sync directory efficiently showing progress bar</span><br>
+              rsync -avz -e "ssh -i my-key.pem" ./dist/ ubuntu@54.210.10.20:/var/www/html/
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">8. Storage & Archive Commands (`tar`, `zip`, `lsblk`)</h2>
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              <span class="text-secondary"># Compress folder into tar.gz archive</span><br>
+              tar -czvf app_backup.tar.gz /var/www/app/<br><br>
+              <span class="text-secondary"># Extract tar.gz archive</span><br>
+              tar -xzvf app_backup.tar.gz -C /opt/<br><br>
+              <span class="text-secondary"># View AWS EBS block storage volumes attached to EC2</span><br>
+              lsblk
+            </div>
+
+            <div class="p-4 bg-light rounded mt-5 border-start border-4 border-success">
+              <h5 class="font-weight-bold text-dark mb-2">Master Linux, DevOps & AWS in Telugu!</h5>
+              <p class="mb-0 text-muted">Want hands-on training in Linux server administration, AWS cloud infrastructure, Docker, Kubernetes, and Terraform? Join our upcoming live batch at <strong>Telugu IT Tutorials</strong>. <a href="index.html#courses" class="text-success font-weight-bold">View Courses & Enroll &rarr;</a></p>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

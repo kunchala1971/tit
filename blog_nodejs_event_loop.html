@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Understanding Node.js Event Loop & Async Architecture | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_nodejs_event_loop.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="telugu it tutorials.com" name="keywords" />
+  
+  <meta name="description" content="Comprehensive breakdown of the Node.js event loop, libuv thread pool, microtasks vs macrotasks, and non-blocking I/O operations." />
+
+  <!-- Primary Keywords -->
+  <meta name="keywords"
+    content="Telugu IT Tutorials, IT training in Telugu, Telugu web development tutorials, Full stack development courses in Telugu, Online coding classes in Telugu, Programming tutorials Telugu, ReactJS tutorials in Telugu, Node.js course in Telugu, SpringBoot tutorials Telugu, Git and Docker training in Telugu, SQL courses for beginners Telugu, HTML CSS JavaScript in Telugu, Best Telugu online coding institute, Interview Q&A preparation Telugu" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta property="og:description"
+    content="Learn programming in Telugu with live virtual courses on React, Node.js, SQL, Git, Docker & more. Lifetime access + 100% job placement support." />
+  <meta property="og:url" content="https://teluguittutorials.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://teluguittutorials.com/images/banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta name="twitter:description"
+    content="Master full-stack development in Telugu with lifetime access & job support. Courses include HTML, CSS, JavaScript, React, Node.js, SQL." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/images/banner.jpg" />
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+        <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg wow fadeInUp" style="padding-top: 60px; padding-bottom: 60px;">
+      <article class="blog-post-card">
+
+        <!-- Post Header -->
+        <header class="post-header">
+          <span class="post-tag">Backend Development</span>
+          <h1>Understanding the Node.js Event Loop</h1>
+          <p>A deep dive into how Node.js handles asynchronous operations using its single-threaded architecture.</p>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content">
+          <section class="lang-section" style="padding: 20px;">
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #444;">
+              One of the most common questions asked in backend interviews is: "If Node.js is single-threaded, how does it handle thousands of concurrent connections?" The answer lies in the <strong>Event Loop</strong>. Understanding this concept is crucial for writing performant Node.js applications and avoiding blocking code.
+            </p>
+
+            <!-- Step 1 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">1</span>
+                <span>The Single-Threaded Myth</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                It is true that JavaScript executes on a single main thread. However, Node.js itself is not entirely single-threaded. It uses the C++ library <strong>libuv</strong> to handle asynchronous I/O operations. When Node.js needs to perform a heavy task (like reading a file or making a network request), it offloads that work to libuv's thread pool, allowing the main thread to continue executing other code.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">2</span>
+                <span>The Phases of the Event Loop</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                The event loop is essentially an infinite loop that waits for tasks, executes them, and then sleeps until more tasks arrive. It operates in several distinct phases:
+              </p>
+              <ul style="line-height: 1.8;">
+                <li><strong>Timers:</strong> Executes callbacks scheduled by <code>setTimeout()</code> and <code>setInterval()</code>.</li>
+                <li><strong>Pending Callbacks:</strong> Executes I/O callbacks deferred to the next loop iteration.</li>
+                <li><strong>Idle, Prepare:</strong> Used internally by Node.js.</li>
+                <li><strong>Poll:</strong> Retrieves new I/O events; executes I/O related callbacks (almost all with the exception of close callbacks, timers, and <code>setImmediate()</code>).</li>
+                <li><strong>Check:</strong> Executes <code>setImmediate()</code> callbacks.</li>
+                <li><strong>Close Callbacks:</strong> Executes close events (e.g., <code>socket.on('close', ...)</code>).</li>
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">3</span>
+                <span>The Peril of Blocking the Event Loop</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                Because there is only one thread executing JavaScript, if you execute a CPU-intensive operation (like a massive synchronous while loop, heavy cryptography, or image processing) directly on the main thread, the Event Loop freezes. No other incoming HTTP requests, WebSocket messages, or database responses can be processed while this operation runs.
+              </p>
+              <div class="command-card mt-3 mb-3">
+// DANGEROUS: This freezes the entire Node.js server for all concurrent users!
+app.get('/heavy', (req, res) =&gt; {
+  let count = 0;
+  for (let i = 0; i &lt; 1e10; i++) { count += i; } // 100% CPU lock
+  res.send({ count });
+});
+              </div>
+              <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-top: 15px;">
+                <strong>Golden Backend Rule:</strong> <em>"Don't block the event loop!"</em> Always use non-blocking asynchronous APIs (e.g., <code>fs.promises.readFile</code> instead of <code>fs.readFileSync</code>), and offload CPU-heavy computation to Worker Threads or external microservices.
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">4</span>
+                <span>Microtasks vs Macrotasks (The Hidden Priority Queue)</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                In technical interviews, senior engineers will test your knowledge on where <code>process.nextTick()</code> and <code>Promise.then()</code> execute.
+              </p>
+              <ul style="line-height: 1.8;">
+                <li><strong>Microtask Queue:</strong> Holds <code>process.nextTick()</code> callbacks (highest priority) and resolved <code>Promise</code> callbacks (second priority).</li>
+                <li><strong>Macrotasks:</strong> Scheduled callbacks in Timers, I/O Poll, and Check (<code>setImmediate</code>) phases.</li>
+              </ul>
+              <div class="p-3 bg-light rounded border mb-3">
+                <strong class="text-danger">Crucial Execution Rule:</strong> The Microtask queue is drained <em>immediately</em> after the currently running operation completes, and between every single phase transition of the Event Loop! A recursive <code>process.nextTick()</code> will completely starve the Event Loop of I/O.
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">5</span>
+                <span>The Classic Event Loop Interview Puzzle</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                Can you predict the exact output order of this code? This is asked in 9 out of 10 Node.js screening rounds:
+              </p>
+              <div class="command-card mt-3 mb-3">
+console.log('1: Synchronous Script Start');
+
+setTimeout(() =&gt; {
+  console.log('2: setTimeout (Timer Phase)');
+}, 0);
+
+setImmediate(() =&gt; {
+  console.log('3: setImmediate (Check Phase)');
+});
+
+Promise.resolve().then(() =&gt; {
+  console.log('4: Promise Microtask');
+});
+
+process.nextTick(() =&gt; {
+  console.log('5: nextTick Microtask');
+});
+
+console.log('6: Synchronous Script End');
+              </div>
+              <p style="line-height: 1.8;">
+                <strong>Execution Order &amp; Explanation:</strong>
+              </p>
+              <ol style="line-height: 1.8;">
+                <li><code>1: Synchronous Script Start</code> — Synchronous code executes immediately on call stack.</li>
+                <li><code>6: Synchronous Script End</code> — Synchronous call stack continues to completion.</li>
+                <li><code>5: nextTick Microtask</code> — <code>process.nextTick</code> queue executes before all other microtasks.</li>
+                <li><code>4: Promise Microtask</code> — Promise microtask queue executes next.</li>
+                <li><code>2: setTimeout</code> &amp; <code>3: setImmediate</code> — Macrotask phases execute based on event loop cycle.</li>
+              </ol>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">6</span>
+                <span>Configuring the Libuv Thread Pool</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                By default, libuv provides a thread pool of <strong>4 worker threads</strong> for handling asynchronous tasks that cannot be performed non-blockingly at the OS kernel level (such as <code>fs</code> file system operations, <code>crypto.pbkdf2</code>, and DNS lookups).
+              </p>
+              <p style="line-height: 1.8;">
+                In high-throughput enterprise servers with heavy file processing or cryptographic hashing, 4 threads can easily become a bottleneck. You can scale the thread pool up to 128 threads using the environment variable:
+              </p>
+              <div class="command-card mt-3 mb-3">
+// Set at application bootstrap before any async task runs
+process.env.UV_THREADPOOL_SIZE = 16;
+              </div>
+            </div>
+
+            <!-- Telugu Summary Section -->
+            <div class="mt-5 p-4 rounded-3" style="background: linear-gradient(135deg, #f0fdf4, #e0f2fe); border-left: 5px solid #0284c7;">
+              <h4 class="font-weight-bold" style="color: #0c4a6e;">💡 తెలుగులో ఈవెంట్ లూప్ వివరణ (Node.js Event Loop in Telugu)</h4>
+              <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">
+                Node.js సింగిల్-థ్రెడెడ్ అయినప్పటికీ వేలకొద్దీ కనెక్షన్లను ఏకకాలంలో ఎలా హ్యాండిల్ చేస్తుందనేది చాలా మందికి అర్థం కాని ప్రశ్న.
+              </p>
+              <ul style="line-height: 1.8; color: #333;">
+                <li><strong>సింగిల్ థ్రెడ్ మరియు libuv:</strong> మీ జావాస్క్రిప్ట్ కోడ్ కేవలం ఒకే థ్రెడ్ పై నడుస్తుంది. కానీ ఫైల్ రీడింగ్ లేదా డేటాబేస్ నెట్‌వర్క్ కాల్స్ వంటి భారీ పనులను బ్యాక్‌గ్రౌండ్‌లోని <code>libuv</code> థ్రెడ్ పూల్ కి అప్పగిస్తుంది.</li>
+                <li><strong>ఈవెంట్ లూప్ ఫేజెస్:</strong> టైమర్స్ (Timers), పోల్ (Poll), మరియు చెక్ (Check) అనే దశల ద్వారా ఈవెంట్ లూప్ ఎడతెగకుండా తిరుగుతూ పూర్తయిన టాస్క్‌ల కాల్‌బ్యాక్‌లను కాల్ స్టాక్‌లోకి పంపుతుంది.</li>
+                <li><strong>ప్రొడక్షన్ జాగ్రత్త:</strong> భారీ లూప్‌లను లేదా సింక్రోనస్ కోడ్‌ను నేరుగా రాయడం వల్ల సర్వర్ మొత్తం ఫ్రీజ్ అయిపోతుంది. ఎల్లప్పుడూ అస్రింక్రోనస్ పద్ధతులనే వాడాలి.</li>
+              </ul>
+              <p class="mb-0 text-muted small">మరింత ప్రాక్టికల్ బ్యాకెండ్ ఆర్కిటెక్చర్ కొరకు మా <a href="course_details.html" class="font-weight-bold text-primary">Node.js &amp; Express లైవ్ కోర్సు చూడండి</a>.</p>
+            </div>
+
+            <!-- Summary -->
+            <div class="success-card mt-5">
+              <span class="icon">🚀</span>
+              <div>
+                <strong>Master Enterprise Backend Scalability (KSR Tip)</strong><br>
+                Once you truly master how the Event Loop delegates I/O to the OS kernel through epoll/kqueue, you can design Node.js microservices capable of handling millions of real-time WebSocket and HTTP connections effortlessly.
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer">
+          <span>Published for Backend Developers</span>
+          <span>Node.js Architecture Guide</span>
+        </footer>
+
+      </article>
+    </section>
+  </main>
+
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>

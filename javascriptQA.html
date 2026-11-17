@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Telugu It Tutorials.com JavaScript Interview Questions and Answers - A comprehensive guide for preparing for JavaScript developer interviews. Includes tricky coding challenges, core concepts, and more.">
+    <meta name="description" content="Comprehensive JavaScript interview preparation covering event loop, prototypes, hoisting, closures, ES6+, and tricky coding questions." />
     <meta name="keywords" content="Telugu It Tutorials.com JavaScript interview questions, JavaScript coding questions, JavaScript developer interview, JavaScript technical interview, JavaScript coding challenges, JavaScript functions, JavaScript concepts, JavaScript arrays, JavaScript objects, JavaScript interview guide, JavaScript exam, JavaScript certification, JavaScript developer Q&A, JavaScript programming, JavaScript ES6, JavaScript closures, JavaScript promises">
-    <title>Telugu It Tutorials.com | JavaScript Interview Questions and Answers</title>
+    <title>Top JavaScript Interview Questions & Answers | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/javascriptQA.html" />
 <meta name="description" content="Telugu IT Tutorials offers live virtual full-stack development courses in Telugu (HTML, CSS, JavaScript, React, Node.js, SQL) with 100% job placement support and lifetime access." />
 
   <!-- Primary Keywords -->
@@ -57,6 +58,31 @@
                 });
             });
         });
+
+        function filterQA() {
+            const query = document.getElementById('qaSearchInput').value.toLowerCase().trim();
+            const qas = document.querySelectorAll('.qa');
+            let visibleCount = 0;
+            qas.forEach(qa => {
+                const text = qa.innerText.toLowerCase();
+                if (!query || text.includes(query)) {
+                    qa.style.display = '';
+                    visibleCount++;
+                } else {
+                    qa.style.display = 'none';
+                }
+            });
+            const countEl = document.getElementById('qaMatchCount');
+            if (countEl) {
+                countEl.innerText = query ? `Found ${visibleCount} matching questions` : `Showing all ${qas.length} questions`;
+            }
+        }
+
+        function toggleAllQA(show) {
+            document.querySelectorAll('.qa .answer').forEach(a => {
+                a.style.display = show ? 'block' : 'none';
+            });
+        }
     </script>
   </head>
 
@@ -73,7 +99,7 @@
         <nav id="nav-menu-container">
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="index.html#speakers">Videos</a></li>
                <li class="menu-has-children">
       <a class="menu-active" href="articles.html">Interview Q&amp;A</a>
@@ -86,7 +112,7 @@
       </ul>
     </li>
                 <li class="menu-has-children">
-              <a href="#">Code Snipets</a>
+              <a href="c_programs.html">Code Snippets</a>
               <ul>
                 <li><a href="c_programs.html">C Language</a></li>
                 <li><a href="java_programs.html">Java</a></li>
@@ -95,7 +121,8 @@
               </ul>
             </li>
             <li><a href="index.html#courses">Courses</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
 
           </ul>
         </nav>
@@ -105,6 +132,23 @@
 
     <main id="main" style=" padding:10%;">
          <h1>JavaScript Interview QA</h1>
+<div class="container mb-4" style="background: #f9f9f9; padding: 20px; border-radius: 5px;"><p style="font-size:1.1rem; line-height: 1.6; text-align: justify; color: #444;">Prepare for your next technical interview with our extensive JavaScript Q&A. JavaScript is the most popular programming language in the world, powering the interactive logic of the web. Interviewers heavily focus on JavaScript concepts such as the event loop, closures, scope, prototypal inheritance, and ES6+ features like Promises and async/await. This guide is designed to test your core understanding of the language, ensuring you don't just know how to write code, but understand how it executes under the hood.</p></div>
+
+<div class="card p-3 mb-4 shadow-sm border-0" style="background: #f8fafc; border-left: 4px solid #ffc107 !important;">
+  <div class="row align-items-center">
+    <div class="col-md-7 mb-2 mb-md-0">
+      <div class="input-group">
+        <span class="input-group-text bg-white border-end-0"><i class="fa fa-search text-warning"></i></span>
+        <input type="text" id="qaSearchInput" class="form-control border-start-0" placeholder="Type keyword to filter JavaScript questions (e.g. closure, promise, event loop, hoisting)..." onkeyup="filterQA()">
+      </div>
+    </div>
+    <div class="col-md-5 text-md-right text-center">
+      <button type="button" class="btn btn-sm btn-outline-warning text-dark me-1" onclick="toggleAllQA(true)"><i class="fa fa-plus-circle me-1"></i> Expand All</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleAllQA(false)"><i class="fa fa-minus-circle me-1"></i> Collapse All</button>
+      <div class="small text-muted mt-1" id="qaMatchCount">Search across 100 JavaScript questions</div>
+    </div>
+  </div>
+</div>
         <div class="qa">
             <div class="question">1. What are JavaScript data types?</div>
             <div class="answer">JavaScript has 6 primitive data types: string, number, boolean, undefined, null, and symbol. It also has non-primitive types like objects and arrays.</div>
@@ -584,80 +628,80 @@
             </div>
         </div>
 
-
+    <div class="container mt-5 mb-5" style="background: #eef2f5; padding: 25px; border-left: 5px solid #ffc107; border-radius: 6px;">
+      <h3 style="color:#d39e00; font-weight: 700;">Tips for Technical Interview Success</h3>
+      <p style="font-size:1.1rem; line-height: 1.6; color: #333;">Mastering JavaScript internals is what unlocks senior full-stack roles. Make sure you don't just remember definitions, but can code solutions on a whiteboard or online IDE during live screenings.</p>
+      
+      <div class="mt-4 pt-3 border-top">
+        <h5 class="font-weight-bold" style="color: #0e1b4d;">💡 తెలుగులో జావాస్క్రిప్ట్ ఇంటర్వ్యూ ముఖ్య గమనికలు:</h5>
+        <ul style="line-height: 1.8; color: #444;">
+          <li><strong>క్లోజర్స్ (Closures):</strong> ఒక ఇన్నర్ ఫంక్షన్ తన ఔటర్ ఫంక్షన్ స్కోప్‌లోని వేరియబుల్స్‌ను ఔటర్ ఫంక్షన్ ఎగ్జిక్యూషన్ ముగిసిన తర్వాత కూడా గుర్తుంచుకోగలగడమే క్లోజర్. డేటా ఎన్‌క్యాప్సులేషన్‌కు ఇది చాలా ముఖ్యం.</li>
+          <li><strong>ప్రామిసెస్ &amp; Async/Await:</strong> కాల్‌బ్యాక్ హెల్ (Callback Hell) ను నివారించడానికి ES6 Promises మరియు ES8 async/await ఎలా పనిచేస్తాయో, ఎర్రర్ హ్యాండ్లింగ్ కోసం <code>try/catch</code> ఎలా వాడాలో స్పష్టంగా చెప్పాలి.</li>
+          <li><strong>ఈవెంట్ బబ్లింగ్ &amp; డెలిగేషన్:</strong> డోమ్ (DOM) లో ఈవెంట్ ఎలా ప్రయాణిస్తుంది మరియు పేరెంట్ ఎలిమెంట్‌పై లిజనర్ పెట్టడం ద్వారా మెమరీని ఎలా ఆదా చేయవచ్చో వివరించాలి.</li>
+        </ul>
+        <p class="mb-0 text-muted small">మా యూట్యూబ్ ఛానెల్‌లో పూర్తి <a href="https://www.youtube.com/playlist?list=PLq_d8fc5zu_P1fn7aVBGVpX4i2CvnXD8t" target="_blank" rel="noopener" class="text-danger font-weight-bold">తెలుగు JavaScript వీడియో ప్లేలిస్ట్‌ను ఇక్కడ చూడండి &rarr;</a></p>
+      </div>
     </div>
+    </main>
 
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-info">
-              <h4>TIT</h4>
-              <p>
-                With over 25 years of experience in IT training and development,
-                our institute is dedicated to empowering individuals with the
-                skills and knowledge required to excel in the rapidly evolving
-                tech industry. Led by an expert who has worked with top-tier
-                corporate companies, we offer comprehensive training in both Web
-                and Windows application development.
-              </p>
-            </div>
+      <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
 
-            <div class="col-lg-6 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#about">About us</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#courses">Courses</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-             <a href="terms.html">Terms of service</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="privacy.html">Privacy policy</a>
-                </li>
-              </ul>
-            </div>
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
 
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                Ongole <br />
-                Andhrapradesh 523 002<br />
-                India <br />
-                <!-- <strong>Phone:</strong> +91 99999 99999<br> -->
-                <strong>Email:</strong>training@telugututorial.com<br />
-              </p>
-
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a href="#" class="google-plus"
-                  ><i class="fa fa-google-plus"></i
-                ></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>TIT@2024</strong>. All Rights Reserved
-        </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
       </div>
-    </footer>
+    </div>
+  </footer>
     <!-- #footer -->
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -678,5 +722,18 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+  
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+  This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our use of cookies. 
+  <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+  <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');" style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got it!</button>
+</div>
+<script>
+  if(!localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+</script>
+
   </body>
 </html>

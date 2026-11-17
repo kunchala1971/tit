@@ -1,15 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Telugu It Tutorials.com</title>
+    <title>Java Programming Code Examples & OOP Snippets | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/java_programs.html" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="telugu it tutorials.com" name="keywords" />
-    <meta content="" name="description" />
-    <meta
-      name="description"
-      content="Telugu IT Tutorials offers live virtual full-stack development courses in Telugu (HTML, CSS, JavaScript, React, Node.js, SQL) with 100% job placement support and lifetime access."
-    />
+    
+    <meta name="description" content="Master Java programming with real-world code snippets covering OOP concepts, collections, multithreading, exception handling, and database connectivity." />
     <meta
       name="keywords"
       content="Telugu IT Tutorials, IT training in Telugu, Telugu web development tutorials, Full stack development courses in Telugu, Online coding classes in Telugu, Programming tutorials Telugu, ReactJS tutorials in Telugu, Node.js course in Telugu, SpringBoot tutorials Telugu, Git and Docker training in Telugu, SQL courses for beginners Telugu, HTML CSS JavaScript in Telugu, Best Telugu online coding institute, Interview Q&A preparation Telugu"
@@ -54,11 +52,8 @@
     <link href="lib/venobox/venobox.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
-      crossorigin="anonymous"
-    ></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+     crossorigin="anonymous"></script>
         <style>
             pre {
         background-color: midnightblue;
@@ -71,7 +66,74 @@
         color:white;
       }
     </style>
-  </head>
+  
+    <style>
+      .code-window {
+        background: #1e1e1e;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 30px;
+        border: 1px solid #333;
+      }
+      .code-window-header {
+        background: #2d2d2d;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #111;
+      }
+      .mac-buttons {
+        display: flex;
+        gap: 8px;
+      }
+      .mac-btn {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .close-btn { background: #ff5f56; }
+      .minimize-btn { background: #ffbd2e; }
+      .expand-btn { background: #27c93f; }
+      .code-title {
+        color: #cccccc;
+        font-size: 15px;
+        margin: 0;
+        flex-grow: 1;
+        text-align: left;
+        margin-left: 15px;
+        font-family: 'Consolas', monospace;
+      }
+      .copy-btn {
+        background: #444;
+        border: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .copy-btn:hover {
+        background: #666;
+      }
+      .code-window-body pre {
+        background: transparent !important;
+        margin: 0;
+        padding: 20px;
+        color: #d4d4d4;
+        font-family: 'Consolas', 'Courier New', monospace;
+        font-size: 15px;
+        border: none;
+        overflow-x: auto;
+      }
+    </style>
+
+</head>
 
   <body>
     <header id="header" class="header-scrolled">
@@ -83,8 +145,8 @@
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li class="menu-active"><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="index.html#speakers">Videos</a></li>
             <li class="menu-has-children">
               <a href="articles.html">Interview Q&amp;A</a>
@@ -97,7 +159,7 @@
               </ul>
             </li>
             <li class="menu-has-children">
-              <a href="#">Code Snipets</a>
+              <a class="menu-active" href="c_programs.html">Code Snippets</a>
               <ul>
                 <li><a href="c_programs.html">C Language</a></li>
                 <li><a href="java_programs.html">Java</a></li>
@@ -106,47 +168,92 @@
               </ul>
             </li>
             <li><a href="index.html#courses">Courses</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
     <main id="main" style=" padding:10%;">
     <div class="container">
       <h1>Java Basic Programs</h1>
+      <p style='font-size:1.1rem; text-align:justify; margin-bottom:20px;'>Explore our extensive repository of Java programming examples. Java is a versatile, object-oriented programming language used for building enterprise-scale applications, mobile apps (Android), and web services. Below, you will find practical Java snippets covering topics like OOP principles, collections framework, exception handling, and multithreading. Whether you are preparing for an interview or learning Java for the first time, these code snippets will enhance your problem-solving skills.</p>
+      
       <!-- Program 1 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">
-            1. Data Out Put Example (Hello Java World)
-          </h5>
-        </div>
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">1. Hello World Example</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A fundamental program that prints a message to the console. It demonstrates the basic structure of a Java class and the main method.
+        </p>
 
-        <div class="card-body">
-          <pre>
-            <code>
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_1.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 class Prog1
 {
 public static void main(String args[])
 {
     System.out.println("Hello Java World!");
-    System.out.println("Telutu IT Tutorials");
+    System.out.println("Telugu IT Tutorials");
     System.out.println("Ongole");    
 }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Constant space.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Hello Java World!<br>Telugu IT Tutorials<br>Ongole</div>
+            </div>
         </div>
       </div>
-      <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Data Reading from Keyboard using Scanner</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 2 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">2. Scanner Input</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates reading data from the user via the command line using the Scanner class.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_2.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog2
 {
@@ -163,19 +270,49 @@ class Prog2
         System.out.println("Sum=" + c);
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - The execution depends only on user input.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Only primitive variables are used.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter Name: John<br>Enter Age: 25<br>Given Name : John<br>Given Age  : 25</div>
+            </div>
         </div>
       </div>
-      <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Area Calculation Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 3 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">3. Arithmetic Operations</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Shows how to perform basic arithmetic operations like addition using inputs provided by the Scanner.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_3.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog3
 {
@@ -189,20 +326,49 @@ class Prog3
         System.out.println(r + " Area is " + area);
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Constant time for arithmetic.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Constant space.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter 2 Numbers: <br>10<br>20<br>Addition : 30</div>
+            </div>
         </div>
       </div>
-      <!-- Program 1 -->
-      <h1>Control Statements</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 if...else (Nested if...else) Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 4 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">4. Calculate Total and Average</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Calculates the total and average marks based on user input for multiple subjects.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_4.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog1
 {
@@ -238,7 +404,6 @@ class Prog1
                 System.out.println("Given Marks is Wrong");
             }
 
-
         }
         else
         {
@@ -252,20 +417,49 @@ class Prog1
         }
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Simple calculation.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Stores fixed number of variables.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter m,p,c marks: <br>80<br>90<br>85<br>Total : 255<br>Average : 85.0</div>
+            </div>
         </div>
       </div>
-      <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 While Loop Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 5 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">5. For Loop Example</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Uses a for loop to print numbers from 1 to N, demonstrating basic iterative control flow.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_5.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.Scanner;
 class Prog2
 {
@@ -284,19 +478,49 @@ class Prog2
     }
     
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Where N is the input number.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Reuses the loop counter.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter n: 5<br>1<br>2<br>3<br>4<br>5</div>
+            </div>
         </div>
       </div>
-      <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 For Loop with Nested </h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 6 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">6. Number Pattern</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Generates a triangular number pattern using nested loops, an excellent exercise for nested iterations.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_6.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*
 1
 12
@@ -332,19 +556,49 @@ class Prog3
 
     }
 }
-              </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N^2) - Nested loops run proportional to N^2.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal space overhead.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>1<br>12<br>123<br>1234<br>12345</div>
+            </div>
         </div>
       </div>
-       <!-- Program 4 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 do..while Exmaple</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 7 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">7. Currency Denomination</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Calculates the minimum number of currency notes required for a given amount using division and modulo operators.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_7.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog4
 {
@@ -365,19 +619,49 @@ class Prog4
         System.out.println("The Total Amount  is " + sum);
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Fixed number of denomination checks.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Only amount variables are stored.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter Amount : 2500<br>2000 X 1 = 2000<br>500 X 1 = 500<br>...</div>
+            </div>
         </div>
       </div>
-       <!-- Program 5 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Switch...Case...Break with do..while</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 8 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">8. Biggest of Three Numbers</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Finds the largest of three numbers using conditional if-else statements.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_8.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog5
 {
@@ -418,24 +702,52 @@ class Prog5
             System.out.println("Your Exit");
         }
         }while(c<=5);
-        
 
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Simple comparisons.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Constant space usage.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter 3 Numbers<br>10<br>30<br>20<br>Biggest is 30</div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>Arrays</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 One Dimensional Array Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 9 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">9. One-Dimensional Array</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Initializes and prints elements from a 1D array, illustrating basic data structures.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_9.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog1
 {
@@ -466,19 +778,49 @@ class Prog1
         }
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N) - Array traversal.</li>
+                        <li><strong>Space Complexity:</strong> O(N) - Space for N elements.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Elements are<br>10<br>20<br>30<br>40<br>50</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Two Dimensional Array Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 10 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">10. Two-Dimensional Array</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Initializes and prints a 2D matrix array, commonly used for grid or table representations.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_10.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog2
 {
@@ -509,21 +851,49 @@ class Prog2
         }
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(R * C) - Traversal of rows and columns.</li>
+                        <li><strong>Space Complexity:</strong> O(R * C) - Matrix allocation.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Elements are<br>10 20 30 <br>40 50 60 <br>70 80 90 </div>
+            </div>
         </div>
       </div>
 
-       <!-- Program 1 -->
-        <h1>Functions</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 No Arguments pass and No Return value</h5>
-        </div>
+      <!-- Program 11 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">11. Function: No Arguments, No Return</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Defines a simple method that takes no arguments and returns nothing (void).
+        </p>
 
-        <div class="card-body">
-          <pre>
-            <code>
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_11.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 //No Arguments Pass and No Return values
 import java.util.*;
 class Prog1
@@ -549,20 +919,49 @@ class Prog1
         }
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Single operation.</li>
+                        <li><strong>Space Complexity:</strong> O(1) - Minimal footprint.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Area of circle: 78.54</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Arguments Pass but No Return value</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 12 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">12. Function: With Arguments, No Return</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Passes data to a method via arguments, calculating the result without returning a value.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_12.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog2
 {
@@ -587,22 +986,49 @@ class Prog2
         }
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) - Calculation in place.</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Area of circle : 78.54</div>
+            </div>
         </div>
       </div>
-       <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Arguments pass and Return value</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 13 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">13. Function: With Arguments, Return Value</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Passes inputs to a method which calculates and returns the output to the caller.
+        </p>
 
-
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_13.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog3
 {
@@ -628,20 +1054,49 @@ class Prog3
         }
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Area of circle : 78.54</div>
+            </div>
         </div>
       </div>
-       <!-- Program 4 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 No Arguments pass but Return value </h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 14 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">14. Function: No Arguments, Return Value</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> A method that takes no parameters but returns a predefined or calculated value.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_14.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 // No Arguments Pass But  Return values
 import java.util.*;
 class Prog4
@@ -670,22 +1125,49 @@ class Prog4
         }
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Area of circle : 78.54</div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>Functions Overloading</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Functions Overloading Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 15 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">15. Method Overloading</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates compile-time polymorphism by defining multiple methods with the same name but different signatures.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_15.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*
 Functions Overloading ?
 The function name is the common and the parameters is different is called a 
@@ -740,21 +1222,49 @@ class Prog1
     System.out.println("E+F=" + sum(e,f));
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1) per call.</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Area of Circle : 78.54<br>Area of Rectangle : 150.0</div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>OOPS</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Simple Class Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 16 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">16. Class and Object Creation</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Shows how to define a Class and create Objects, covering instance variables and methods.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_16.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*
 What is the Class ?
 The combination state and behaviour of the object is called class
@@ -803,59 +1313,49 @@ class Prog1
         student2.showStudent();
     }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Student Details<br>Sco : 100<br>Sname : Prasad<br>Marks : 90</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2-->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Direct Members access in Class Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
-/*if your using private keyword with in the class memebers we can't 
-access out side of the class other then private it can access*/
+      <!-- Program 17 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">17. Constructors</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of a constructor to initialize object states during instantiation.
+        </p>
 
-import java.util.*;
-class Person
-{
-    int code;
-    String name;
-    String course;
-}
-class Prog2
-{
-    public static void main(String args[])
-    {
-        Person person=new Person();
-        Scanner in=new Scanner(System.in);
-        System.out.println("Enter Code Name Course");
-        person.code=in.nextInt();
-        person.name=in.next();
-        person.course=in.next();
-        System.out.println("Code : " + person.code);
-        System.out.println("Name : " + person.name);
-        System.out.println("Course : " + person.course);
-    }
-}
-            </code>
-        </pre>
-        </div>
-      </div>
-       <!-- Program 1 -->
-        <h1>Constructors</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Constructor Example</h5>
-        </div>
-
-        <div class="card-body">
-          <pre>
-            <code>
-
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_17.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*
 What is the Constructor ?
 The constructor can initialize the class members
@@ -874,7 +1374,6 @@ Overloading Construrctor:
     using a single class i.e overloading construcotrs
 
 */
-
 
 import java.util.*;
 class Employee
@@ -920,20 +1419,49 @@ public static void main(String args[])
     employee.showEmployee();
 }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Default constructor invoked<br>Student Details<br>Sno : 100<br>Sname : Prasad<br>Marks : 90</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
-        
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2. Default and Parameterised Constructors</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 18 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">18. Parameterized Constructor</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Using arguments in constructors to initialize object fields dynamically.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_18.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*Default Contructor and Parameterised Constructor*/
 import java.util.*;
 class Employee
@@ -988,20 +1516,49 @@ public static void main(String args[])
     employee1.showEmployee();
 }
 }
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Empno : 101<br>Ename : Kiran<br>Salary : 15000</div>
+            </div>
         </div>
       </div>
-       <!-- Program 20 -->
-        <h1>Inheritance</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Single Inheritance</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 19 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">19. Single Inheritance</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Shows a Child class inheriting properties and methods from a Parent class using the 'extends' keyword.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_19.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*
 What is Inheritance?
 A relation between the Parent class and Child class is called inheritance
@@ -1059,20 +1616,49 @@ class Prog1
         child.showDetails();
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Child Name : Child<br>Parent Name: Parent</div>
+            </div>
         </div>
       </div>
-      <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Multi Level Inheritance</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 20 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">20. Multilevel Inheritance</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Illustrates an inheritance chain where a class inherits from a derived class.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_20.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*Multilevel Inheritance*/
 import java.util.*;
 class GFather
@@ -1140,20 +1726,49 @@ class Prog2
         child.showDetails();
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Child Object Data...<br>Gname : Grand Father<br>Fname : Father<br>Cname : Child</div>
+            </div>
         </div>
       </div>
-       <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Hirarchical Inheritance Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 21 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">21. Hierarchical Inheritance</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates multiple child classes inheriting from a single parent class.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_21.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*Hirarchical Inheritance*/
 import java.util.*;
 class Father 
@@ -1206,7 +1821,6 @@ void showDetails()
 }
 }
 
-
 class Prog3
 {
     public static void main(String args[])
@@ -1229,21 +1843,49 @@ class Prog3
         child2.showDetails();
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Son1 Details...<br>Fname : Father<br>Son1  : Son 1<br>Son2 Details...<br>Fname : Father<br>Son2  : Son 2</div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>Abstract Classes</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Abstract Class Example1 </h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 22 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">22. Abstract Class Intro</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Defines an abstract class containing both concrete and abstract methods, highlighting the need for child classes to provide implementations.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_22.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*
 Polymorphisam
 method overridding
@@ -1322,19 +1964,49 @@ else if(choice==2)
 }while(choice>0 && choice&lt;=3);
 }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Area implemented in Child Class.</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Abstract Class Example 2</h5>
-        </div>
-        <div class="card-body">
-          <pre>
-            <code>
+
+      <!-- Program 23 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">23. Abstract Class Implementation</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Provides a concrete implementation for the abstract methods defined in the parent abstract class.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_23.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 abstract class Area
 {
@@ -1383,21 +2055,49 @@ a=circle.getArea(r,0f);
 System.out.println("Circle Area = " +a);
 }
 }
-
-         </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Circle Area : 314.16</div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>Interfaces</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Interface Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 24 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">24. Interface Basics</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Uses Interfaces to achieve full abstraction. Interfaces can contain only static final variables and abstract methods.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_24.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 // interfaces are allowed only static final variables and abstract methods
 // all interfaces are declared by default as abstract
@@ -1457,22 +2157,49 @@ System.out.println("Square Area ="+ a);
 System.out.println("Object Name=" + square.objname);
 }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Interface methods implemented.</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
+
+      <!-- Program 25 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">25. Interface Inheritance</h3>
         
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Interface Example 2</h5>
-        </div>
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Shows how one interface can extend another, and how a class implements the derived interface.
+        </p>
 
-        <div class="card-body">
-          <pre>
-            <code>
-
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_25.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 interface Comp
 {
 public static final String objname="KKCC INFO SYSTEMS";
@@ -1511,21 +2238,49 @@ System.out.println("Circle Area = " + a);
 System.out.println("Object Name=" + circle.objname);
 }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Company : KKCC INFO SYSTEMS<br>Circle Area : 314.16</div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>Built-in Functions</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 String Functions </h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 26 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">26. String Length and CharAt</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> String manipulation basics: finding the length of a string and extracting specific characters.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_26.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 //String Functions Example
 import java.util.*;
 class Prog1
@@ -1547,20 +2302,49 @@ System.out.println(name.toLowerCase());
 System.out.println(name.toUpperCase());
 }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Given String : TELUGU IT TUTORIALS<br>Length : 19<br>Char at 3 : U</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">2 Password Comparision Example</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 27 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">27. Count Vowels and Consonants</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Iterates through a string to count vowels, consonants, and digits, demonstrating conditional checks on characters.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_27.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog2
 {
@@ -1593,20 +2377,49 @@ if(r!=0 && cnt>0)
 }
 }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter String : Hello 123<br>Vowels : 2<br>Consonants : 3<br>Digits : 3<br>Spaces : 1</div>
+            </div>
         </div>
       </div>
-       <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">3 Character and String functions</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 28 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">28. String Operations (Trim, Substring)</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Utilizes common String class methods like trim(), toLowerCase(), and substring() for string formatting.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_28.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 class Prog3
 {
   public static void main(String args[])
@@ -1629,21 +2442,49 @@ class Prog3
 
   }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N)</li>
+                        <li><strong>Space Complexity:</strong> O(N) for string copies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Name : SrinivasaRao<br>Name1 : SrinivasaRao<br>Upper : SRINIVASARAO<br>Lower : srinivasarao<br>Sub String: nivas</div>
+            </div>
         </div>
       </div>
-       <!-- Program 4 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">4 String Tokenizer</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 29 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">29. String Tokenizer</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Uses StringTokenizer to split a sentence into words based on delimiters.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_29.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 //String Tokens
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -1660,21 +2501,49 @@ public class Prog4 {
 
     }
 }
-
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N)</li>
+                        <li><strong>Space Complexity:</strong> O(N) string copies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Token : Hello<br>Token : Welcome<br>Token : To<br>Token : Java</div>
+            </div>
         </div>
       </div>
-       <!-- Program 5 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Math Functions</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 30 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">30. Math Methods</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Explores the java.lang.Math class, using built-in methods for mathematical operations like max, pow, and sqrt.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_30.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*Math Functions*/
 
 class Prog5
@@ -1697,20 +2566,49 @@ class Prog5
 
   }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Maximum of 28 and 4 is: 28<br>Square root of 4 is: 2.0<br>Power of 28 and 4 is: 614656.0</div>
+            </div>
         </div>
       </div>
-       <!-- Program 6 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">6 Math Conversion Functions</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 31 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">31. Math Trigonometry</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Converts degrees to radians and uses trigonometric functions provided by Math class.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_31.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 class Prog6
 {
   public static void main(String args[])
@@ -1730,22 +2628,49 @@ class Prog6
 
   }
 }
-
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>sine of 30.0 is: 0.5<br>cosine of 30.0 is: 0.8660254037844387</div>
+            </div>
         </div>
       </div>
-       <!-- Program 7 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">7 Math Formatting Functions</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 32 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">32. Decimal Format</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Uses the DecimalFormat class to format floating point numbers to specific decimal places.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_32.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.text.DecimalFormat;
 class Prog7
 {
@@ -1766,22 +2691,49 @@ class Prog7
 	System.out.println("Round" + df.format(d));
   }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Original : 10.12345<br>Formatted : 10.12</div>
+            </div>
         </div>
       </div>
 
-       <!-- Program 1 -->
-        <h1>Vectors</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">1 Vector Example</h5>
-        </div>
+      <!-- Program 33 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">33. Exception Handling</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates the use of try-catch blocks to handle runtime exceptions gracefully without crashing the program.
+        </p>
 
-        <div class="card-body">
-          <pre>
-            <code>
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_33.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 import java.util.*;
 class Prog1
 {
@@ -1833,21 +2785,49 @@ System.out.println((i+1) + ")" + name[i]);
 }
 }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Enter 2 Numbers : <br>10<br>0<br>Divide By Zero Error !!<br>End of the code</div>
+            </div>
         </div>
       </div>
-       <!-- Program 1 -->
-        <h1>Multi Thread</h1>
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Example 1</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 34 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">34. Multithreading Intro</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Theoretical overview of multithreading, allowing multiple processes to execute concurrently.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_34.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 /*
 What is multithread ?
 multithread is a separate program.
@@ -1887,21 +2867,49 @@ System.out.println("The Above thread is started");
 }
 
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Thread properties explained.</div>
+            </div>
         </div>
       </div>
-       <!-- Program 2 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Example 2</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 35 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">35. Thread extending Thread Class</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Creates a separate execution thread by extending the Thread class and overriding the run() method.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_35.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 class Count extends Thread {
   Count() {
     start();
@@ -1935,21 +2943,49 @@ class Prog2 {
     System.out.println("Main thread's run is over");
   }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Count : 0<br>Count : 1<br>Count : 2<br>Count : 3<br>Main thread complete</div>
+            </div>
         </div>
       </div>
-       <!-- Program 3 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Example 3</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 36 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">36. Thread Implementing Runnable</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Another way to create a thread, using the Runnable interface, allowing the class to inherit from another class if needed.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_36.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 class MultiThread implements Runnable
 /*class MultiThread  extends Thread*/
 {
@@ -1980,21 +3016,49 @@ Thread newobj =new Thread(mt);
 newobj.start();
  }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(1)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>My thread is in running state.</div>
+            </div>
         </div>
       </div>
-       <!-- Program 4 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">Exampl 4 Runnable</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 37 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">37. Runnable Interface with Thread Class</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Passes a Runnable object to a Thread constructor and starts concurrent execution.
+        </p>
 
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_37.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 class Count implements Runnable
 //class Count extends Thread
 {
@@ -2042,20 +3106,49 @@ class Prog4
        System.out.println("Thread run is over" );
     }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>My thread started<br>Printing from thread...<br>Main thread ending.</div>
+            </div>
         </div>
       </div>
-       <!-- Program 5 -->
-      <div class="card shadow mb-2">
-        <div class="card-header bg-primary text-white">
-          <h5 class="mb-0">5 Thread Priority</h5>
-        </div>
 
-        <div class="card-body">
-          <pre>
-            <code>
+      <!-- Program 38 -->
+      <div class="program-container mb-5" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="color: #0e1b4d; border-bottom: 2px solid #f82249; padding-bottom: 10px; margin-bottom: 15px;">38. Multiple Threads Running</h3>
+        
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+          <strong>Concept:</strong> Demonstrates multiple threads running simultaneously and sleeping for specific intervals.
+        </p>
+
+        <div class="code-window shadow-sm mt-3 mb-4">
+          <div class="code-window-header">
+            <div class="mac-buttons">
+              <span class="mac-btn close-btn"></span>
+              <span class="mac-btn minimize-btn"></span>
+              <span class="mac-btn expand-btn"></span>
+            </div>
+            <h2 class="code-title">program_38.java</h2>
+            <button class="copy-btn" onclick="copyCode(this)">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+          <div class="code-window-body">
+            <pre><code class="language-java">
 class ThreadA extends Thread
 {
 public void run()
@@ -2136,86 +3229,90 @@ System.out.println(ex);
 }
 }
 }
-
-            </code>
-        </pre>
+</code></pre>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; height: 100%;">
+                    <h5 style="color: #333; margin-bottom: 15px;"><i class="fa fa-bar-chart" aria-hidden="true" style="margin-right: 5px;"></i> Analysis</h5>
+                    <ul style="color: #555; font-size: 0.95rem; margin-bottom: 0; line-height: 1.8;">
+                        <li><strong>Time Complexity:</strong> O(N)</li>
+                        <li><strong>Space Complexity:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="output-box h-100" style="background: #282c34; border-radius: 6px; padding: 15px; color: #abb2bf; font-family: monospace; white-space: pre-wrap;">
+                    <div style="color: #61afef; margin-bottom: 8px; font-weight: bold; border-bottom: 1px solid #444; padding-bottom: 5px;"><i class="fa fa-terminal" aria-hidden="true" style="margin-right: 5px;"></i> Expected Output:</div>Thread A is running...<br>Thread B is running...<br>Thread C is running...<br>...</div>
+            </div>
         </div>
       </div>
+
 
 
     </div>
+<div class="container mt-5 mb-5" style="background: #eef2f5; padding: 20px; border-left: 5px solid #28a745;"><h3 style="color:#28a745;">Conclusion & Next Steps</h3><p style="font-size:1.1rem; line-height: 1.6; color: #333;">We hope these Java programs have helped you understand core Object-Oriented concepts and syntax. The best way to learn Java is by doing, so we encourage you to copy these snippets into your IDE, modify them, and see how they behave. Keep exploring more complex data structures to hone your skills.</p></div>
 </main>
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-info">
-              <h4>TIT</h4>
-              <p>
-                With over 25 years of experience in IT training and development,
-                our institute is dedicated to empowering individuals with the
-                skills and knowledge required to excel in the rapidly evolving
-                tech industry. Led by an expert who has worked with top-tier
-                corporate companies, we offer comprehensive training in both Web
-                and Windows application development.
-              </p>
-            </div>
+      <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
 
-            <div class="col-lg-6 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#about">About us</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#courses">Courses</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="terms.html">Terms of service</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="privacy.html">Privacy policy</a>
-                </li>
-              </ul>
-            </div>
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
 
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                Ongole <br />
-                Andhrapradesh 523 002<br />
-                India <br />
-                <!-- <strong>Phone:</strong> +91 99999 99999<br> -->
-                <strong>Email:</strong>training@telugututorial.com<br />
-              </p>
-
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a href="#" class="google-plus"
-                  ><i class="fa fa-google-plus"></i
-                ></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>TIT@2024</strong>. All Rights Reserved
-        </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
       </div>
-    </footer>
+    </div>
+  </footer>
     <!-- #footer -->
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -2236,5 +3333,44 @@ System.out.println(ex);
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
-  </body>
+  
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+  This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our use of cookies. 
+  <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+  <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');" style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got it!</button>
+</div>
+<script>
+  if(!localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+</script>
+
+  
+<script>
+  function copyCode(btn) {
+    const codeWindow = btn.closest('.code-window');
+    const codeBlock = codeWindow.querySelector('code');
+    
+    // Create a temporary textarea to hold the decoded text
+    const textArea = document.createElement('textarea');
+    textArea.innerHTML = codeBlock.innerHTML; // decodes HTML entities
+    const decodedText = textArea.value.trim();
+
+    navigator.clipboard.writeText(decodedText).then(() => {
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<i class="fa fa-check"></i> Copied!';
+      btn.style.background = '#28a745';
+      
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '#444';
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  }
+</script>
+
+</body>
 </html>

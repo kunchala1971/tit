@@ -1,0 +1,319 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Complete Django Development Setup Guide | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_django_setup.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="telugu it tutorials.com" name="keywords" />
+  
+  <meta name="description" content="Step-by-step tutorial on installing Python, virtualenv, configuring Django project settings, database migration, and REST framework." />
+
+  <!-- Primary Keywords -->
+  <meta name="keywords"
+    content="Telugu IT Tutorials, IT training in Telugu, Telugu web development tutorials, Full stack development courses in Telugu, Online coding classes in Telugu, Programming tutorials Telugu, ReactJS tutorials in Telugu, Node.js course in Telugu, SpringBoot tutorials Telugu, Git and Docker training in Telugu, SQL courses for beginners Telugu, HTML CSS JavaScript in Telugu, Best Telugu online coding institute, Interview Q&A preparation Telugu" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta property="og:description"
+    content="Learn programming in Telugu with live virtual courses on React, Node.js, SQL, Git, Docker & more. Lifetime access + 100% job placement support." />
+  <meta property="og:url" content="https://teluguittutorials.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://teluguittutorials.com/images/banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta name="twitter:description"
+    content="Master full-stack development in Telugu with lifetime access & job support. Courses include HTML, CSS, JavaScript, React, Node.js, SQL." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/images/banner.jpg" />
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+        <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg wow fadeInUp" style="padding-top: 60px; padding-bottom: 60px;">
+      <article class="blog-post-card">
+
+        <!-- Post Header -->
+        <header class="post-header">
+          <span class="post-tag">Developer Setup Guide</span>
+          <h1>Django Environment Setup Guide for VS Code</h1>
+          <p>A step-by-step guide to installing Python, creating virtual environments, and configuring VS Code for Django development.</p>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content">
+
+          <section class="lang-section" style="padding: 20px;">
+            <h2 class="section-heading">📌 Setting up Django in VS Code (English Guide)</h2>
+            <p class="intro-desc">This comprehensive guide will help you install Python, set up a virtual environment, and configure Visual Studio Code to start building your first Django web application.</p>
+
+            <!-- Step 1 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">1</span>
+                <span>Step 1: Install Python</span>
+              </div>
+              <ul class="step-list" style="margin-top: 15px; line-height: 1.8;">
+                <li>Visit the official website: <strong>python.org</strong> and download the latest version for Windows.</li>
+                <li>Run the installer. <strong>CRITICAL:</strong> Ensure you check the box that says <strong>"Add Python to PATH"</strong> at the bottom of the installer window before clicking "Install Now".</li>
+                <li>To verify installation, open Command Prompt and type:</li>
+              </ul>
+              <div class="command-card mt-3 mb-3">python --version</div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">2</span>
+                <span>Step 2: Install VS Code and Extensions</span>
+              </div>
+              <ul class="step-list" style="margin-top: 15px; line-height: 1.8;">
+                <li>Download VS Code from <strong>code.visualstudio.com</strong> and install it.</li>
+                <li>Open VS Code, click the Extensions icon on the left sidebar (or press <code>Ctrl + Shift + X</code>).</li>
+                <li>Search for and install the following extensions:
+                  <ul style="padding-left: 20px; margin-top: 6px;">
+                    <li><strong>Python</strong> (by Microsoft) - Essential for linting and formatting.</li>
+                    <li><strong>Django</strong> (by Baptiste Darthenay) - Provides Django syntax highlighting and snippets.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">3</span>
+                <span>Step 3: Create a Virtual Environment</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                It is a best practice to create an isolated environment for every Python project so dependencies do not conflict.
+              </p>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Create a new folder for your project on your computer (e.g., <code>my_django_project</code>) and open this folder in VS Code.</li>
+                <li>Open the integrated terminal in VS Code (<code>Ctrl + `</code>).</li>
+                <li>Run the following command to create a virtual environment named <code>env</code>:</li>
+              </ul>
+              <div class="command-card mt-3 mb-3">python -m venv env</div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Now, activate the virtual environment:</li>
+              </ul>
+              <div class="command-card mt-3 mb-3">.\env\Scripts\activate</div>
+              <div style="background: #e7f3fe; border-left: 4px solid #2196F3; padding: 15px; margin-top: 15px;">
+                <strong>Pro Tip:</strong> You will know the environment is activated when you see <code>(env)</code> at the beginning of your terminal prompt line. If you get an Execution Policy error on Windows, run <code>Set-ExecutionPolicy Unrestricted -Scope CurrentUser</code> in PowerShell as Administrator.
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">4</span>
+                <span>Step 4: Install Django and Start Project</span>
+              </div>
+              <ul class="step-list" style="margin-top: 15px; line-height: 1.8;">
+                <li>With the virtual environment activated, install Django via pip:</li>
+              </ul>
+              <div class="command-card mt-3 mb-3">pip install django</div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Once installed, create your first Django project (don't forget the dot at the end so it installs in the current directory):</li>
+              </ul>
+              <div class="command-card mt-3 mb-3">django-admin startproject core .</div>
+              <ul class="step-list" style="line-height: 1.8;">
+                <li>Finally, run the development server to verify everything works:</li>
+              </ul>
+              <div class="command-card mt-3 mb-3">python manage.py runserver</div>
+            </div>
+
+            <!-- Success Box -->
+            <div class="success-card mt-5">
+              <span class="icon">🎉</span>
+              <div>
+                <strong>Setup Complete!</strong><br>
+                Open your browser and navigate to <code>http://127.0.0.1:8000/</code>. You should see the standard Django congratulatory rocket page!
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer">
+          <span>Published for Python Developers</span>
+          <span>VS Code + Django Setup Guide</span>
+        </footer>
+
+      </article>
+    </section>
+  </main>
+
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>

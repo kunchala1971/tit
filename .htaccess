@@ -1,0 +1,54 @@
+# Apache Server Configuration for Telugu IT Tutorials
+
+# 1. Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve sitemap.xml, robots.txt, and ads.txt directly if they exist
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^(sitemap\.xml|robots\.txt|ads\.txt)$ - [L]
+
+  # Ensure uppercase Ads.txt redirects to lowercase ads.txt
+  RewriteRule ^Ads\.txt$ /ads.txt [R=301,L]
+
+  # Redirect thin duplicate c_course.html to comprehensive c_programs.html
+  RewriteRule ^c_course\.html$ /c_programs.html [R=301,L]
+
+  # HTTPS Enforcement (Uncomment if your server supports SSL)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# 2. Correct MIME Types for Sitemap and Robots
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+  AddType text/xml .xml
+  AddType text/plain .txt
+</IfModule>
+
+# 3. Enable Browser Caching & Compression (Optimizes Page Speed for AdSense)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# 4. Security Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>

@@ -1,0 +1,308 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>React 19 useFormStatus Hook: Complete Guide & Live Examples | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_react19_useformstatus.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="React 19 useFormStatus, useFormStatus example, React 19 form pending state, submit button loading spinner React 19" name="keywords" />
+  
+  <meta name="description" content="Master React 19's useFormStatus hook: learn how child components read parent form submission status without prop drilling, with live code examples." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="React 19 useFormStatus Hook: Complete Guide & Live Examples (2026)" />
+  <meta property="og:description"
+    content="Learn how child components access parent form submission status, pending state, and formData using React 19's useFormStatus hook." />
+  <meta property="og:url" content="https://teluguittutorials.com/blog_react19_useformstatus.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="React 19 useFormStatus Hook: Complete Guide & Live Examples (2026)" />
+  <meta name="twitter:description" content="Master form submission pending states and button loaders in React 19." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet" />
+
+  <!-- Bootstrap & Libs -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheets -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/custom.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369" crossorigin="anonymous"></script>
+
+  <!-- Schema.org TechArticle Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "React 19 useFormStatus Hook: Complete Guide & Live Examples",
+    "description": "Comprehensive guide on React 19 useFormStatus hook: reading parent form status, handling pending state, disabling submit buttons, and preventing prop drilling.",
+    "author": {
+      "@type": "Person",
+      "name": "KSR",
+      "jobTitle": "Senior Software Architect & IT Trainer"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Telugu IT Tutorials",
+      "logo": "https://teluguittutorials.com/img/favicon.png"
+    },
+    "mainEntityOfPage": "https://teluguittutorials.com/blog_react19_useformstatus.html",
+    "datePublished": "2026-09-13",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <article class="blog-post-card bg-white p-4 p-md-5 rounded shadow-sm">
+
+          <!-- Post Header -->
+          <header class="post-header border-bottom pb-4 mb-4">
+            <span class="badge bg-success text-white mb-2 px-3 py-2">React 19 New Hooks</span>
+            <h1 class="display-5 font-weight-bold text-dark">React 19 `useFormStatus` Hook: Complete Guide & Live Examples</h1>
+            <p class="text-muted lead">Learn how child components inside forms can read parent submission status without prop drilling using React 19's `useFormStatus`.</p>
+            <div class="d-flex align-items-center mt-3 text-muted small">
+              <i class="bi bi-person-circle me-2 text-success"></i> <strong class="me-3">By KSR</strong>
+              <i class="bi bi-clock me-2 text-success"></i> <span>9 min read</span>
+              <span class="ms-auto text-muted">Updated September 2026</span>
+            </div>
+          </header>
+
+          <!-- Post Content -->
+          <div class="post-content" style="line-height: 1.8; color: #333;">
+            <p class="lead" style="font-size: 1.15rem;">
+              In React applications, submit buttons or loading indicators are often modular child components inside a parent <code>&lt;form&gt;</code>. Previously, passing loading states down to child components required manually passing props or Context. <strong>React 19's `useFormStatus` hook</strong> acts like a Context consumer that automatically hooks into the nearest parent <code>&lt;form&gt;</code>.
+            </p>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">1. `useFormStatus` Syntax & Properties</h2>
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              import { useFormStatus } from 'react-dom';<br><br>
+              const { pending, data, method, action } = useFormStatus();
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mb-2">Properties Breakdown:</h4>
+            <ul class="lh-lg">
+              <li><strong>`pending`</strong>: A boolean that is <code>true</code> while the parent <code>&lt;form&gt;</code> action is submitting.</li>
+              <li><strong>`data`</strong>: The <code>FormData</code> object being submitted by the parent form (or <code>null</code> if not submitting).</li>
+              <li><strong>`method`</strong>: The HTTP method (<code>GET</code> or <code>POST</code>).</li>
+              <li><strong>`action`</strong>: Reference to the action function passed to parent <code>&lt;form action={...}&gt;</code>.</li>
+            </ul>
+
+            <div class="p-3 bg-warning bg-opacity-10 border-start border-4 border-warning rounded mb-4">
+              <h5 class="font-weight-bold text-dark mb-1">Important Rule:</h5>
+              <p class="mb-0 text-dark">`useFormStatus` MUST be called inside a component that is rendered <strong>inside</strong> a <code>&lt;form&gt;</code>. It will not read status if called inside the component that renders the <code>&lt;form&gt;</code> itself.</p>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">2. Complete Live Code Example: Reusable Submit Button Component</h2>
+
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace small">
+              import React from 'react';<br>
+              import { useFormStatus } from 'react-dom';<br><br>
+              <span class="text-secondary">// 1. Reusable Submit Button Child Component</span><br>
+              function SubmitButton({ label = "Submit" }) {<br>
+              &nbsp;&nbsp;<span class="text-secondary">// Automatically reads status of nearest parent &lt;form&gt;</span><br>
+              &nbsp;&nbsp;const { pending, data } = useFormStatus();<br><br>
+              &nbsp;&nbsp;return (<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;button <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="submit" <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;className="btn btn-success font-weight-bold" <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disabled={pending}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{pending ? (<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span className="spinner-border spinner-border-sm me-2" role="status" /&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submitting {data?.get("email")}...<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) : (<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br>
+              &nbsp;&nbsp;);<br>
+              }<br><br>
+              <span class="text-secondary">// 2. Parent Form Component</span><br>
+              export default function NewsletterForm() {<br>
+              &nbsp;&nbsp;async function subscribeAction(formData) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;await new Promise(r => setTimeout(r, 2000));<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;alert(`Subscribed: ${formData.get("email")}`);<br>
+              &nbsp;&nbsp;}<br><br>
+              &nbsp;&nbsp;return (<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;form action={subscribeAction} className="p-4 border rounded"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Subscribe to Tech Newsletter&lt;/h4&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div className="mb-3"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" name="email" placeholder="Enter your email" className="form-control" required /&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">{/* SubmitButton reads pending status automatically */}</span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SubmitButton label="Join Newsletter" /&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>
+              &nbsp;&nbsp;);<br>
+              }
+            </div>
+
+            <div class="p-4 bg-light rounded mt-5 border-start border-4 border-success">
+              <h5 class="font-weight-bold text-dark mb-2">Learn Modern React 19 Frontend Architecture</h5>
+              <p class="mb-0 text-muted">Join our live virtual classes at <strong>Telugu IT Tutorials</strong> to master React 19 hooks, Server Components, and Next.js 15. <a href="index.html#courses" class="text-success font-weight-bold">View Courses &rarr;</a></p>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Django పరిచయం & MVT ఆర్కిటెక్చర్ సంపూర్ణ మార్గదర్శి (తెలుగు) | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_django_introduction_telugu.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Django Telugu tutorial, Django MVT architecture Telugu, Django ORM Telugu, makemigrations migrate Telugu, Django interview questions Telugu" name="keywords" />
+  
+  <meta name="description" content="Django Web Framework సంపూర్ణ తెలుగు మార్గదర్శి: MVT Architecture, Models, Views, Templates, Built-in ORM, Admin Interface, మరియు ముఖ్యమైన కమాండ్స్." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Django వెబ్ ఫ్రేమ్‌వర్క్ సంపూర్ణ పరిచయం & MVT ఆర్కిటెక్చర్ గైడ్ (తెలుగు)" />
+  <meta property="og:description"
+    content="Python ఆధారంగా పనిచేసే Django Web Framework, MVT Pattern, ORM, Admin Interface, మరియు commands పై సంపూర్ణ తెలుగు టుటోరియల్." />
+  <meta property="og:url" content="https://teluguittutorials.com/blog_django_introduction_telugu.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Django పరిచయం & MVT ఆర్కిటెక్చర్ సంపూర్ణ మార్గదర్శి (తెలుగు)" />
+  <meta name="twitter:description" content="Django web development సంపూర్ణ గైడ్ - MVT architecture, ORM, CLI commands మరియు ఇంటర్వ్యూ ప్రశ్నలు." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet" />
+
+  <!-- Bootstrap & Libs -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheets -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/custom.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369" crossorigin="anonymous"></script>
+
+  <!-- Schema.org TechArticle Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Django వెబ్ ఫ్రేమ్‌వర్క్ సంపూర్ణ పరిచయం & MVT ఆర్కిటెక్చర్ గైడ్ (తెలుగు)",
+    "description": "Django Python framework, MVT architecture, ORM, Admin interface, request lifecycle, and CLI workflow in Telugu.",
+    "author": {
+      "@type": "Person",
+      "name": "KSR",
+      "jobTitle": "Senior Software Architect & IT Trainer"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Telugu IT Tutorials",
+      "logo": "https://teluguittutorials.com/img/favicon.png"
+    },
+    "mainEntityOfPage": "https://teluguittutorials.com/blog_django_introduction_telugu.html",
+    "datePublished": "2026-09-13",
+    "inLanguage": "te"
+  }
+  </script>
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <article class="blog-post-card bg-white p-4 p-md-5 rounded shadow-sm">
+
+          <!-- Post Header -->
+          <header class="post-header border-bottom pb-4 mb-4">
+            <span class="badge bg-danger text-white mb-2 px-3 py-2" style="background-color:#f82249;">Django (తెలుగు ట్యుటోరియల్)</span>
+            <h1 class="display-5 font-weight-bold text-dark">Django Introduction & MVT Architecture (తెలుగులో సంపూర్ణ మార్గదర్శి)</h1>
+            <p class="text-muted lead">Python ఆధారంగా పనిచేసే Django Web Framework, MVT Pattern, ORM, Admin Interface, మరియు CLI కమాండ్స్ పై సమగ్రమైన వివరణ.</p>
+            <div class="d-flex align-items-center mt-3 text-muted small">
+              <i class="bi bi-person-circle me-2 text-danger"></i> <strong class="me-3">By KSR</strong>
+              <i class="bi bi-clock me-2 text-danger"></i> <span>15 min read</span>
+              <span class="ms-auto text-muted">Updated September 2026</span>
+            </div>
+          </header>
+
+          <!-- Post Content -->
+          <div class="post-content" style="line-height: 1.8; color: #333;">
+
+            <h2 class="h3 font-weight-bold text-dark mt-4 mb-3">1. Django అంటే ఏమిటి?</h2>
+            <p class="lead" style="font-size: 1.15rem;">
+              Django అనేది <strong>Python ఆధారంగా పనిచేసే High-Level, Open-Source Web Framework</strong>. Web Applications ను వేగంగా, సురక్షితంగా మరియు సులభంగా develop చేయడానికి Django ఉపయోగిస్తారు.
+            </p>
+
+            <p>Django ఉపయోగించి క్రింది రకాల అప్లికేషన్లు తయారీ చేయవచ్చు:</p>
+            <ul class="lh-lg">
+              <li>Web Applications</li>
+              <li>REST APIs</li>
+              <li>E-Commerce Applications</li>
+              <li>Content Management Systems (CMS)</li>
+              <li>Social Networking Applications</li>
+              <li>Enterprise Applications</li>
+              <li>Database-driven Applications</li>
+            </ul>
+
+            <div class="p-3 bg-light border-start border-4 border-danger rounded mb-4">
+              <h5 class="font-weight-bold text-dark mb-1">Simple Definition (సరళమైన నిర్వచనం):</h5>
+              <p class="mb-0 text-muted">Django అనేది Python ఆధారంగా Web Applications ను secure, scalable మరియు maintainable గా develop చేయడానికి ఉపయోగించే Web Framework.</p>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">2. Django ఎందుకు ఉపయోగించాలి?</h2>
+            <p>Framework లేకుండా ఒక Web Application develop చేయాలంటే చాలా విషయాలను మనమే మొదటి నుండి (scratch) develop చేయాల్సి ఉంటుంది:</p>
+            <ul>
+              <li>URL Handling</li>
+              <li>Database Connectivity</li>
+              <li>User Authentication</li>
+              <li>Form Processing</li>
+              <li>Security (SQLi, XSS, CSRF)</li>
+              <li>Session Management</li>
+              <li>HTML Rendering</li>
+              <li>Admin System</li>
+            </ul>
+            <p>కానీ Django లో వీటిలో చాలా features <strong>built-in గా available</strong> ఉంటాయి.</p>
+            <p><strong>ఉదాహరణ:</strong> Database records manage చేయడానికి Django లో ఇప్పటికే <strong>Admin Interface</strong> ఉంటుంది. అలాగే Database తో పని చేయడానికి Django <strong>ORM</strong> అందిస్తుంది.</p>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">3. Django ముఖ్యమైన Features</h2>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">3.1 Python-Based Framework</h4>
+            <p>Django పూర్తిగా Python ecosystem తో పనిచేస్తుంది. కాబట్టి Python తెలిసిన developers Django ను సులభంగా నేర్చుకోవచ్చు.</p>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">3.2 MVT Architecture</h4>
+            <p>Django <strong>MVT Architecture</strong> ను follow చేస్తుంది. MVT అంటే: <code>M → Model</code>, <code>V → View</code>, <code>T → Template</code>.</p>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">3.3 Built-in ORM (Object Relational Mapping)</h4>
+            <p>Django లో ORM ఉంటుంది. దీని ద్వారా Python code ఉపయోగించి database తో interact చేయవచ్చు.</p>
+            <div class="bg-dark text-light p-3 rounded mb-3 font-monospace">
+              # Database లోని అన్ని Student records ను పొందే విధానం<br>
+              Student.objects.all()
+            </div>
+            <p>దీని ద్వారా ప్రతి operation కోసం మనం SQL query manually రాయాల్సిన అవసరం తగ్గుతుంది.</p>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">3.4 Built-in Admin Interface</h4>
+            <p>Django లో powerful Admin Interface ఉంటుంది. దీని ద్వారా browser నుండి database records (Students add చేయడం, update చేయడం, delete చేయడం, data చూడడం) ను సులభంగా manage చేయవచ్చు.</p>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">3.5 Security Protection</h4>
+            <p>Django అనేక common web security problems నుండి inherent protection అందిస్తుంది: SQL Injection, XSS, CSRF, మరియు Clickjacking.</p>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">3.6 URL Routing & Rapid Development</h4>
+            <p>User ఒక URL ను request చేసినప్పుడు (ఉదాహరణకి <code>/products/</code>), ఆ request ఏ View కి వెళ్లాలో Django URL configuration ద్వారా నిర్ణయిస్తుంది. Built-in features ఉండటం వల్ల development చాలా వేగంగా (Rapid Development) పూర్తవుతుంది.</p>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">4. Django MVT Architecture</h2>
+            <p>Application లో ప్రతి component కు ఒక ప్రత్యేక responsibility ఉంటుంది:</p>
+
+            <div class="bg-dark text-light p-4 rounded mb-4 text-center font-monospace" style="line-height: 1.6;">
+              USER / CLIENT <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ (HTTP Request) <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<strong>URL</strong> <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ <br>
+              &nbsp;&nbsp;&nbsp;<strong>VIEW</strong> <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;┌─┴─────────┐ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;▼           ▼ <br>
+              <strong>MODEL</strong>     <strong>TEMPLATE</strong> <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;│           │ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;▼           │ <br>
+              DATABASE        │ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;│           │ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;└─────┬─────┘ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ <br>
+              &nbsp;&nbsp;HTTP Response ──► USER
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">5. Components లోతైన వివరాలు (Model, View, Template, URLs)</h2>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">5.1 Model (మొడల్)</h4>
+            <p><strong>Model అనేది Application యొక్క data మరియు database structure ను represent చేస్తుంది.</strong> Models ను Python classes రూపంలో create చేస్తారు.</p>
+            <div class="bg-dark text-light p-3 rounded mb-3 font-monospace">
+              from django.db import models<br><br>
+              class Student(models.Model):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;name = models.CharField(max_length=100)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;age = models.IntegerField()<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;email = models.EmailField()
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">5.2 Template (టెంప్లేట్)</h4>
+            <p><strong>Template అనేది Application యొక్క Presentation Layer లేదా UI Layer.</strong> Templates సాధారణంగా HTML files. Dynamic data display చేయడానికి Django Template Language (DTL) ఉపయోగిస్తారు.</p>
+            <div class="bg-dark text-light p-3 rounded mb-3 font-monospace">
+              &lt;!DOCTYPE html&gt;<br>
+              &lt;html&gt;<br>
+              &lt;body&gt;<br>
+              &nbsp;&nbsp;&lt;h1&gt;Welcome {{ name }}&lt;/h1&gt;<br>
+              &lt;/body&gt;<br>
+              &lt;/html&gt;
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">5.3 View (వ్యూ)</h4>
+            <p><strong>View అనేది HTTP Request ను process చేసి HTTP Response ను return చేసే component.</strong> View లో business logic ఉంటుంది.</p>
+            <div class="bg-dark text-light p-3 rounded mb-3 font-monospace">
+              from django.http import HttpResponse<br><br>
+              def home(request):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;return HttpResponse("Welcome to Django in Telugu")
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">5.4 URLs (యుఆర్ఎల్స్)</h4>
+            <p>Incoming request ఏ View కి వెళ్లాలో నిర్ణయిస్తాయి.</p>
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              from django.urls import path<br>
+              from . import views<br><br>
+              urlpatterns = [<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;path('home/', views.home),<br>
+              ]
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">6. Basic Django Workflow & Commands</h2>
+            
+            <div class="table-responsive my-4">
+              <table class="table table-bordered">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th>Command (కమాండ్)</th>
+                    <th>ఉపయోగం (Purpose)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>django-admin startproject myproject</code></td>
+                    <td>కొత్త Django Project ను సృష్టించడం.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py startapp appname</code></td>
+                    <td>కొత్త Django App ను సృష్టించడం.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py runserver</code></td>
+                    <td>Development Server (http://127.0.0.1:8000/) ను start చేయడం.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py makemigrations</code></td>
+                    <td>Models ఆధారంగా Migration files ని తయారు చేయడం. (Database మార్చదు)</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py migrate</code></td>
+                    <td>Migration files లోని మార్పులను actual Database కి apply చేయడం.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py createsuperuser</code></td>
+                    <td>Admin Interface లోకి లాగిన్ అవ్వడానికి Superuser create చేయడం.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="p-3 bg-light border-start border-4 border-warning rounded mb-4">
+              <h5 class="font-weight-bold text-dark mb-1">Project మరియు App మధ్య వ్యత్యాసం:</h5>
+              <p class="mb-0 text-muted"><strong>Project:</strong> ఒక పూర్తి Website లేదా Web Application యొక్క Main Container.<br><strong>App:</strong> Project లోని ఒక నిర్దిష్టమైన ఫంక్షనాలిటీ/మాడ్యూల్ (ఉదా: Users, Products, Orders). ఒక Project లో multiple Apps ఉండవచ్చు.</p>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">7. Django ఇంటర్వ్యూ ప్రశ్నలు & సమాధానాలు (Interview Questions)</h2>
+
+            <div class="qa-item mb-3 p-3 bg-light rounded border">
+              <h5 class="font-weight-bold text-dark mb-2">Q1. Django అంటే ఏమిటి?</h5>
+              <p class="mb-0 text-muted">Django అనేది Python ఆధారంగా Web Applications ను వేగంగా develop చేయడానికి ఉపయోగించే High-Level Web Framework.</p>
+            </div>
+
+            <div class="qa-item mb-3 p-3 bg-light rounded border">
+              <h5 class="font-weight-bold text-dark mb-2">Q2. Django ఏ Architecture ను follow చేస్తుంది?</h5>
+              <p class="mb-0 text-muted">Django <strong>MVT (Model-View-Template) Architecture</strong> ను follow చేస్తుంది.</p>
+            </div>
+
+            <div class="qa-item mb-3 p-3 bg-light rounded border">
+              <h5 class="font-weight-bold text-dark mb-2">Q3. makemigrations మరియు migrate మధ్య తేడా ఏమిటి?</h5>
+              <p class="mb-0 text-muted"><code>makemigrations</code> అనేది Models ఆధారంగా migration instructions/files ని create చేస్తుంది. <code>migrate</code> అనేది ఆ migration files ను actual database కి apply చేస్తుంది.</p>
+            </div>
+
+            <div class="qa-item mb-3 p-3 bg-light rounded border">
+              <h5 class="font-weight-bold text-dark mb-2">Q4. Model, View, Template బాధ్యతలు ఏమిటి?</h5>
+              <p class="mb-0 text-muted">Model → Database Data & Structure<br>View → Business Logic & Request Handling<br>Template → User Interface & Presentation Layer</p>
+            </div>
+
+            <div class="p-4 bg-light rounded mt-5 border-start border-4 border-danger">
+              <h5 class="font-weight-bold text-dark mb-2">తెలుగులో Full-Stack Web Development నేర్చుకోండి!</h5>
+              <p class="mb-0 text-muted">Python, Django, PostgreSQL, మరియు ReactJS ప్రత్యక్ష తరగతులలో చేరండి. ప్రాక్టికల్ ప్రాజెక్ట్‌లతో జాబ్ రెడీ స్కిల్స్ పొందండి. <a href="index.html#courses" class="text-danger font-weight-bold">కోర్సులు చూడండి &rarr;</a></p>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

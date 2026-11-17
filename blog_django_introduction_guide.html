@@ -1,0 +1,488 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Complete Django Framework Introduction & MVT Architecture Guide | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_django_introduction_guide.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Django introduction, Django MVT architecture, Django tutorial, Django ORM, makemigrations vs migrate, Django admin, Django interview questions" name="keywords" />
+  
+  <meta name="description" content="Comprehensive introduction to Django Web Framework: MVT architecture, Models, Views, Templates, ORM, Admin Panel, CLI commands, and top Django interview questions." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Complete Django Framework Introduction & MVT Architecture Guide" />
+  <meta property="og:description"
+    content="Master Python's Django framework from scratch: MVT pattern, ORM database models, view logic, templates, admin panel, and CLI workflow." />
+  <meta property="og:url" content="https://teluguittutorials.com/blog_django_introduction_guide.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Complete Django Framework Introduction & MVT Architecture Guide" />
+  <meta name="twitter:description" content="Learn Django web development from basic concepts to MVT architecture and production commands." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/img/favicon.png" />
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet" />
+
+  <!-- Bootstrap & Libs -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheets -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/custom.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369" crossorigin="anonymous"></script>
+
+  <!-- Schema.org TechArticle Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Complete Django Framework Introduction & MVT Architecture Guide",
+    "description": "Comprehensive guide on Django Python framework, MVT architecture, ORM, Admin interface, request lifecycle, and CLI workflow.",
+    "author": {
+      "@type": "Person",
+      "name": "KSR",
+      "jobTitle": "Senior Software Architect & IT Trainer"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Telugu IT Tutorials",
+      "logo": "https://teluguittutorials.com/img/favicon.png"
+    },
+    "mainEntityOfPage": "https://teluguittutorials.com/blog_django_introduction_guide.html",
+    "datePublished": "2026-09-13",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <article class="blog-post-card bg-white p-4 p-md-5 rounded shadow-sm">
+
+          <!-- Post Header -->
+          <header class="post-header border-bottom pb-4 mb-4">
+            <span class="badge bg-info text-dark mb-2 px-3 py-2">Python Web Framework</span>
+            <h1 class="display-5 font-weight-bold text-dark">Complete Django Framework Introduction & MVT Architecture Guide</h1>
+            <p class="text-muted lead">Learn Python's premier full-stack web framework from scratch: MVT architecture, ORM database mapping, built-in Admin interface, and essential CLI commands.</p>
+            <div class="d-flex align-items-center mt-3 text-muted small">
+              <i class="bi bi-person-circle me-2 text-info"></i> <strong class="me-3">By KSR</strong>
+              <i class="bi bi-clock me-2 text-info"></i> <span>14 min read</span>
+              <span class="ms-auto text-muted">Updated September 2026</span>
+            </div>
+          </header>
+
+          <!-- Post Content -->
+          <div class="post-content">
+            
+            <h2 class="h3 font-weight-bold text-dark mt-4 mb-3">1. What is Django?</h2>
+            <p class="lead" style="font-size: 1.15rem; line-height: 1.8;">
+              <strong>Django</strong> is a high-level, open-source web application framework written in Python. It follows the <em>"Batteries Included"</em> philosophy, providing developers with built-in tools for database management, user authentication, security, URL routing, and HTML rendering out of the box.
+            </p>
+            
+            <div class="p-3 bg-light border-start border-4 border-info rounded mb-4">
+              <h5 class="font-weight-bold text-dark mb-1">Simple Definition:</h5>
+              <p class="mb-0 text-muted">Django is a Python-based web framework designed for rapid development, clean pragmatic design, and scalable production deployment.</p>
+            </div>
+
+            <p>Django is widely used to develop:</p>
+            <ul class="lh-lg">
+              <li>Full-Stack Web Applications & Dynamic Portals</li>
+              <li>RESTful APIs & Backend Microservices</li>
+              <li>E-Commerce Platforms & Online Stores</li>
+              <li>Content Management Systems (CMS)</li>
+              <li>Enterprise Database-Driven Software</li>
+            </ul>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">2. Why Use Django Over Writing Raw Web Servers?</h2>
+            <p>Building a web application from scratch without a framework requires manual implementation of low-level infrastructure:</p>
+
+            <div class="row my-4">
+              <div class="col-md-6 mb-3">
+                <div class="card border-danger p-3 h-100">
+                  <h5 class="font-weight-bold text-danger">Without a Framework:</h5>
+                  <ul class="small text-muted mb-0 lh-lg">
+                    <li>Manual HTTP request routing parsing</li>
+                    <li>Raw SQL string concatenation (vulnerable to SQLi)</li>
+                    <li>Custom session cookies & cryptography logic</li>
+                    <li>Manual HTML form validation & CSRF tokens</li>
+                    <li>No built-in administrative interface</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card border-success p-3 h-100">
+                  <h5 class="font-weight-bold text-success">With Django Framework:</h5>
+                  <ul class="small text-muted mb-0 lh-lg">
+                    <li>Built-in declarative Object-Relational Mapper (ORM)</li>
+                    <li>Auto-generated instant Admin Panel</li>
+                    <li>Built-in protection against SQLi, XSS, CSRF, & Clickjacking</li>
+                    <li>Modular App architecture for reusable features</li>
+                    <li>Rapid development cycle ("The web framework for perfectionists with deadlines")</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">3. Core Features of Django</h2>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div class="p-3 border rounded h-100 bg-light">
+                  <h6 class="font-weight-bold text-dark"><i class="bi bi-cpu-fill text-info me-2"></i>Python Ecosystem</h6>
+                  <p class="small text-muted mb-0">Leverages Python's extensive package library (Pandas, NumPy, Celery, Pillow).</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="p-3 border rounded h-100 bg-light">
+                  <h6 class="font-weight-bold text-dark"><i class="bi bi-shield-lock-fill text-success me-2"></i>Bank-Grade Security</h6>
+                  <p class="small text-muted mb-0">Automatic sanitization against SQL Injection, Cross-Site Scripting, and CSRF attacks.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="p-3 border rounded h-100 bg-light">
+                  <h6 class="font-weight-bold text-dark"><i class="bi bi-speedometer2 text-danger me-2"></i>Rapid Prototyping</h6>
+                  <p class="small text-muted mb-0">Go from concept to production-ready deployed MVP in record time.</p>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">4. Understanding Django MVT Architecture</h2>
+            <p>Django follows the <strong>MVT (Model - View - Template)</strong> architecture, which strictly decouples data structures, business logic, and user interface presentation layers.</p>
+
+            <div class="table-responsive my-4">
+              <table class="table table-bordered text-center">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th>Component</th>
+                    <th>Full Form</th>
+                    <th>Primary Responsibility</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong class="text-primary">Model</strong></td>
+                    <td>Database Layer</td>
+                    <td>Defines database schema tables, fields, constraints, and ORM query logic.</td>
+                  </tr>
+                  <tr>
+                    <td><strong class="text-success">View</strong></td>
+                    <td>Business Logic Layer</td>
+                    <td>Receives HTTP requests, executes Python logic, queries Models, & renders Templates.</td>
+                  </tr>
+                  <tr>
+                    <td><strong class="text-warning">Template</strong></td>
+                    <td>Presentation (UI) Layer</td>
+                    <td>HTML files populated dynamically using Django Template Language (DTL).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">Django Request Execution Flow Diagram:</h4>
+            <div class="bg-dark text-light p-4 rounded mb-4 text-center font-monospace" style="line-height: 1.6;">
+              USER / BROWSER <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ (1. HTTP Request: /students/) <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ <br>
+              <strong>urls.py</strong> (2. Route Matching) <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ <br>
+              <strong>views.py</strong> (3. Business Logic Execution) <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ (Query Data)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ (Pass Data) <br>
+              <strong>models.py</strong> (Database)&nbsp;&nbsp;<strong>templates/*.html</strong> (UI) <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───────────┬──────────┘ <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼ <br>
+              HTTP Response (HTML / JSON) ──► USER BROWSER
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">5. Detailed Component Code Walkthrough</h2>
+
+            <h4 class="h5 font-weight-bold text-dark">5.1 Model Example (models.py)</h4>
+            <div class="bg-dark text-light p-3 rounded mb-3 font-monospace">
+              from django.db import models<br><br>
+              class Student(models.Model):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;name = models.CharField(max_length=100)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;age = models.IntegerField()<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;email = models.EmailField(unique=True)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;created_at = models.DateTimeField(auto_now_add=True)<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;def __str__(self):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.name
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">5.2 View Example (views.py)</h4>
+            <div class="bg-dark text-light p-3 rounded mb-3 font-monospace">
+              from django.shortcuts import render<br>
+              from .models import Student<br><br>
+              def student_list(request):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;# Fetch all records via Django ORM<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;students = Student.objects.all()<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;return render(request, 'students/list.html', {'students': students})
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">5.3 Template Example (templates/students/list.html)</h4>
+            <div class="bg-dark text-light p-3 rounded mb-3 font-monospace">
+              &lt;!DOCTYPE html&gt;<br>
+              &lt;html&gt;<br>
+              &lt;body&gt;<br>
+              &nbsp;&nbsp;&lt;h1&gt;Registered Students&lt;/h1&gt;<br>
+              &nbsp;&nbsp;&lt;ul&gt;<br>
+              &nbsp;&nbsp;{% for student in students %}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;{{ student.name }} ({{ student.email }})&lt;/li&gt;<br>
+              &nbsp;&nbsp;{% empty %}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;No students registered yet.&lt;/li&gt;<br>
+              &nbsp;&nbsp;{% endfor %}<br>
+              &nbsp;&nbsp;&lt;/ul&gt;<br>
+              &lt;/body&gt;<br>
+              &lt;/html&gt;
+            </div>
+
+            <h4 class="h5 font-weight-bold text-dark mt-4">5.4 URL Configuration Example (urls.py)</h4>
+            <div class="bg-dark text-light p-3 rounded mb-4 font-monospace">
+              from django.urls import path<br>
+              from . import views<br><br>
+              urlpatterns = [<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;path('students/', views.student_list, name='student_list'),<br>
+              ]
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">6. Essential Django Management CLI Commands</h2>
+            <div class="table-responsive my-4">
+              <table class="table table-bordered">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th>Command</th>
+                    <th>Purpose & Execution</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>django-admin startproject myproject</code></td>
+                    <td>Creates a new main Django project container directory structure.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py startapp appname</code></td>
+                    <td>Creates a modular, reusable application feature module inside the project.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py runserver</code></td>
+                    <td>Starts the built-in development web server at <code>http://127.0.0.1:8000/</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py makemigrations</code></td>
+                    <td>Generates Python migration files based on detected changes in <code>models.py</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py migrate</code></td>
+                    <td>Applies pending migration files to create or alter tables in the actual SQL database.</td>
+                  </tr>
+                  <tr>
+                    <td><code>python manage.py createsuperuser</code></td>
+                    <td>Creates an administrative account to log into the Django Admin dashboard at <code>/admin/</code>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="p-3 bg-warning bg-opacity-10 border-start border-4 border-warning rounded mb-4">
+              <h5 class="font-weight-bold text-dark mb-1">Crucial Difference: makemigrations vs migrate</h5>
+              <p class="mb-0 text-dark"><code>makemigrations</code> only generates blueprint instructions (files in <code>migrations/</code>). <code>migrate</code> actually executes those instructions against your database (PostgreSQL/MySQL/SQLite).</p>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">7. Project vs. App: Key Architectural Difference</h2>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="card p-3 h-100 border-info">
+                  <h5 class="font-weight-bold text-info">Django Project</h5>
+                  <p class="small text-muted mb-0">The overall container for an entire website/web service. Contains global configurations, root URL routing, and database settings (<code>settings.py</code>, <code>urls.py</code>).</p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card p-3 h-100 border-success">
+                  <h5 class="font-weight-bold text-success">Django App</h5>
+                  <p class="small text-muted mb-0">A self-contained web module handling a specific functionality (e.g., <code>users</code>, <code>products</code>, <code>payments</code>). One project can contain multiple apps.</p>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="h3 font-weight-bold text-dark mt-5 mb-3">8. Frequently Asked Django Interview Questions</h2>
+            
+            <div class="qa-item mb-3 p-3 bg-light rounded border">
+              <h5 class="font-weight-bold text-dark mb-2">Q1. What architecture does Django follow?</h5>
+              <p class="mb-0 text-muted">Django follows the <strong>MVT (Model-View-Template)</strong> architecture. Model manages data, View contains logic, and Template handles UI presentation.</p>
+            </div>
+
+            <div class="qa-item mb-3 p-3 bg-light rounded border">
+              <h5 class="font-weight-bold text-dark mb-2">Q2. What is Django ORM?</h5>
+              <p class="mb-0 text-muted">Django ORM (Object Relational Mapping) allows developers to interact with relational databases (PostgreSQL, MySQL, SQLite) using Python classes and methods instead of writing raw SQL queries.</p>
+            </div>
+
+            <div class="qa-item mb-3 p-3 bg-light rounded border">
+              <h5 class="font-weight-bold text-dark mb-2">Q3. What is the role of Django Admin?</h5>
+              <p class="mb-0 text-muted">Django Admin is an automatically generated web interface that enables superusers and staff to perform CRUD (Create, Read, Update, Delete) operations directly on database models via a browser.</p>
+            </div>
+
+            <div class="p-4 bg-light rounded mt-5 border-start border-4 border-info">
+              <h5 class="font-weight-bold text-dark mb-2">Master Full-Stack Python & Django with Telugu IT Tutorials</h5>
+              <p class="mb-0 text-muted">Want live, interactive training in Python, Django, REST APIs, and PostgreSQL? Join our upcoming live batch. <a href="index.html#courses" class="text-info font-weight-bold">View Courses & Enroll &rarr;</a></p>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

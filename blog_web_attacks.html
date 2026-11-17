@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Common Web Security Attacks & Prevention Guide | Telugu IT Tutorials</title>
+  <link rel="canonical" href="https://teluguittutorials.com/blog_web_attacks.html" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="telugu it tutorials.com" name="keywords" />
+  
+  <meta name="description" content="Learn how to protect web applications against XSS, CSRF, SQL Injection, CORS vulnerabilities, and JWT security pitfalls." />
+
+  <!-- Primary Keywords -->
+  <meta name="keywords"
+    content="Telugu IT Tutorials, IT training in Telugu, Telugu web development tutorials, Full stack development courses in Telugu, Online coding classes in Telugu, Programming tutorials Telugu, ReactJS tutorials in Telugu, Node.js course in Telugu, SpringBoot tutorials Telugu, Git and Docker training in Telugu, SQL courses for beginners Telugu, HTML CSS JavaScript in Telugu, Best Telugu online coding institute, Interview Q&A preparation Telugu" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta property="og:description"
+    content="Learn programming in Telugu with live virtual courses on React, Node.js, SQL, Git, Docker & more. Lifetime access + 100% job placement support." />
+  <meta property="og:url" content="https://teluguittutorials.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://teluguittutorials.com/images/banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Telugu IT Tutorials — Learn Full Stack Development in Telugu" />
+  <meta name="twitter:description"
+    content="Master full-stack development in Telugu with lifetime access & job support. Courses include HTML, CSS, JavaScript, React, Node.js, SQL." />
+  <meta name="twitter:image" content="https://teluguittutorials.com/images/banner.jpg" />
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon" />
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/venobox/venobox.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880499509623369"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+  <header id="header" class="header-scrolled">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h2>
+          <a href="index.html">Telugu <span>IT</span> Tutorials</a>
+        </h2>
+        <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#speakers">Videos</a></li>
+
+          <li class="menu-has-children">
+            <a href="articles.html">Interview Q&amp;A</a>
+            <ul>
+              <li><a href="htmlQA.html">HTML</a></li>
+              <li><a href="cssQA.html">CSS</a></li>
+              <li><a href="javascriptQA.html">JavaScript</a></li>
+              <li><a href="reactJsQA.html">ReactJs</a></li>
+              <li><a href="javaQA.html">Java</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children">
+            <a href="c_programs.html">Code Snippets</a>
+            <ul>
+              <li><a href="c_programs.html">C Language</a></li>
+              <li><a href="java_programs.html">Java</a></li>
+              <li><a href="python_programs.html">Python</a></li>
+              <li><a href="javascript_programs.html">JavaScript</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#courses">Courses</a></li>
+          <li class="menu-active"><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 90px; min-height: 60vh;">
+    <section id="blog-content" class="section-bg wow fadeInUp" style="padding-top: 60px; padding-bottom: 60px;">
+      <article class="blog-post-card">
+
+        <!-- Post Header -->
+        <header class="post-header">
+          <span class="post-tag">Cybersecurity</span>
+          <h1>Top 5 Web Attacks Every Developer Should Know</h1>
+          <p>Protect your applications by understanding the most common security vulnerabilities and how to prevent them.</p>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content">
+          <section class="lang-section" style="padding: 20px;">
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #444;">
+              Building a web application is only half the battle; securing it is the other half. Every day, thousands of web applications are compromised due to easily preventable vulnerabilities. As a developer, it is your responsibility to understand these attacks so you can write secure code from day one. Let's break down the Top 5 web attacks and how to mitigate them.
+            </p>
+
+            <!-- Attack 1 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">1</span>
+                <span>SQL Injection (SQLi)</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                SQL Injection occurs when an attacker can insert malicious SQL statements into a database query via user input. If an application takes input from a login form and blindly concatenates it into a database query, an attacker could input <code>' OR '1'='1</code> to bypass authentication entirely.
+              </p>
+              <div class="command-card mt-3 mb-3">
+// VULNERABLE CODE (Never do this!)
+const query = `SELECT * FROM users WHERE email = '${req.body.email}' AND password = '${req.body.password}'`;
+
+// SECURE CODE: Using Parameterized Prepared Statements
+const query = 'SELECT * FROM users WHERE email = ? AND password = ?';
+db.execute(query, [req.body.email, hashedPassword]);
+              </div>
+              <div style="background: #e7f3fe; border-left: 4px solid #2196F3; padding: 15px; margin-top: 15px;">
+                <strong>Prevention:</strong> Always use Parameterized Queries (Prepared Statements) or an ORM like Prisma, Hibernate, or TypeORM. Never concatenate raw user input into SQL strings.
+              </div>
+            </div>
+
+            <!-- Attack 2 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">2</span>
+                <span>Cross-Site Scripting (XSS)</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                XSS happens when an application includes untrusted data in a web page without proper validation or escaping. This allows attackers to execute malicious JavaScript in the victim's browser, which can be used to steal session cookies, log keystrokes, or redirect the user to a phishing website.
+              </p>
+              <div class="command-card mt-3 mb-3">
+// VULNERABLE: Direct HTML inner injection
+document.getElementById('welcome').innerHTML = userInput; // Can run &lt;script&gt;!
+
+// SECURE: Use textContent or DOMPurify
+document.getElementById('welcome').textContent = userInput;
+              </div>
+              <div style="background: #e7f3fe; border-left: 4px solid #2196F3; padding: 15px; margin-top: 15px;">
+                <strong>Prevention:</strong> Sanitize and encode all user input before rendering it. Use Content Security Policy (CSP) headers, and configure cookies with the <code>HttpOnly</code> flag so JavaScript cannot read session tokens.
+              </div>
+            </div>
+
+            <!-- Attack 3 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">3</span>
+                <span>Cross-Site Request Forgery (CSRF)</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                CSRF is an attack that forces an end user to execute unwanted actions on a web application in which they are currently authenticated. Because the browser automatically sends session cookies with requests, an attacker can embed a malicious form or image tag on a third-party site. If the authenticated user visits it, a state-changing request (like transferring funds or changing an email address) is executed silently.
+              </p>
+              <div style="background: #e7f3fe; border-left: 4px solid #2196F3; padding: 15px; margin-top: 15px;">
+                <strong>Prevention:</strong> Use Anti-CSRF tokens for all state-changing HTTP requests (POST, PUT, DELETE), set cookie <code>SameSite=Strict</code> or <code>Lax</code>, and require re-authentication for critical actions.
+              </div>
+            </div>
+
+            <!-- Attack 4 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">4</span>
+                <span>Distributed Denial of Service (DDoS)</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                A DDoS attack attempts to disrupt normal traffic by overwhelming an origin server with a distributed flood of automated requests from botnets. The goal is to exhaust CPU, RAM, or bandwidth so legitimate users cannot access your service.
+              </p>
+              <div style="background: #e7f3fe; border-left: 4px solid #2196F3; padding: 15px; margin-top: 15px;">
+                <strong>Prevention:</strong> Use rate-limiting middleware (e.g., <code>express-rate-limit</code>), deploy behind reverse proxies and CDNs (Cloudflare / AWS CloudFront), configure Web Application Firewalls (WAF), and use autoscaling container groups.
+              </div>
+            </div>
+
+            <!-- Attack 5 -->
+            <div class="step-block mt-5">
+              <div class="step-title">
+                <span class="step-number">5</span>
+                <span>Man-in-the-Middle (MitM) Attacks</span>
+              </div>
+              <p style="margin-top: 15px; line-height: 1.8;">
+                In a MitM attack, the attacker secretly intercepts and relays communications between two parties who believe they are communicating directly. This frequently occurs on unsecured public Wi-Fi networks where attackers perform ARP spoofing or DNS poisoning to harvest sensitive plaintext credentials.
+              </p>
+              <div style="background: #e7f3fe; border-left: 4px solid #2196F3; padding: 15px; margin-top: 15px;">
+                <strong>Prevention:</strong> Enforce HTTPS everywhere using modern TLS 1.3 certificates, implement HTTP Strict Transport Security (HSTS) response headers, and never transmit sensitive tokens over unencrypted channels.
+              </div>
+            </div>
+
+            <!-- Telugu Security Checklist -->
+            <div class="mt-5 p-4 rounded-3" style="background: linear-gradient(135deg, #fef2f2, #fee2e2); border-left: 5px solid #dc2626;">
+              <h4 class="font-weight-bold" style="color: #991b1b;">💡 వెబ్ సెక్యూరిటీ తెలుగు చెక్‌లిస్ట్ (Security Checklist in Telugu)</h4>
+              <p style="font-size: 1.05rem; line-height: 1.8; color: #1f2937;">
+                ఏదైనా వెబ్ అప్లికేషన్‌ను ప్రొడక్షన్‌లోకి పంపేముందు ప్రతి డెవలపర్ ఈ భద్రతా ప్రమాణాలను పాటించాలి:
+              </p>
+              <ul style="line-height: 1.8; color: #1f2937;">
+                <li><strong>యూజర్ ఇన్‌పుట్‌ను ఎప్పుడూ నమ్మకండి:</strong> ఫారమ్‌లు మరియు APIల ద్వారా వచ్చే డేటాను తప్పనిసరిగా సర్వర్ వైపు వ్యాలిడేట్ చేయాలి.</li>
+                <li><strong>ప్రిపేర్డ్ స్టేట్‌మెంట్స్:</strong> డేటాబేస్ క్వెరీలలో పారామీటరైజ్డ్ క్వెరీలను మాత్రమే ఉపయోగించాలి, దీనివల్ల SQL ఇంజెక్షన్ దాడులను 100% నివారించవచ్చు.</li>
+                <li><strong>కుకీ సెక్యూరిటీ:</strong> సెషన్ కుకీలకు <code>HttpOnly; Secure; SameSite=Strict</code> ఫ్లాగ్‌లను యాడ్ చేయడం వల్ల XSS మరియు CSRF దాడుల నుండి పూర్తి రక్షణ లభిస్తుంది.</li>
+              </ul>
+              <p class="mb-0 text-muted small">మా ఫుల్ స్టాక్ వెబ్ డెవలప్‌మెంట్ కోర్సులో సెక్యూరిటీ మరియు అథెంటికేషన్‌పై ప్రాక్టికల్ శిక్షణ ఇస్తాము. <a href="course_details.html" class="font-weight-bold text-danger">కోర్సు వివరాలు చూడండి</a>.</p>
+            </div>
+
+            <!-- Summary -->
+            <div class="success-card mt-5">
+              <span class="icon">🛡️</span>
+              <div>
+                <strong>Security is a Mindset</strong><br>
+                Never trust user input. By adopting a "defense in depth" strategy and understanding these top vulnerabilities, you'll be well on your way to building robust and secure web applications.
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer">
+          <span>Published for Software Engineers</span>
+          <span>Security & Best Practices</span>
+        </footer>
+
+      </article>
+    </section>
+  </main>
+
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h4>TIT</h4>
+            <p>
+              With over 25 years of experience in IT training and development,
+              our institute is dedicated to empowering individuals with the
+              skills and knowledge required to excel in the rapidly evolving
+              tech industry. Led by an expert who has worked with top-tier
+              corporate companies, we offer comprehensive training in both Web
+              and Windows application development.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="index.html">Home</a></li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="index.html#courses">Courses</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="terms.html">Terms of service</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="privacy.html">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <strong>Email:</strong>info@teluguittutorials.com<br />
+            </p>
+            <a href="https://wa.me/918985472191" target="_blank" class="btn btn-success btn-sm mt-2">
+              <i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TIT@2026</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 15px; text-align: center; z-index: 9999; display: none;">
+    This website uses cookies to ensure you get the best experience. By continuing to use this site, you consent to our
+    use of cookies.
+    <a href="privacy.html" style="color: #4CAF50; text-decoration: underline; margin-left: 10px;">Learn More</a>
+    <button
+      onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');"
+      style="margin-left: 15px; background: #4CAF50; border: none; color: white; padding: 5px 15px; cursor: pointer; border-radius: 3px;">Got
+      it!</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>
